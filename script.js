@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
   noProjectsMessage.style.marginTop = '0px';
   noProjectsMessage.style.display = 'none'; 
   projectsContainer.appendChild(noProjectsMessage);
-
+ 
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       const filter = button.id.replace('filter-', '');
