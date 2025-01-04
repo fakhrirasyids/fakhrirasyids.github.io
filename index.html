@@ -123,9 +123,18 @@
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Freelance Projects</h1>
+      <div>
+        <button id="filter-android">Android</button>
+        <button id="filter-ios">iOS</button>
+        <button id="filter-react-native">React Native</button>
+        <button id="filter-flutter">Flutter</button>
+        <button id="filter-desktop">Desktop</button>
+        <button id="filter-all">All</button>
+      </div>
+      
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
                 src="./assets/porto/trafficsense_placeholder.png"
@@ -135,6 +144,7 @@
             </div>
             <h2 class="experience-sub-title project-title">Traffic Sense (Kotlin)</h2>
             <div class="btn-container">
+              <input type="hidden" value="Android">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/fakhrirasyids/TrafficSense'"
@@ -149,7 +159,7 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
                 src="./assets/porto/ndorokojo_placeholder.png"
@@ -159,6 +169,7 @@
             </div>
             <h2 class="experience-sub-title project-title">Ndoro Kojo (Kotlin)</h2>
             <div class="btn-container">
+              <input type="hidden" value="Android">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/fakhrirasyids/ndorokojo-android'"
@@ -169,11 +180,11 @@
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://www.dropbox.com/scl/fi/ke7scutt5o16sqj9n1mku/Ndoro-Kojo.apk?rlkey=bswlgxgp8ionntdxrdvenoajx&dl=0'"
               >
-                Live Sample Demo
+                Live Demo
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
                 src="./assets/porto/jukee_placeholder.png"
@@ -183,6 +194,7 @@
             </div>
             <h2 class="experience-sub-title project-title">Jukee (Java)</h2>
             <div class="btn-container">
+              <input type="hidden" value="Android">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/fakhrirasyids/Jukee'"
@@ -199,7 +211,7 @@
           </div>
         </div>
         <div class="about-containers">
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
                 src="./assets/porto/mhe_placeholder.png"
@@ -209,6 +221,7 @@
             </div>
             <h2 class="experience-sub-title project-title">My Heavy Equipment (Kotlin)</h2>
             <div class="btn-container">
+              <input type="hidden" value="Android">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/fakhrirasyids/myheavyequipment'"
@@ -223,7 +236,7 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-category="desktop">
             <div class="article-container">
               <img
                 src="./assets/porto/beataco_placeholder.png"
@@ -233,6 +246,7 @@
             </div>
             <h2 class="experience-sub-title project-title">Beataco (Desktop Java Swing)</h2>
             <div class="btn-container">
+              <input type="hidden" value="Desktop">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/fakhrirasyids/BeatacoBot-Swing'"
@@ -241,8 +255,9 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-category="android">
             <div class="article-container">
+              <input type="hidden" value="Android">
               <img
                 src="./assets/porto/beritain_placeholder.png"
                 alt="BeritaIn"
@@ -261,7 +276,7 @@
           </div>
         </div>
         <div class="about-containers">
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
                 src="./assets/porto/aromaloka_placeholder.png"
@@ -271,6 +286,7 @@
             </div>
             <h2 class="experience-sub-title project-title">Aromaloka (Kotlin Slicing)</h2>
             <div class="btn-container">
+              <input type="hidden" value="Android">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/fakhrirasyids/Aromaloka'"
@@ -285,7 +301,7 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
                 src="./assets/porto/diabetless_placeholder.png"
@@ -295,6 +311,7 @@
             </div>
             <h2 class="experience-sub-title project-title">Diabetless (Kotlin Slicing)</h2>
             <div class="btn-container">
+              <input type="hidden" value="Android">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/fakhrirasyids/diabetless'"
@@ -305,11 +322,11 @@
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://www.dropbox.com/scl/fi/hr6er7obhp630p5lpfz3c/Diabetless.apk?rlkey=9xfoh07svz10de85qiwges650&dl=0'"
               >
-                Live Sample Demo
+                Live Demo
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
                 src="./assets/porto/painthing_placeholder.png"
@@ -319,6 +336,7 @@
             </div>
             <h2 class="experience-sub-title project-title">Painthings (Kotlin Slicing)</h2>
             <div class="btn-container">
+              <input type="hidden" value="Android">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/fakhrirasyids/Painthings'"
@@ -335,7 +353,7 @@
           </div>
         </div>
         <div class="about-containers">
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
                 src="./assets/porto/cba_placeholder.png"
@@ -345,6 +363,7 @@
             </div>
             <h2 class="experience-sub-title project-title">Cinta Beauty App (Java Slicing)</h2>
             <div class="btn-container">
+              <input type="hidden" value="Android">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/fakhrirasyids/CintaBeautyApp'"
@@ -359,7 +378,7 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
                 src="./assets/porto/picdf_placeholder.png"
@@ -369,6 +388,7 @@
             </div>
             <h2 class="experience-sub-title project-title">PicDF (Kotlin Jetpack Compose)</h2>
             <div class="btn-container">
+              <input type="hidden" value="Android">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/fakhrirasyids/PicDF-AndroidCompose'"
@@ -377,7 +397,7 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
                 src="./assets/porto/capstone_placeholder.png"
@@ -387,6 +407,7 @@
             </div>
             <h2 class="experience-sub-title project-title">Capstone App (Kotlin Slicing)</h2>
             <div class="btn-container">
+              <input type="hidden" value="Android">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/fakhrirasyids/capstoneapp'"
