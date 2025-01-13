@@ -101,13 +101,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const projectsContainer = document.querySelector('.experience-details-container');
 
   const noProjectsMessage = document.createElement('p');
-  noProjectsMessage.textContent = `Oops, there's no project in here`;
+  noProjectsMessage.textContent = `Project in progress :)`;
   noProjectsMessage.style.textAlign = 'center';
   noProjectsMessage.style.fontSize = '1.5em';
   noProjectsMessage.style.color = '#666';
   noProjectsMessage.style.marginTop = '0px';
   noProjectsMessage.style.display = 'none'; 
   projectsContainer.appendChild(noProjectsMessage);
+
+  buttons.forEach((btn) => btn.classList.remove('active'));
+  buttons[0].classList.add('active');
+  filterProjects('all');
  
   buttons.forEach((button) => {
     button.addEventListener('click', () => {

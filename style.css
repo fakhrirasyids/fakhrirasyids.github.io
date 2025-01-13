@@ -272,6 +272,42 @@ section {
   display: flex;
 }
 
+.project-description {
+  margin: 16px 0;
+  padding-left: 20px;
+  list-style: disc;
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* Ensures the li elements stack vertically */
+  justify-content: space-between; /* Distributes li elements evenly to fill the blanks */
+}
+
+
+.btn-container-horizontal {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn-color-2 {
+  background-color: #4CAF50; /* Example color */
+  color: white;
+}
+
+.btn-color-2:hover {
+  background-color: #45A049;
+}
+
 .about-pic {
   border-radius: 2rem;
 }
@@ -310,7 +346,7 @@ section {
 .experience-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
-  font-size: 1.75rem;
+  font-size: 1.55rem;
   margin-bottom: 2rem;
 }
 
