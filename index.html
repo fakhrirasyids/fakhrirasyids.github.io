@@ -66,6 +66,12 @@
             class="icon"
             onclick="location.href='https://github.com/fakhrirasyids'"
           />
+          <img
+            src="./assets/medium.png"
+            alt="My Medium profile"
+            class="icon"
+            onclick="location.href='https://medium.com/@fakhrirasyids'"
+          />
         </div>
       </div>
     </section>
@@ -82,7 +88,7 @@
         </div>
         <div class="about-details-container">
           <div class="about-containers">
-            <div class="details-container">
+            <div class="details-container-about">
               <img
                 src="./assets/experience.png"
                 alt="Experience icon"
@@ -90,19 +96,19 @@
               />
               <h3>Experience</h3>
               <p>
-                Software Engineer with three years of experience in mobile
+                Software Engineer with two years of experience in mobile
                 development who is passionate and enthusiastic about mobile developing. Have experience designing
                 and developing applications for government, industrial, and various systems.
               </p>
             </div>
-            <div class="details-container">
+            <div class="details-container-about">
               <img
                 src="./assets/education.png"
                 alt="Education icon"
                 class="icon"
               />
               <h3>Education</h3>
-              <p>Currently pursuing my undergraduate degree in informatics engineering in Dian Nuswantoro University, with a particular emphasis on the development of machine learning projects using TensorFlow.</p>
+              <p>Fresh Graduate in informatics engineering at Universitas Dian Nuswantoro, with a particular emphasis on the development of machine learning projects using TensorFlow with the mobile app for the view.</p>
             </div>
           </div>
           <div class="text-container">
@@ -122,18 +128,208 @@
 
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Public Projects</h1>
+      <h1 class="title">Public Projects (25)</h1>
       <div>
         <button id="filter-all">All</button>
         <button id="filter-android">Android</button>
         <button id="filter-ios">iOS</button>
-        <button id="filter-react-native">React Native</button>
-        <button id="filter-flutter">Flutter</button>
+        <button id="filter-multiplatform">Multiplatform</button>
         <button id="filter-desktop">Desktop</button>
       </div>
       
       <div class="experience-details-container">
-        <div class="about-containers">
+ 
+          <div class="details-container color-container" data-category="multiplatform">
+            <div class="article-container">
+              <img
+                src="./assets/porto/spaceattack_placeholder_kmp.png"
+                alt="Space Attack"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Space Attack<br>(KMP, SwiftUI)</h2>
+            
+            <ul class="project-description">
+              <li>Custom Animation with Jetpack Compose and SwiftUI.</li>
+              <li>Implementing Clean MVVM Architecture.</li>
+              <li>Modularization</li>
+              <li>Leaderboard Logic in Kotlin Multiplatform</li>
+            </ul>
+          
+            <div class="btn-container-horizontal">
+              <input type="hidden" value="Android">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fakhrirasyids/SpaceAttack-KMP'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container" data-category="android">
+            <div class="article-container">
+              <img
+                src="./assets/porto/stasave_placeholder_android_kotlin.png"
+                alt="Stasave"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Stasave<br>(Jetpack Compose)</h2>
+
+            <ul class="project-description">
+              <li>Implementing Clean MVVM Architecture.</li>
+              <li>Modularization and Dynamic Features.</li>
+              <li>Get whatsapp statuses seamlessly.</li>
+              <li>Room with Local Storage Integrations.</li>
+            </ul>
+
+            <div class="btn-container-horizontal">
+              <input type="hidden" value="Android">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fakhrirasyids/SpaceAttack-KMP'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.dropbox.com/scl/fi/8vhlsx7p85bll5ry2bzk4/TrafficSenseLast.apk?rlkey=cypout5bva3hi4ruxbj3kppdo&dl=0'"
+              >
+                Playstore
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container" data-category="ios">
+            <div class="article-container">
+              <img
+                src="./assets/porto/beritain_placeholder_ios_swift.png"
+                alt="BeritaIn"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">BeritaIn<br>(SwiftUI)</h2>
+            
+            <ul class="project-description">
+              <li>Implementing MVVM with Clean Architecture</li>
+              <li>Modularization</li>
+              <li>CI\CD with CircleCI</li>
+              <li>Dependency Injection with Swinject</li>
+              <li>Implementing CoreData</li>
+              <li>Language Localication</li>
+              <li>Linter with SwiftLint</li>
+            </ul>
+          
+            <div class="btn-container-horizontal">
+              <input type="hidden" value="Android">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fakhrirasyids/Berita.In-IOS'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+
+
+          <div class="details-container color-container" data-category="android">
+            <div class="article-container">
+              <img
+                src="./assets/porto/library_android_leech.png"
+                alt="Jukee"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Leech<br>(Android Library)</h2>
+
+            <ul class="project-description">
+              <li>Implementing Clean Architecture.</li>
+              <li>Background downloading.</li>
+              <li>Support multiple file format.</li>
+              <li>Notification view for Download Items.</li>
+            </ul>
+
+            <div class="btn-container-horizontal">
+              <input type="hidden" value="Android">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fakhrirasyids/Jukee'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://jitpack.io/#fakhrirasyids/leech'"
+              >
+                Jitpack
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container" data-category="ios">
+            <div class="article-container">
+              <img
+                src="./assets/porto/library_ios_floatingmenu.png"
+                alt="FloatingMenu"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Floating Menu<br>(IOS Package)</h2>
+
+            <ul class="project-description">
+              <li>Customizable Floating Menu.</li>
+              <li>Customizable menu items.</li>
+              <li>Built with SwiftUI.</li>
+            </ul>
+
+            <div class="btn-container-horizontal">
+              <input type="hidden" value="Android">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fakhrirasyids/ios-floating-bottom-menu'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://medium.com/@fakhrirasyids/floating-bottom-menu-creating-a-custom-bottom-menu-with-swiftui-a974f070d9d0'"
+              >
+                Medium Article
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container" data-category="android">
+            <div class="article-container">
+              <img
+                src="./assets/porto/library_android_highlightor.png"
+                alt="Highlightor"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Highlightor<br>(Android Library)</h2>
+
+            <ul class="project-description">
+              <li>Built with Jetpack Compose.</li>
+              <li>Highlighting composables synchronously.</li>
+              <li>Custom highlighting index.</li>
+            </ul>
+
+            <div class="btn-container-horizontal">
+              <input type="hidden" value="Android">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fakhrirasyids/Highlightor-Compose'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://jitpack.io/#fakhrirasyids/Highlightor-Compose'"
+              >
+                Jitpack
+              </button>
+            </div>
+          </div>
+
+
           <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
@@ -227,8 +423,8 @@
               </button>
             </div>
           </div>
-        </div>
-        <div class="about-containers">
+
+
           <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
@@ -319,8 +515,171 @@
               </button>
             </div>
           </div>
-        </div>
-        <div class="about-containers">
+
+
+          <div class="details-container color-container" data-category="android">
+            <div class="article-container">
+              <img
+                src="./assets/porto/ecoquest_placeholder_android_kotlin.png"
+                alt="EcoQuest"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">EcoQuest<br>(Kotlin)</h2>
+            
+            <ul class="project-description">
+              <li>Gamification with Quest Feature</li>
+              <li>User Ranking based on Finished Quests</li>
+              <li>Implementing MVVM Design Pattern</li>
+              <li>Firebase Integration</li>
+            </ul>
+          
+            <div class="btn-container-horizontal">
+              <input type="hidden" value="Android">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fakhrirasyids/EcoQuest-android'"
+              >
+                Github
+              </button>
+              <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://www.dropbox.com/scl/fi/ywofov126xxl6wj1aw9l6/EcoQuest.apk?rlkey=oquyd1jxgpegpf9malh96n0o3&st=qo69rt0f&dl=0'"
+            >
+              App Demo
+            </button>
+            </div>
+          </div>
+          <div class="details-container color-container" data-category="android">
+            <div class="article-container">
+              <img
+                src="./assets/porto/sakuku_placeholder_android_java.png"
+                alt="Sakuku"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Sakuku<br>(Kotlin)</h2>
+
+            <ul class="project-description">
+              <li>Goals and Money Tracker Features.</li>
+              <li>Account - Balance Integration.</li>
+              <li>Custom View with Java such as Diagrams.</li>
+              <li>Firebase Integration.</li>
+            </ul>
+
+            <div class="btn-container-horizontal">
+              <input type="hidden" value="Android">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fakhrirasyids/sakuku-android'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container" data-category="android">
+            <div class="article-container">
+              <img
+                src="./assets/porto/examine_placeholder_kotlin.png"
+                alt="Examine"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Examine<br>(Kotlin)</h2>
+
+            <ul class="project-description">
+              <li>QR Code Scanner.</li>
+              <li>AES Encryptor/Decryptor for the data.</li>
+              <li>Device ID (Android ID/IMEI) checker.</li>
+              <li>Rest API Integrations.</li>
+            </ul>
+
+            <div class="btn-container-horizontal">
+              <input type="hidden" value="Android">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fakhrirasyids/examine'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.dropbox.com/scl/fi/wegvgbrnahrc7okx449fd/Jukee.apk?rlkey=qsp2v3o8uqmnle5vmqt7rble5&dl=0'"
+              >
+                App Demo
+              </button>
+            </div>
+          </div>
+
+
+          <div class="details-container color-container" data-category="android">
+            <div class="article-container">
+              <img
+                src="./assets/porto/hangman_placeholder_java.png"
+                alt="Hangman"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Hangman<br>(Java)</h2>
+          
+            <div class="btn-container-horizontal">
+              <input type="hidden" value="Android">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fakhrirasyids/Hangman-android'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.dropbox.com/scl/fi/ywofov126xxl6wj1aw9l6/EcoQuest.apk?rlkey=oquyd1jxgpegpf9malh96n0o3&st=labjj70r&dl=0'"
+              >
+                App Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container" data-category="android">
+            <div class="article-container">
+              <img
+                src="./assets/porto/bankit_placeholder_kotlin.png"
+                alt="BankIT"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">BankIT<br>(Java)</h2>
+
+            <div class="btn-container-horizontal">
+              <input type="hidden" value="Android">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fakhrirasyids/BankIT-android'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container" data-category="android">
+            <div class="article-container">
+              <img
+                src="./assets/porto/laundry_placeholder_android_compose.png"
+                alt="Laundry"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Laundry<br>(Jetpack Compose)</h2>
+
+            <div class="btn-container-horizontal">
+              <input type="hidden" value="Android">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fakhrirasyids/laundry-android'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+
+
           <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
@@ -390,8 +749,8 @@
               </button>
             </div>
           </div>
-        </div>
-        <div class="about-containers">
+
+
           <div class="details-container color-container" data-category="android">
             <div class="article-container">
               <img
@@ -467,7 +826,36 @@
               </button>
             </div>
           </div>
-        </div>
+
+
+          <div class="details-container color-container" data-category="ios">
+            <div class="article-container">
+              <img
+                src="./assets/porto/gamography_placeholder_ios_swift.png"
+                alt="Gamography"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Gamography<br>(SwiftUI)</h2>
+
+
+            <ul class="project-description">
+              <li>Implementing MVVM Architecture.</li>
+              <li>Reactive Programming with Combine & RxSwift.</li>
+              <li>Rest API Integrations.</li>
+            </ul>
+
+            <div class="btn-container-horizontal">
+              <input type="hidden" value="Android">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fakhrirasyids/Gamography-IOS'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+
       </div>
       <img
         src="./assets/arrow.png"
