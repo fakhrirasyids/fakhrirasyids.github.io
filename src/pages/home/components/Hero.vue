@@ -4,10 +4,11 @@
     <div class="flex-1 text-center md:text-left space-y-4">
       <h1 class="text-4xl md:text-5xl font-bold text-text-primary-light dark:text-text-primary-dark">
         {{ $t('hero.title') }}
+        <span class="inline-block animate-waving-hand origin-bottom-left">👋</span>
       </h1>
 
-      <h2 class="text-2xl md:text-2xl font-normal text-text-secondary-light dark:text-text-secondary-dark">
-        {{ $t('hero.description') }}
+      <h2 class="text-2xl md:text-2xl font-normal text-text-secondary-light dark:text-text-secondary-dark min-h-[1.5em]">
+        {{ typedText }}<span class="border-r-2 border-text-secondary-light dark:border-text-secondary-dark animate-blink ml-1"></span>
       </h2>
 
       <!-- Download CV + Or + Projects -->
@@ -104,3 +105,80 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const descriptions = [
+  'Mobile Developer',
+  'Software Engineer'
+]
+
+const typedText = ref('')
+let currentIndex = 0
+let charIndex = 0
+let isDeleting = false
+
+const typeSpeed = 100
+const deleteSpeed = 60
+const pauseTime = 1000
+
+function typeLoop() {
+  const currentText = descriptions[currentIndex]
+
+  if (!isDeleting) {
+    typedText.value = currentText.substring(0, charIndex + 1)
+    charIndex++
+
+    if (charIndex === currentText.length) {
+      isDeleting = true
+      setTimeout(typeLoop, pauseTime)
+    } else {
+      setTimeout(typeLoop, typeSpeed)
+    }
+  } else {
+    typedText.value = currentText.substring(0, charIndex - 1)
+    charIndex--
+
+    if (charIndex === 0) {
+      isDeleting = false
+      currentIndex = (currentIndex + 1) % descriptions.length
+      setTimeout(typeLoop, 300)
+    } else {
+      setTimeout(typeLoop, deleteSpeed)
+    }
+  }
+}
+
+onMounted(() => {
+  typeLoop()
+})
+</script>
+
+
+<style scoped>
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-waving-hand {
+  animation: wave 2.2s infinite;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+</style>
