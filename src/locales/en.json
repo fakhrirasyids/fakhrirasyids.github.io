@@ -9,12 +9,13 @@
     },
     "hero": {
         "title": "Hi, I’m Fakhri 👋",
+        "check_projects": "See My Projects",
         "description": "Software Engineer - Mobile Developer"
     },
     "about": {
         "label": "About Me",
         "title": "Curious about me? Here you have it.",
-        "description": "In a professional setting, I’m a passionate developer with experience in full-stack development, building scalable, clean, and modern applications for various platforms and clients. I enjoy solving problems and turning ideas into reality."
+        "description": "I'm a <strong>Mobile Developer</strong> with <strong>over Three Years of Experience</strong> building applications across <strong>government, industrial, and enterprise sectors</strong>. I’m passionate about <strong>SOLID principles</strong> and <strong>Clean Architecture</strong>, and have contributed to both <strong>end-user products</strong> and internal <strong>mobile libraries (SDKs)</strong>. Skilled at working independently and collaboratively, I'm committed to continuously growing in the mobile engineering space.<br/><br/>My background includes a <strong>Bachelor's degree in Informatics Engineering</strong> from <strong>Universitas Dian Nuswantoro</strong>, with academic focus on <strong>machine learning</strong> and <strong>mobile cybersecurity</strong>. Outside of mobile, I’ve also developed <strong>web and desktop applications</strong> using a variety of modern technologies and frameworks, ensuring clean, maintainable, and scalable solutions."
     },
     "skills": {
         "title": "Technologies I’m Great At"

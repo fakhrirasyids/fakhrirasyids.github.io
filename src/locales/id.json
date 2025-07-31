@@ -9,12 +9,13 @@
     },
     "hero": {
         "title": "Halo, saya Fakhri 👋",
+        "check_projects": "Lihat Proyek Saya",
         "description": "Software Engineer - Mobile Developer"
     },
     "about": {
         "label": "Tentang Saya",
-        "title": "Penasaran tentang saya? Ini dia jawabannya.",
-        "description": "Secara profesional, saya adalah pengembang yang antusias dengan pengalaman dalam pengembangan full-stack, membangun aplikasi modern yang bersih dan skalabel untuk berbagai platform dan klien. Saya senang memecahkan masalah dan mewujudkan ide menjadi kenyataan."
+        "title": "Penasaran tentang saya? Ini dia.",
+        "description": "Saya adalah seorang <strong>Mobile Developer</strong> dengan <strong>lebih dari Tiga Tahun Pengalaman</strong> dalam membangun aplikasi di berbagai sektor seperti <strong>pemerintahan, industri, dan perusahaan</strong>. Saya memiliki ketertarikan besar pada <strong>SOLID Principles</strong> dan <strong>Clean Architecture</strong>, serta telah berkontribusi dalam pembuatan <strong>end-user products</strong> maupun <strong>library internal (SDK) untuk mobile</strong>. Terampil bekerja secara mandiri maupun dalam tim, saya berkomitmen untuk terus berkembang di dunia Mobile Engineering.<br/><br/>Latar belakang saya mencakup <strong>gelar Sarjana Teknik Informatika</strong> dari <strong>Universitas Dian Nuswantoro</strong>, dengan fokus akademik pada <strong>machine learning</strong> dan <strong>keamanan siber pada aplikasi mobile</strong>. Di luar pengembangan mobile, saya juga telah mengembangkan <strong>aplikasi web dan desktop</strong> menggunakan berbagai teknologi dan framework modern, dengan fokus pada solusi yang bersih, terstruktur, dan skalabel."
     },
     "skills": {
         "title": "Teknologi yang Saya Kuasai"

@@ -10,14 +10,28 @@
         {{ $t('hero.description') }}
       </h2>
 
-      <!-- Download CV Button with margin -->
-      <div class="mt-4">
+      <!-- Download CV + Or + Projects -->
+      <div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-start gap-2 sm:gap-4 text-sm">
+        <!-- Download CV -->
         <a
           href="/cv.pdf"
           target="_blank"
-          class="inline-block bg-green-light dark:bg-green-dark text-inverted-dark px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark transition"
+          class="inline-flex self-center sm:self-auto bg-green-light dark:bg-green-dark text-inverted-dark px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark transition"
         >
           {{ $t('header.download_cv') }}
+        </a>
+
+        <!-- Or -->
+        <span class="text-text-muted-light dark:text-text-muted-dark self-center sm:self-auto">
+          or
+        </span>
+
+        <!-- See Projects -->
+        <a
+          href="#projects"
+          class="inline-flex self-center sm:self-auto bg-inverted-light dark:bg-inverted-dark text-inverted-dark dark:text-inverted-light px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark transition"
+        >
+          {{ $t('hero.check_projects') }}
         </a>
       </div>
 
@@ -32,7 +46,7 @@
           <img
             src="/assets/icons/asset-github-icon.png"
             alt="GitHub"
-            class="w-6 h-6 transition duration-300 dark:invert dark:brightness-75"
+            class="w-6 h-6 transition duration-300 opacity-75 dark:invert dark:brightness-75"
           />
         </a>
 
@@ -45,7 +59,7 @@
           <img
             src="/assets/icons/asset-linkedin-icon.png"
             alt="LinkedIn"
-            class="w-6 h-6 transition duration-300 dark:invert dark:brightness-75"
+            class="w-6 h-6 transition duration-300 opacity-75 dark:invert dark:brightness-75"
           />
         </a>
 
@@ -58,7 +72,7 @@
           <img
             src="/assets/icons/asset-medium-icon.png"
             alt="Medium"
-            class="h-6 w-auto transition duration-300 dark:invert dark:brightness-75"
+            class="h-6 w-auto transition duration-300 opacity-75 dark:invert dark:brightness-75"
           />
         </a>
       </div>
