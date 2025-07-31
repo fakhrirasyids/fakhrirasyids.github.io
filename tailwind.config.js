@@ -56,6 +56,11 @@ export default {
           light: '#000000',
           dark: '#ffffff',
         },
+
+        green: {
+          light: '#67AC5C',
+          dark: '#10b981'
+        }
       },
     },
   },
