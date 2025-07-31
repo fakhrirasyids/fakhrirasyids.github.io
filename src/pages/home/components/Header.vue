@@ -12,28 +12,28 @@
         @click.prevent="scrollTo('#about')"
         class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark transition"
       >
-        About
+        {{ $t('header.about') }}
       </a>
       <a
         href="#experience"
         @click.prevent="scrollTo('#experience')"
         class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark transition"
       >
-        Experience
+        {{ $t('header.experience') }}
       </a>
       <a
         href="#projects"
         @click.prevent="scrollTo('#projects')"
         class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark transition"
       >
-        Projects
+        {{ $t('header.projects') }}
       </a>
       <a
         href="#contact"
         @click.prevent="scrollTo('#contact')"
         class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark transition"
       >
-        Contact
+        {{ $t('header.contact') }}
       </a>
 
       <div class="w-px h-6 bg-border-light dark:bg-border-dark mx-4"></div>
@@ -45,11 +45,24 @@
         aria-label="Toggle Theme"
       >
         <img
-          :src="isDark ? '/assets/icons/asset-icon-light-mode.svg' : '/assets/icons/asset-icon-dark-mode.svg'"
+          :src="isDark ? '/assets/icons/asset-icon-dark-mode.svg' : '/assets/icons/asset-icon-light-mode.svg'"
           alt="Theme Icon"
           class="w-6 h-6"
         />
       </button>
+
+      <!-- Language Switcher (Desktop) -->
+      <div class="relative">
+        <select
+        @change="switchLanguage"
+        :value="locale"
+          class="bg-transparent text-text-muted-light dark:text-text-muted-dark border border-border-light dark:border-border-dark px-2 py-1 rounded-md text-sm"
+        >
+          <option value="en">🇺🇸 EN</option>
+          <option value="id">🇮🇩 ID</option>
+        </select>
+      </div>
+
 
       <!-- Download CV -->
       <a
@@ -57,7 +70,7 @@
         target="_blank"
         class="bg-inverted-light dark:bg-inverted-dark text-inverted-dark dark:text-inverted-light px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark transition"
       >
-        Download CV
+        {{ $t('header.download_cv') }}
       </a>
     </nav>
 
@@ -123,10 +136,10 @@
         </div>
 
         <nav class="flex flex-col gap-4 mt-6">
-          <a href="#about" @click.prevent="scrollTo('#about')" class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">About</a>
-          <a href="#experience" @click.prevent="scrollTo('#experience')" class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">Experience</a>
-          <a href="#projects" @click.prevent="scrollTo('#projects')" class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">Projects</a>
-          <a href="#contact" @click.prevent="scrollTo('#contact')" class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">Contact</a>
+          <a href="#about" @click.prevent="scrollTo('#about')" class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">{{ $t('header.about') }}</a>
+          <a href="#experience" @click.prevent="scrollTo('#experience')" class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">{{ $t('header.experience') }}</a>
+          <a href="#projects" @click.prevent="scrollTo('#projects')" class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">{{ $t('header.projects') }}</a>
+          <a href="#contact" @click.prevent="scrollTo('#contact')" class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">{{ $t('header.contact') }}</a>
 
           <div class="h-px w-full bg-border-light dark:bg-border-dark my-4"></div>
 
@@ -136,13 +149,26 @@
             class="flex items-center justify-between w-full hover:bg-border-dark rounded-lg transition"
             aria-label="Toggle Theme"
           >
-            <span class="text-sm text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">Switch Theme</span>
+            <span class="text-sm text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">{{ $t('header.switch_theme') }}</span>
             <img
               :src="isDark ? '/assets/icons/asset-icon-light-mode.svg' : '/assets/icons/asset-icon-dark-mode.svg'"
               alt="Theme Icon"
               class="w-6 h-6"
             />
           </button>
+
+          <!-- Language Switch (Mobile) -->
+        <div class="mt-2">
+          <select
+            @change="switchLanguage"
+            :value="locale"
+            class="w-full bg-transparent text-text-muted-light dark:text-text-muted-dark border border-border-light dark:border-border-dark px-3 py-2 rounded-md text-sm"
+          >
+            <option value="en">🇺🇸 EN</option>
+            <option value="id">🇮🇩 ID</option>
+          </select>
+        </div>
+
 
           <!-- CV -->
           <a
@@ -151,7 +177,7 @@
             class="mt-4 text-center bg-inverted-light dark:bg-inverted-dark text-inverted-dark dark:text-inverted-light px-4 py-2 rounded-full font-medium hover:bg-border-dark transition"
             @click="isOpen = false"
           >
-            Download CV
+            {{ $t('header.download_cv') }}
           </a>
         </nav>
       </div>
@@ -162,8 +188,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useDarkMode } from '@/composables/useDarkMode'
+import { useI18n } from 'vue-i18n'
 
 const isOpen = ref(false)
+const { isDark, toggleDark } = useDarkMode()
+const { locale } = useI18n()
 
 function scrollTo(selector: string) {
   const el = document.querySelector(selector)
@@ -173,5 +202,11 @@ function scrollTo(selector: string) {
   }
 }
 
-const { isDark, toggleDark } = useDarkMode()
+const switchLanguage = (event: Event) => {
+  const target = event.target as HTMLSelectElement | null
+  if (target) {
+    locale.value = target.value
+    localStorage.setItem('locale', target.value)
+  }
+}
 </script>

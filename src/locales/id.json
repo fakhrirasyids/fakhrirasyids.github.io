@@ -1,0 +1,55 @@
+{
+    "header": {
+        "about": "Tentang",
+        "experience": "Pengalaman",
+        "projects": "Proyek",
+        "contact": "Kontak",
+        "switch_theme": "Ganti Tema",
+        "download_cv": "Unduh CV"
+    },
+    "hero": {
+        "title": "Halo, saya Fakhri 👋",
+        "description": "Saya seorang full-stack developer yang fokus membangun produk digital yang bersih dan skalabel.",
+        "location": "📍 Semarang, Indonesia"
+    },
+    "about": {
+        "label": "Tentang Saya",
+        "title": "Penasaran tentang saya? Ini dia jawabannya.",
+        "description": "Secara profesional, saya adalah pengembang yang antusias dengan pengalaman dalam pengembangan full-stack, membangun aplikasi modern yang bersih dan skalabel untuk berbagai platform dan klien. Saya senang memecahkan masalah dan mewujudkan ide menjadi kenyataan."
+    },
+    "skills": {
+        "title": "Teknologi yang Saya Kuasai"
+    },
+    "experience": {
+        "title": "Pengalaman",
+        "job_title": "Sr. Frontend Developer @ Freelanxx",
+        "period": "Nov 2021 – Sekarang",
+        "responsibilities": [
+        "Memimpin arsitektur design system",
+        "Mengoptimalkan rendering SPA"
+        ]
+    },
+    "projects": {
+        "title": "Proyek",
+        "items": [
+        {
+            "name": "Space Attack",
+            "description": "Sebuah game digital modern...",
+            "technologies": ["Kotlin", "Jetpack Compose"]
+        }
+        ]
+    },
+    "contact": {
+        "title": "Hubungi Saya",
+        "description": "Mari bekerja sama! Tinggalkan pesan di bawah atau kirim email langsung.",
+        "email_label": "Email",
+        "phone_label": "Telepon"
+    },
+    "footer": {
+        "copyright": "© 2025 II Dirancang dan dikodekan dengan ❤️ oleh Fakhri Rasyid Saputro"
+    },
+    "notfound": {
+        "message": "Ups! Halaman yang kamu cari tidak ditemukan.",
+        "go_home": "Kembali ke Beranda"
+    }
+}

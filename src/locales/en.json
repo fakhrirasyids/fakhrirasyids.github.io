@@ -1,0 +1,55 @@
+{
+    "header": {
+        "about": "About",
+        "experience": "Experience",
+        "projects": "Projects",
+        "contact": "Contact",
+        "switch_theme": "Switch Theme",
+        "download_cv": "Download CV"
+    },
+    "hero": {
+        "title": "Hi, I’m Fakhri 👋",
+        "description": "I'm a full-stack developer focused on building clean and scalable digital products.",
+        "location": "📍 Semarang, Indonesia"
+    },
+    "about": {
+        "label": "About Me",
+        "title": "Curious about me? Here you have it.",
+        "description": "In a professional setting, I’m a passionate developer with experience in full-stack development, building scalable, clean, and modern applications for various platforms and clients. I enjoy solving problems and turning ideas into reality."
+    },
+    "skills": {
+        "title": "Technologies I’m Great At"
+    },
+    "experience": {
+        "title": "Experience",
+        "job_title": "Sr. Frontend Developer @ Freelanxx",
+        "period": "Nov 2021 – Present",
+        "responsibilities": [
+            "Lead design system architecture",
+            "Optimized SPA rendering"
+        ]
+    },
+    "projects": {
+        "title": "Projects",
+        "items": [
+            {
+                "name": "Space Attack",
+                "description": "A modern digital game...",
+                "technologies": ["Kotlin", "Jetpack Compose"]
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contact Me",
+        "description": "Let’s work together! Drop me a line below or email me directly.",
+        "email_label": "Email",
+        "phone_label": "Phone"
+    },
+    "footer": {
+        "copyright": "© 2025 II Designed and coded with ❤️ by Fakhri Rasyid Saputro"
+    },
+    "notfound": {
+        "message": "Oops! The page you're looking for doesn't exist.",
+        "go_home": "Go Home"
+    }
+}
