@@ -9,6 +9,7 @@
     },
     "hero": {
         "title": "Hi, I’m Fakhri",
+        "or": "or",
         "check_projects": "See My Projects"
     },
     "about": {
@@ -21,13 +22,58 @@
         "title": "The skills, tools and technologies I am really good at:"
     },
     "experience": {
-        "title": "Experience",
-        "job_title": "Sr. Frontend Developer @ Freelanxx",
-        "period": "Nov 2021 – Present",
+    "label": "Experience",
+    "title": "Here is a quick summary of my most recent experiences:",
+    "items": [
+        {
+        "title": "Mobile Developer",
+        "company": "Fischer Medical Ventures",
+        "location": "Central Region, Singapore",
+        "period": "September 2024 – March 2025",
         "responsibilities": [
-            "Lead design system architecture",
-            "Optimized SPA rendering"
-        ]
+            "Developed production-grade Android applications that integrated with medical hardware using USB and Bluetooth Low Energy (BLE), enabling real-time device communication and control.",
+            "Led technical research initiatives into BLE protocols, video conferencing SDKs, and on-device machine learning models (TensorFlow Lite) for real-time diagnostics and embedded AI use cases.",
+            "Collaborated with cross-functional teams including firmware engineers and backend developers to deliver high-reliability Android apps for medical use."
+        ],
+        "logo": "/assets/logo/asset-fmv-logo.png"
+        },
+        {
+        "title": "Android Engineer Intern",
+        "company": "Traveloka (Travel Activities Department)",
+        "location": "Tangerang, Indonesia",
+        "period": "February 2024 – June 2024",
+        "responsibilities": [
+            "Implemented new features using Clean MVVM & MVP architecture and developed unit/UI tests achieving over 70% test coverage in Kotlin and Java codebases.",
+            "Refactored legacy modules and resolved bugs to enhance stability and performance of the Travel Activities section within the Traveloka Android app.",
+            "Researched and proposed integration strategies for Jetpack Compose and modern Android libraries to improve developer efficiency and UI responsiveness."
+        ],
+        "logo": "/assets/logo/asset-traveloka-logo.png"
+        },
+        {
+        "title": "Mobile Developer",
+        "company": "Freelanxx",
+        "location": "Semarang, Indonesia",
+        "period": "January 2022 – January 2024",
+        "responsibilities": [
+            "Designed, developed, and deployed cross-platform mobile applications using Kotlin, Java, and Flutter for diverse clients across healthcare, education, and retail sectors.",
+            "Built RESTful API backends using Node.js and Laravel to support mobile features such as authentication, real-time updates, and secure data storage.",
+            "Led agile-based development sprints, coordinated with remote teams, and maintained version control using GitHub and GitLab CI/CD pipelines."
+        ],
+        "logo": "/assets/logo/asset-freelanxx-logo.png"
+        },
+        {
+        "title": "Mobile Developer Intern",
+        "company": "Schoters (Project-Based Internship)",
+        "location": "Indonesia",
+        "period": "July 2022 – August 2022",
+        "responsibilities": [
+            "Built and maintained Android application features using Java and Kotlin, integrated Firebase services including Realtime Database and Crashlytics.",
+            "Practiced version control (Git) and participated in collaborative code reviews as part of a remote internship program simulating real-world development environments.",
+            "Optimized existing app performance through profiling and refactoring efforts aligned with Clean Architecture principles."
+        ],
+        "logo": "/assets/logo/asset-schoters-logo.jpg"
+        }
+    ]
     },
     "projects": {
         "title": "Projects",

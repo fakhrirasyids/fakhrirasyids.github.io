@@ -2,17 +2,17 @@
   <section class="py-12 px-6 max-w-6xl mx-auto h-auto md:h-[600px] flex flex-col md:flex-row md:items-center gap-10">
     <!-- Left content -->
     <div class="flex-1 text-center md:text-left space-y-4">
-      <h1 class="text-4xl md:text-5xl font-bold text-text-primary-light dark:text-text-primary-dark">
+      <h1 class="text-4xl md:text-5xl font-bold text-text-primary-light dark:text-text-primary-dark transition">
         {{ $t('hero.title') }}
         <span class="inline-block animate-waving-hand origin-bottom-left">👋</span>
       </h1>
 
-      <h2 class="text-2xl md:text-2xl font-normal text-text-secondary-light dark:text-text-secondary-dark min-h-[1.5em]">
+      <h2 class="text-2xl md:text-2xl font-normal text-text-secondary-light dark:text-text-secondary-dark min-h-[1.5em] transition">
         {{ typedText }}<span class="border-r-2 border-text-secondary-light dark:border-text-secondary-dark animate-blink ml-1"></span>
       </h2>
 
       <!-- Download CV + Or + Projects -->
-      <div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-start gap-2 sm:gap-4 text-sm">
+      <div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-start gap-2 sm:gap-4 text-sm  py-6">
         <!-- Download CV -->
         <a
           href="/cv.pdf"
@@ -24,16 +24,17 @@
 
         <!-- Or -->
         <span class="text-text-muted-light dark:text-text-muted-dark self-center sm:self-auto">
-          or
+          {{ $t('hero.or') }}
         </span>
 
         <!-- See Projects -->
         <a
           href="#projects"
-          class="inline-flex self-center sm:self-auto bg-inverted-light dark:bg-inverted-dark text-inverted-dark dark:text-inverted-light px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark transition"
+          class="inline-flex self-center sm:self-auto items-center border border-border-light dark:border-border-dark text-text-primary-light dark:text-text-primary-dark px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark hover:text-primary-dark dark:hover:text-primary-light transition duration-200"
         >
           {{ $t('hero.check_projects') }}
         </a>
+
       </div>
 
       <!-- Socials -->
@@ -42,12 +43,12 @@
           href="https://github.com/fakhrirasyids"
           target="_blank"
           rel="noopener noreferrer"
-          class="block"
+          class="block transition-transform duration-300 hover:scale-110"
         >
           <img
             src="/assets/icons/asset-github-icon.png"
             alt="GitHub"
-            class="w-6 h-6 transition duration-300 opacity-75 dark:invert dark:brightness-75"
+            class="w-6 h-6 transition duration-300 opacity-75 hover:opacity-100 dark:invert dark:brightness-75"
           />
         </a>
 
@@ -55,12 +56,12 @@
           href="https://linkedin.com/in/fakhrirasyids"
           target="_blank"
           rel="noopener noreferrer"
-          class="block"
+          class="block transition-transform duration-300 hover:scale-110"
         >
           <img
             src="/assets/icons/asset-linkedin-icon.png"
             alt="LinkedIn"
-            class="w-6 h-6 transition duration-300 opacity-75 dark:invert dark:brightness-75"
+            class="w-6 h-6 transition duration-300 opacity-75 hover:opacity-100 dark:invert dark:brightness-75"
           />
         </a>
 
@@ -68,12 +69,12 @@
           href="https://medium.com/@fakhrirasyids"
           target="_blank"
           rel="noopener noreferrer"
-          class="block"
+          class="block transition-transform duration-300 hover:scale-110"
         >
           <img
             src="/assets/icons/asset-medium-icon.png"
             alt="Medium"
-            class="h-6 w-auto transition duration-300 opacity-75 dark:invert dark:brightness-75"
+            class="h-6 w-auto transition duration-300 opacity-75 hover:opacity-100 dark:invert dark:brightness-75"
           />
         </a>
       </div>

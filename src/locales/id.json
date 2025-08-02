@@ -9,6 +9,7 @@
     },
     "hero": {
         "title": "Halo, saya Fakhri",
+        "or": "atau",
         "check_projects": "Lihat Proyek Saya"
     },
     "about": {
@@ -18,16 +19,61 @@
     },
     "skills": {
         "label": "Keahlian",
-        "title": "Teknologi yang Saya Kuasai"
+        "title": "Keahlian, alat, dan teknologi yang saya kuasai dengan baik:"
     },
     "experience": {
-        "title": "Pengalaman",
-        "job_title": "Sr. Frontend Developer @ Freelanxx",
-        "period": "Nov 2021 – Sekarang",
+    "label": "Pengalaman",
+    "title": "Berikut adalah ringkasan singkat dari pengalaman terbaru saya:",
+    "items": [
+        {
+        "title": "Mobile Developer",
+        "company": "Fischer Medical Ventures",
+        "location": "Central Region, Singapura",
+        "period": "September 2024 – Maret 2025",
         "responsibilities": [
-        "Memimpin arsitektur design system",
-        "Mengoptimalkan rendering SPA"
-        ]
+            "Mengembangkan aplikasi Android tingkat produksi yang terintegrasi dengan perangkat keras medis menggunakan USB dan Bluetooth Low Energy (BLE), memungkinkan komunikasi dan kontrol perangkat secara real-time.",
+            "Memimpin inisiatif riset teknis terkait protokol BLE, SDK video konferensi, dan model machine learning on-device (TensorFlow Lite) untuk diagnosis real-time dan penerapan AI tersemat.",
+            "Berkoordinasi dengan tim lintas fungsi termasuk insinyur firmware dan pengembang backend untuk mengirimkan aplikasi Android yang andal untuk penggunaan medis."
+        ],
+        "logo": "/assets/logo/asset-fmv-logo.png"
+        },
+        {
+        "title": "Android Engineer Intern",
+        "company": "Traveloka (Departemen Aktivitas Perjalanan)",
+        "location": "Tangerang, Indonesia",
+        "period": "Februari 2024 – Juni 2024",
+        "responsibilities": [
+            "Mengimplementasikan fitur baru menggunakan arsitektur Clean MVVM & MVP serta mengembangkan pengujian unit/UI dengan cakupan pengujian lebih dari 70% pada basis kode Kotlin dan Java.",
+            "Melakukan refactor pada modul lama dan memperbaiki bug untuk meningkatkan stabilitas dan performa pada bagian Aktivitas Perjalanan di aplikasi Android Traveloka.",
+            "Melakukan riset dan mengusulkan strategi integrasi Jetpack Compose dan pustaka Android modern untuk meningkatkan efisiensi pengembangan dan responsivitas UI."
+        ],
+        "logo": "/assets/logo/asset-traveloka-logo.png"
+        },
+        {
+        "title": "Mobile Developer",
+        "company": "Freelanxx",
+        "location": "Semarang, Indonesia",
+        "period": "Januari 2022 – Januari 2024",
+        "responsibilities": [
+            "Merancang, mengembangkan, dan menerapkan aplikasi mobile lintas platform menggunakan Kotlin, Java, dan Flutter untuk berbagai klien di sektor kesehatan, pendidikan, dan ritel.",
+            "Membangun backend API RESTful menggunakan Node.js dan Laravel untuk mendukung fitur-fitur mobile seperti autentikasi, pembaruan real-time, dan penyimpanan data yang aman.",
+            "Memimpin sprint pengembangan berbasis agile, berkoordinasi dengan tim jarak jauh, dan mengelola versi kode menggunakan GitHub dan pipeline CI/CD GitLab."
+        ],
+        "logo": "/assets/logo/asset-freelanxx-logo.png"
+        },
+        {
+        "title": "Mobile Developer Intern",
+        "company": "Schoters (Magang Berbasis Proyek)",
+        "location": "Indonesia",
+        "period": "Juli 2022 – Agustus 2022",
+        "responsibilities": [
+            "Mengembangkan dan memelihara fitur aplikasi Android menggunakan Java dan Kotlin, serta mengintegrasikan layanan Firebase termasuk Realtime Database dan Crashlytics.",
+            "Menerapkan kontrol versi (Git) dan terlibat dalam code review kolaboratif dalam program magang jarak jauh yang mensimulasikan lingkungan pengembangan nyata.",
+            "Mengoptimalkan performa aplikasi yang ada melalui profiling dan refactoring sesuai prinsip Clean Architecture."
+        ],
+        "logo": "/assets/logo/asset-schoters-logo.jpg"
+        }
+    ]
     },
     "projects": {
         "title": "Proyek",
