@@ -89,10 +89,11 @@
         "title": "Contact Me",
         "description": "Let’s work together! Drop me a line below or email me directly.",
         "email_label": "Email",
-        "phone_label": "Phone"
+        "phone_label": "Phone / Whatsapp",
+        "find_me_at": "Or Find me at:"
     },
     "footer": {
-        "copyright": "© 2025 II Designed and coded with ❤️ by Fakhri Rasyid Saputro"
+        "copyright": "© 2025 I Designed and coded by Fakhri Rasyid Saputro"
     },
     "notfound": {
         "message": "Oops! The page you're looking for doesn't exist.",

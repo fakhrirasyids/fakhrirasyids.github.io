@@ -89,10 +89,11 @@
         "title": "Hubungi Saya",
         "description": "Mari bekerja sama! Tinggalkan pesan di bawah atau kirim email langsung.",
         "email_label": "Email",
-        "phone_label": "Telepon"
+        "phone_label": "Telepon / Whatsapp",
+        "find_me_at": "Atau Temukan saya di:"
     },
     "footer": {
-        "copyright": "© 2025 II Dirancang dan dikodekan dengan ❤️ oleh Fakhri Rasyid Saputro"
+        "copyright": "© 2025 I Dirancang dan dikodekan oleh Fakhri Rasyid Saputro"
     },
     "notfound": {
         "message": "Ups! Halaman yang kamu cari tidak ditemukan.",

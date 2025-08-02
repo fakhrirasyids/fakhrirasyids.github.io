@@ -1,5 +1,8 @@
 <template>
-  <header class="w-full px-6 py-4 flex justify-between items-center relative z-50">
+  <header
+    class="sticky top-0 w-full px-6 py-4 flex justify-between items-center z-50
+           bg-background-light dark:bg-background-dark shadow-sm transition duration-300"
+  >
     <!-- Logo -->
     <div class="text-2xl font-bold tracking-wide text-text-primary-light dark:text-text-primary-dark">
       &lt;fakhrirasyids /&gt;
@@ -109,7 +112,8 @@
     <transition name="slide">
       <div
         v-if="isOpen"
-        class="bg-surface-light dark:bg-surface-dark fixed top-0 right-0 h-full w-[80vw] max-w-sm bg-surface-dark text-text-primary-dark z-50 p-6 shadow-lg"
+        class="fixed top-0 right-0 h-full w-[80vw] max-w-sm z-50 p-6 shadow-lg
+              backdrop-blur-md bg-surface-light/80 dark:bg-surface-dark/80 text-text-primary-dark"
       >
         <div class="flex justify-between items-center">
           <div class="text-2xl font-bold tracking-wide text-text-primary-light dark:text-text-primary-dark">&lt;fakhrirasyids /&gt;</div>
@@ -151,7 +155,7 @@
           >
             <span class="text-sm text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">{{ $t('header.switch_theme') }}</span>
             <img
-              :src="isDark ? '/assets/icons/asset-icon-light-mode.svg' : '/assets/icons/asset-icon-dark-mode.svg'"
+              :src="isDark ? '/assets/icons/asset-icon-dark-mode.svg' : '/assets/icons/asset-icon-light-mode.svg'"
               alt="Theme Icon"
               class="w-6 h-6"
             />
@@ -210,3 +214,30 @@ const switchLanguage = (event: Event) => {
   }
 }
 </script>
+
+<style scoped>
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slide-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-enter-to {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.slide-leave-from {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.slide-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+</style>
