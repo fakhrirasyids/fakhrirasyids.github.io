@@ -1,9 +1,9 @@
 {
     "header": {
-        "about": "About",
+        "home": "Home",
         "experience": "Experience",
         "projects": "Projects",
-        "contact": "Contact",
+        "articles": "Articles",
         "switch_theme": "Switch Theme",
         "download_cv": "Download CV"
     },
@@ -20,6 +20,10 @@
     "skills": {
         "label": "Skills",
         "title": "The skills, tools and technologies I am really good at:"
+    },
+    "articles": {
+        "label": "Articles",
+        "title": "Some thoughts and writings I've published recently:"
     },
     "experience": {
     "label": "Experience",

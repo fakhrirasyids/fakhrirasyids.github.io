@@ -1,9 +1,9 @@
 {
     "header": {
-        "about": "Tentang",
+        "home": "Beranda",
         "experience": "Pengalaman",
         "projects": "Proyek",
-        "contact": "Kontak",
+        "articles": "Artikel",
         "switch_theme": "Ganti Tema",
         "download_cv": "Unduh CV"
     },
@@ -20,6 +20,10 @@
     "skills": {
         "label": "Keahlian",
         "title": "Keahlian, alat, dan teknologi yang saya kuasai dengan baik:"
+    },
+    "articles": {
+        "label": "Artikel",
+        "title": "Beberapa pemikiran dan tulisan yang baru-baru ini saya publikasikan:"
     },
     "experience": {
     "label": "Pengalaman",

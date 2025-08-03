@@ -1,8 +1,10 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <div class="min-h-screen">
+  <div>
+    <LoadingPage />
     <router-view />
   </div>
 </template>
+
+<script setup>
+import LoadingPage from '@/pages/loading/LoadingPage.vue'
+</script>

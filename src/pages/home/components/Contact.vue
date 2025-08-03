@@ -9,7 +9,7 @@
       </span>
     </div>
 
-    <p class="text-text-secondary-light dark:text-text-secondary-dark mb-8 max-w-xl mx-auto">
+    <p class="text-text-secondary-light dark:text-text-secondary-dark mb-8 max-w-xl mx-auto mt-6">
       {{ $t('contact.description') }}
     </p>
 
@@ -42,7 +42,6 @@
     </p>
 
     <!-- Socials -->
-        <!-- Socials -->
         <div class="flex justify-center md:justify-center gap-5">
           <a
             href="https://github.com/fakhrirasyids"

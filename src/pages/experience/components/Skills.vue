@@ -11,7 +11,7 @@
       </div>
 
       <!-- Title -->
-      <h2 class="text-l md:text-xl font-medium mb-8 text-text-primary-light dark:text-text-primary-dark py-4">
+      <h2 class="text-l md:text-xl font-medium mb-8 text-text-primary-light dark:text-text-primary-dark py-4 mt-6">
         {{ $t('skills.title') }}
       </h2>
 

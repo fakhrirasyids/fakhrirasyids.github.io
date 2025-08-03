@@ -102,7 +102,8 @@
         <div
           class="absolute bg-onSurface-light dark:bg-surfaceVariant-dark z-0"
           :class="[
-            'w-[240px] h-[210px] translate-y-[20px]',
+            'border-[10px] border-background-light dark:border-background-dark',
+            'w-[260px] h-[220px] translate-y-[20px]',
             'md:w-[360px] md:h-[360px] md:translate-x-[20px] md:translate-y-[20px]',
             'rounded-none transition-all duration-300'
           ]"
@@ -253,7 +254,7 @@ onMounted(() => {
 }
 
 .bg-blink-cell {
-  background-color: #f3f4f6;
+  background-color: #ECEEF1;
   opacity: 0;
   transition: opacity 0.3s ease;
 }

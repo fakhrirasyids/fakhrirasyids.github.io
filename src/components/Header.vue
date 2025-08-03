@@ -4,44 +4,43 @@
            bg-background-light dark:bg-background-dark shadow-sm transition duration-300"
   >
     <!-- Logo -->
-    <div class="text-2xl font-bold tracking-wide text-text-primary-light dark:text-text-primary-dark">
+    <RouterLink
+      to="/"
+      class="text-2xl font-bold tracking-wide text-text-primary-light dark:text-text-primary-dark"
+    >
       &lt;fakhrirasyids /&gt;
-    </div>
+    </RouterLink>
 
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center space-x-6">
-      <a
-        href="#about"
-        @click.prevent="scrollTo('#about')"
+      <RouterLink
+        to="/"
         class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark transition"
       >
-        {{ $t('header.about') }}
-      </a>
-      <a
-        href="#experience"
-        @click.prevent="scrollTo('#experience')"
+        {{ $t('header.home') }}
+      </RouterLink>
+      <RouterLink
+        to="/experience"
         class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark transition"
       >
         {{ $t('header.experience') }}
-      </a>
-      <a
-        href="#projects"
-        @click.prevent="scrollTo('#projects')"
+      </RouterLink>
+      <RouterLink
+        to="/projects"
         class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark transition"
       >
         {{ $t('header.projects') }}
-      </a>
-      <a
-        href="#contact"
-        @click.prevent="scrollTo('#contact')"
+      </RouterLink>
+      <RouterLink
+        to="/articles"
         class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark transition"
       >
-        {{ $t('header.contact') }}
-      </a>
+        {{ $t('header.articles') }}
+      </RouterLink>
 
       <div class="w-px h-6 bg-border-light dark:bg-border-dark mx-4"></div>
 
-      <!-- Theme Toggle (Desktop) -->
+      <!-- Theme Toggle -->
       <button
         @click="toggleDark"
         class="flex items-center justify-center w-10 h-10 hover:bg-border-light dark:hover:bg-border-dark rounded-full transition"
@@ -54,18 +53,15 @@
         />
       </button>
 
-      <!-- Language Switcher (Desktop) -->
-      <div class="relative">
-        <select
+      <!-- Language Switch -->
+      <select
         @change="switchLanguage"
         :value="locale"
-          class="bg-transparent text-text-muted-light dark:text-text-muted-dark border border-border-light dark:border-border-dark px-2 py-1 rounded-md text-sm"
-        >
-          <option value="en">🇺🇸 EN</option>
-          <option value="id">🇮🇩 ID</option>
-        </select>
-      </div>
-
+        class="bg-transparent text-text-muted-light dark:text-text-muted-dark border border-border-light dark:border-border-dark px-2 py-1 rounded-md text-sm"
+      >
+        <option value="en">🇺🇸 EN</option>
+        <option value="id">🇮🇩 ID</option>
+      </select>
 
       <!-- Download CV -->
       <a
@@ -77,27 +73,15 @@
       </a>
     </nav>
 
-    <!-- Mobile Nav Toggle -->
+    <!-- Mobile Toggle Button -->
     <button
       class="md:hidden text-2xl z-50 text-text-primary-light dark:text-text-primary-dark"
       @click="isOpen = true"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"
-        />
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
-
 
     <!-- Backdrop -->
     <transition name="fade">
@@ -116,38 +100,33 @@
               backdrop-blur-md bg-surface-light/80 dark:bg-surface-dark/80 text-text-primary-dark"
       >
         <div class="flex justify-between items-center">
-          <div class="text-2xl font-bold tracking-wide text-text-primary-light dark:text-text-primary-dark">&lt;fakhrirasyids /&gt;</div>
+          <RouterLink
+            to="/"
+            class="text-2xl font-bold tracking-wide text-text-primary-light dark:text-text-primary-dark"
+            @click="isOpen = false"
+          >
+            &lt;fakhrirasyids /&gt;
+          </RouterLink>
           <button
             @click="isOpen = false"
             aria-label="Close"
             class="text-text-primary-light dark:text-text-primary-dark"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
         <nav class="flex flex-col gap-4 mt-6">
-          <a href="#about" @click.prevent="scrollTo('#about')" class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">{{ $t('header.about') }}</a>
-          <a href="#experience" @click.prevent="scrollTo('#experience')" class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">{{ $t('header.experience') }}</a>
-          <a href="#projects" @click.prevent="scrollTo('#projects')" class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">{{ $t('header.projects') }}</a>
-          <a href="#contact" @click.prevent="scrollTo('#contact')" class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark">{{ $t('header.contact') }}</a>
+          <RouterLink to="/" class="nav-mobile" @click="isOpen = false">{{ $t('header.home') }}</RouterLink>
+          <RouterLink to="/experience" class="nav-mobile" @click="isOpen = false">{{ $t('header.experience') }}</RouterLink>
+          <RouterLink to="/projects" class="nav-mobile" @click="isOpen = false">{{ $t('header.projects') }}</RouterLink>
+          <RouterLink to="/articles" class="nav-mobile" @click="isOpen = false">{{ $t('header.articles') }}</RouterLink>
 
           <div class="h-px w-full bg-border-light dark:bg-border-dark my-4"></div>
 
-          <!-- Theme Switch (Mobile) -->
+          <!-- Theme Switch -->
           <button
             @click="toggleDark"
             class="flex items-center justify-between w-full hover:bg-border-dark rounded-lg transition"
@@ -161,18 +140,15 @@
             />
           </button>
 
-          <!-- Language Switch (Mobile) -->
-        <div class="mt-2">
+          <!-- Language -->
           <select
             @change="switchLanguage"
             :value="locale"
-            class="w-full bg-transparent text-text-muted-light dark:text-text-muted-dark border border-border-light dark:border-border-dark px-3 py-2 rounded-md text-sm"
+            class="w-full mt-2 bg-transparent text-text-muted-light dark:text-text-muted-dark border border-border-light dark:border-border-dark px-3 py-2 rounded-md text-sm"
           >
             <option value="en">🇺🇸 EN</option>
             <option value="id">🇮🇩 ID</option>
           </select>
-        </div>
-
 
           <!-- CV -->
           <a
@@ -198,44 +174,33 @@ const isOpen = ref(false)
 const { isDark, toggleDark } = useDarkMode()
 const { locale } = useI18n()
 
-function scrollTo(selector: string) {
-  const el = document.querySelector(selector)
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth' })
-    isOpen.value = false
-  }
-}
-
 const switchLanguage = (event: Event) => {
-  const target = event.target as HTMLSelectElement | null
-  if (target) {
-    locale.value = target.value
-    localStorage.setItem('locale', target.value)
-  }
+  const target = event.target as HTMLSelectElement
+  locale.value = target.value
+  localStorage.setItem('locale', target.value)
 }
 </script>
 
 <style scoped>
+.nav-mobile {
+  @apply text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark transition;
+}
 .slide-enter-active,
 .slide-leave-active {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
 .slide-enter-from {
   transform: translateX(100%);
   opacity: 0;
 }
-
 .slide-enter-to {
   transform: translateX(0%);
   opacity: 1;
 }
-
 .slide-leave-from {
   transform: translateX(0%);
   opacity: 1;
 }
-
 .slide-leave-to {
   transform: translateX(100%);
   opacity: 0;
