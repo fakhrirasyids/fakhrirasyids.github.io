@@ -61,6 +61,7 @@
       >
         <option value="en">🇺🇸 EN</option>
         <option value="id">🇮🇩 ID</option>
+        <option value="zh">🇨🇳 简体中文</option>
       </select>
 
       <!-- Download CV -->
@@ -148,6 +149,7 @@
           >
             <option value="en">🇺🇸 EN</option>
             <option value="id">🇮🇩 ID</option>
+            <option value="zh">🇨🇳 简体中文</option>
           </select>
 
           <!-- CV -->

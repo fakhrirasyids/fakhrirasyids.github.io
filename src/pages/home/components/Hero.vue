@@ -46,12 +46,12 @@
             {{ $t('hero.or') }}
           </span>
 
-          <a
-            href="#projects"
+          <RouterLink
+            to="/projects"
             class="inline-flex self-center sm:self-auto items-center border border-border-light dark:border-border-dark text-text-primary-light dark:text-text-primary-dark px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark bg-background-light dark:bg-background-dark hover:text-primary-dark dark:hover:text-primary-light transition duration-200"
           >
             {{ $t('hero.check_projects') }}
-          </a>
+          </RouterLink>
         </div>
 
         <!-- Socials -->
@@ -254,11 +254,11 @@ onMounted(() => {
 }
 
 .bg-blink-cell {
-  background-color: #ECEEF1;
+  background-color: #E2E6EC;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 .dark .bg-blink-cell {
-  background-color: #12162a;
+  background-color: #1A1F36;
 }
 </style>

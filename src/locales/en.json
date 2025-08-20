@@ -80,20 +80,49 @@
     ]
     },
     "projects": {
-        "title": "Projects",
-        "items": [
-            {
-                "name": "Space Attack",
-                "description": "A modern digital game...",
-                "technologies": ["Kotlin", "Jetpack Compose"]
-            }
-        ]
+        "label": "Projects",
+        "title": "Some of the projects I’ve worked on:",
+        "platform": "Platform",
+        "technologies": "Technologies",
+        "clear": "Clear",
+        "none": "No Projects Found.",
+        "filter": "Filter",
+        "apply": "Apply",
+        "click_full_detail": "click to see full detail",
+        "showing": "Showing {shown} of {total} projects",
+        "items": {
+            "spaceAttack_kmp_swiftui": "Arcade shooter I wrote once and shipped to iOS and Android. The core loop, scoring rules, and leaderboard logic live in Kotlin Multiplatform so fixes land in both apps. SwiftUI and Compose handle the UI with the same timing constants, so animations feel identical at 60 fps. Saves are local for fast resume and a small sync runs in the background when the network is available. I split the code into MVVM modules so gameplay, storage, and network do not leak into each other. The project is a good template for small cross platform games that want native UI.",
+            "stasave_compose": "Status saver with a clean Compose surface and very few steps. It scans media folders, builds a fast thumbnail grid, and writes files with WorkManager so downloads keep going even if the app is backgrounded. The permission flow is short and direct, and a storage cleaner removes temporary bits after a successful save. I added a share action and a small snackbar system so users get immediate feedback. The codebase follows a simple MVVM pattern and each screen has a preview for quick UI review.",
+            "beritain_swiftui": "SwiftUI news reader that stays responsive on a slow connection. Articles are cached in Core Data and images are loaded with an async pipeline so scrolling stays smooth. I used Swinject for dependency injection to keep view code light. The layout supports multiple languages and I validated a few tricky truncation cases. CI runs SwiftLint and unit tests on each push, and a background refresh updates headlines while the app is idle.",
+            "leech_android_lib": "Small Android download library that focuses on reliability. It wraps OkHttp, supports pause and resume, and handles flaky networks with simple retry rules. A foreground service shows progress and survives configuration changes. The API has clear entry points and the sample app doubles as a test bed with edge cases like server redirects and partial content. I kept the surface small so teams can adopt it without pulling in a lot of extra code.",
+            "floating_menu_ios": "Floating action menu for iOS shipped as a Swift Package. It anchors to a tab bar or a custom container and adjusts to safe areas automatically. Haptics are built in, light and dark mode are supported, and spacing and icons can be tuned with a few parameters. I paid attention to animation timing so the menu feels quick without being jumpy. The demo targets a couple of screen sizes to make sure the layout stays tidy.",
+            "highlightor_android_lib": "Compose utility for guided walkthroughs and onboarding. It measures target bounds at runtime, dims the rest of the screen, and steps through a sequence with a builder style API. Touch is blocked outside the focus area, and the arrow and label can be themed. I tested a few gesture heavy screens to confirm it does not break scroll or fling. The code is small enough that teams can read it in one sitting and adjust it to their needs.",
+            "trafficsense_kotlin": "Android and IoT experiment that reacts to live data. The app reads location updates, overlays routes on Google Maps, and suggests carpools to cut travel and exposure. A small rules engine chooses between route options based on traffic and shared pickups. I wrote the data layer in plain Kotlin so behavior is easy to follow, and I logged decisions to help tune the rules. It is a good starting point for mobility projects that want to try ideas quickly.",
+            "ndorokojo_kotlin": "Livestock marketplace that keeps the flow simple. Sellers post a listing with a short form, buyers filter by type and location, and both sides get notifications when there is a match. OSMDroid handles the map so the app stays light. The list is optimized for low end phones and still feels responsive. I shipped a small admin tool to clear spam and keep the feed clean.",
+            "jukee_java": "Music player in Java with a hosted playlist feature. Playlists sync with Firebase so a friend can load the same set in a few seconds. Playback is smooth with a simple service and a tidy notification, and the UI avoids heavy decoration so it stays fast. I wrote the storage layer with clear interfaces so switching to another backend would be straightforward. It is a solid example of a classic Android app that still feels good.",
+            "my_heavy_equipment_kotlin": "Maintenance helper built for field use. It scans QR codes to pull an asset record, stores entries locally, and builds a PDF summary you can send to a supervisor. The REST API is small and predictable so it is easy to mock in tests. Offline work is queued and retried when the network returns. The screens avoid clutter and the flow keeps the user in a single context until the job is done.",
+            "beataco_java_swing": "Desktop tool for Telegram broadcasts that favors control. You draft a message, pick targets, schedule a send, and watch a compact log for results. It talks to the Telegram Bot API and remembers basic settings between sessions. The UI is Swing with sensible defaults and keyboard shortcuts for operators who live on the app for hours. It is not flashy and that is the point.",
+            "beritain_kotlin": "Android news app that aims for predictable behavior. The architecture is MVVM with strict module boundaries so features do not tangle. Articles are encrypted at rest with SQLCipher and dependencies are wired with Koin. Network calls are pinned and WorkManager handles background refresh. I tested empty states and bad network paths so the app fails in a way that still makes sense.",
+            "ecoquest_kotlin": "Sustainability app with a light game layer. Users pick small quests, earn points, and see their place on a leaderboard. The stack is MVVM with Firebase for sync and simple analytics to learn which quests stick. Reminders are gentle and can be muted so it does not feel like spam. The UI uses accessible colors and large tap targets so it works well on older devices.",
+            "sakuku_kotlin": "Personal finance app that tries to stay calm. Balances and goals are on one screen and you can drill down without losing context. I wrote small custom views for charts to avoid heavy dependencies and tuned them for low memory devices. Data syncs through Firebase which keeps setup light for a single user. The code is clean enough that a new contributor can add a screen in a day.",
+            "examine_kotlin": "Scanner that treats security as part of the normal flow. Codes are read, payloads are encrypted with AES, and actions are tied to a device id for traceability. Retrofit handles requests and the audit trail is stored in a way that is easy to export. I added clear user prompts for failure cases so people do not get stuck. The end result is strict without feeling heavy.",
+            "hangman_java": "Small hangman game for Android built for quick play. It runs fully offline and never nags. Word packs live in the app, progress is saved locally, and the UI is large and readable. The code shows a clean separation between the game loop and the view which makes it a nice teaching sample.",
+            "bankit_java": "Banking style sample that demonstrates clear flows without extra noise. Login, transfer, and history use patterns that teams already know which makes it easy to extend. Lists and forms are tidy and the code is straight Java on purpose. It is a good base when you need to show a stakeholder what a simple path would look like.",
+            "laundry_compose": "Compose UI for a laundry service that focuses on predictable components. Home, services, and order flow share one design system and all components have previews. State holders are thin, theming is consistent, and everything is ready to receive real endpoints. I measured a few large lists to keep scrolling fluid on budget phones.",
+            "picdf_compose": "Tool that turns images into a single PDF with a short path. Pick photos, reorder with drag and drop, set a title, and export with PdfDocument. The app shows a share sheet right after the file is written, and it keeps a small recent list for quick access. The code avoids hidden work on the main thread so the UI stays responsive during export.",
+            "aromaloka_kotlin": "UI slicing project that matches a reference layout closely. ConstraintLayout handles dense parts and MotionLayout adds small transitions where they help. I wrote notes in the code about spacing and ratios so handoff is simple. The goal was not to reinvent the design but to ship a faithful layout that engineers can build on.",
+            "diabetless_kotlin": "Healthcare UI slicing that values calm and clarity. Forms use clear labels and input masks to reduce mistakes, and color choices follow accessibility targets. Navigation is shallow and error messages point to the exact field. The structure matches common patterns so real endpoints can drop in without reshuffling everything.",
+            "painthings_kotlin": "Art marketplace slicing with attention to images. There is a grid, a detail view with a clean gallery, a simple cart, and a fake checkout so flows can be tested end to end. Image loading is smooth and the layout scales down to small screens. The point was to keep the visuals in front and keep the forms from getting in the way.",
+            "capstone_kotlin": "Concept app that ties a few screens into a believable flow. Navigation is straightforward, view models own state, and repositories isolate data access. The project includes a small fake backend so people can click through without setting up services. It is the kind of base you can demo at the end of a sprint and then keep.",
+            "cba_java": "Beauty shop UI in Java that covers the usual path. Product list, details, cart, and a small coupon step are in place. SQLite caches responses so the app feels quick after the first run. The code follows standard Android patterns and avoids heavy libraries so it is easy to read.",
+            "gamography_swiftui": "Game catalog for iOS with a clean SwiftUI front end. Search and favorites work offline, images load with async pipelines, and the network layer is thin so a new API can be swapped in without stress. I tuned list performance for older phones and built a couple of accessibility tweaks for large text. It feels fast yet still readable."
+        }
     },
     "contact": {
         "title": "Contact Me",
         "description": "Let’s work together! Drop me a line below or email me directly.",
         "email_label": "Email",
-        "phone_label": "Phone / Whatsapp",
+        "phone_label": "Phone / Whatsapp / WeChat",
         "find_me_at": "Or Find me at:"
     },
     "footer": {

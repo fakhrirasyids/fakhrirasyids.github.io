@@ -1,0 +1,135 @@
+{
+    "header": {
+        "home": "首页",
+        "experience": "经历",
+        "projects": "项目",
+        "articles": "文章",
+        "switch_theme": "切换主题",
+        "download_cv": "下载简历"
+    },
+    "hero": {
+        "title": "你好，我是 Fakhri",
+        "or": "或",
+        "check_projects": "查看我的项目"
+    },
+    "about": {
+        "label": "关于我",
+        "title": "想了解我？这里有答案。",
+        "description": "我是一名<strong>移动开发工程师</strong>，拥有<strong>三年以上经验</strong>，曾为<strong>政府、工业和企业</strong>等多个领域开发应用。我热衷于<strong>SOLID 原则</strong>和<strong>Clean Architecture（整洁架构）</strong>，并参与过<strong>终端用户产品</strong>及内部<strong>移动端库（SDK）</strong>的开发。无论是独立工作还是团队合作，我都能胜任，并致力于在移动工程领域不断成长。<br/><br/>我毕业于<strong>迪安努桑托罗大学（Universitas Dian Nuswantoro）</strong>信息工程专业，学术方向涵盖<strong>机器学习</strong>和<strong>移动端网络安全</strong>。除了移动开发，我还使用多种现代技术与框架开发过<strong>网页和桌面应用</strong>，确保方案简洁、可维护且可扩展。"
+    },
+    "skills": {
+        "label": "技能",
+        "title": "我精通的技能、工具和技术："
+    },
+    "articles": {
+        "label": "文章",
+        "title": "我最近发布的一些想法和文章："
+    },
+    "experience": {
+        "label": "经历",
+        "title": "以下是我最近工作的简要概述：",
+        "items": [
+            {
+                "title": "移动开发工程师",
+                "company": "Fischer Medical Ventures",
+                "location": "新加坡中部地区",
+                "period": "2024年9月 – 2025年3月",
+                "responsibilities": [
+                    "开发与医疗硬件集成的生产级 Android 应用，通过 USB 和低功耗蓝牙（BLE）实现实时设备通信与控制。",
+                    "主导 BLE 协议、视频会议 SDK 以及设备端机器学习模型（TensorFlow Lite）的技术研究，用于实时诊断和嵌入式 AI 场景。",
+                    "与固件工程师和后端开发人员等跨职能团队合作，交付高可靠性的医疗用 Android 应用。"
+                ],
+                "logo": "/assets/logo/asset-fmv-logo.png"
+            },
+            {
+                "title": "Android 工程师实习生",
+                "company": "Traveloka（旅行活动部门）",
+                "location": "印度尼西亚 坦格朗",
+                "period": "2024年2月 – 2024年6月",
+                "responsibilities": [
+                    "使用 Clean MVVM 与 MVP 架构实现新功能，并开发单元/UI 测试，使 Kotlin 和 Java 代码库的测试覆盖率超过 70%。",
+                    "重构旧模块并修复 Bug，提高 Traveloka Android 应用中旅行活动部分的稳定性和性能。",
+                    "研究并提出 Jetpack Compose 与现代 Android 库的集成方案，以提升开发效率和界面响应速度。"
+                ],
+                "logo": "/assets/logo/asset-traveloka-logo.png"
+            },
+            {
+                "title": "移动开发工程师",
+                "company": "Freelanxx",
+                "location": "印度尼西亚 三宝垄",
+                "period": "2022年1月 – 2024年1月",
+                "responsibilities": [
+                    "为医疗、教育和零售等多个客户设计、开发并部署跨平台移动应用，使用 Kotlin、Java 和 Flutter。",
+                    "构建 RESTful API 后端（Node.js、Laravel）以支持移动功能，如身份验证、实时更新和安全数据存储。",
+                    "领导敏捷开发冲刺，与远程团队协调，并通过 GitHub 和 GitLab CI/CD 流水线进行版本管理。"
+                ],
+                "logo": "/assets/logo/asset-freelanxx-logo.png"
+            },
+            {
+                "title": "移动开发实习生",
+                "company": "Schoters（基于项目的实习）",
+                "location": "印度尼西亚",
+                "period": "2022年7月 – 2022年8月",
+                "responsibilities": [
+                    "使用 Java 和 Kotlin 构建并维护 Android 应用功能，集成 Firebase 服务，包括实时数据库和 Crashlytics。",
+                    "在远程实习中实践 Git 版本控制，并参与协作式代码审查，模拟真实的开发环境。",
+                    "通过性能分析和重构优化现有应用性能，遵循整洁架构原则。"
+                ],
+                "logo": "/assets/logo/asset-schoters-logo.jpg"
+            }
+        ]
+    },
+    "projects": {
+        "label": "项目",
+        "title": "我参与的一些项目：",
+        "platform": "平台",
+        "technologies": "技术",
+        "clear": "清除",
+        "none": "未找到项目。",
+        "filter": "筛选",
+        "apply": "应用",
+        "click_full_detail": "点击查看完整详情",
+        "showing": "显示 {shown} / {total} 个项目",
+        "items": {
+            "spaceAttack_kmp_swiftui": "我做的街机射击游戏，只写一套核心就同时跑在 iOS 和 Android。玩法循环、计分规则和排行榜都在 Kotlin Multiplatform 里，这样修一次两端都生效。UI 用 SwiftUI 和 Compose，各自跟进相同的动画时序，60 帧下手感一致。存档走本地以便秒开，联网时会在后台做一次小同步。代码按 MVVM 分层，玩法、存储、网络彼此隔离。这套结构很适合想要原生界面的跨平台小游戏。",
+            "stasave_compose": "一款干净利落的状态保存工具。应用会扫描媒体目录，生成快速缩略图网格，下载交给 WorkManager，退到后台也能继续。权限流程短而清晰，保存成功后有清理器处理临时文件。我补了分享动作和轻量的 snackbar，让反馈更即时。代码遵循简单的 MVVM，每个界面都有预览，查阅 UI 很方便。",
+            "beritain_swiftui": "一款在慢网下也能保持顺滑的 SwiftUI 新闻阅读器。文章缓存放在 Core Data，图片通过异步管线加载，滚动更稳定。依赖注入用 Swinject，让视图代码更轻。布局支持多语言，我对一些棘手的截断场景做了验证。CI 每次提交都会跑 SwiftLint 和单元测试，后台刷新会在空闲时更新头条。",
+            "leech_android_lib": "小巧的 Android 下载库，目标是稳定可靠。内部封装 OkHttp，支持暂停与继续，对不稳定网络有简单的重试策略。前台服务负责展示进度，能顶住配置变化。API 入口清楚，示例应用同时是测试场，覆盖了重定向和分块内容等边界情况。表层尽量克制，团队接入时负担更小。",
+            "floating_menu_ios": "以 Swift Package 形式发布的 iOS 浮动操作菜单。可以挂在 tab bar 或自定义容器上，会自动适配安全区域。自带触感反馈，明暗模式都能适应，间距、图标和标签都能通过参数调整。动画节奏调过很多次，快但不跳。示例覆盖几种屏幕尺寸，确保布局始终干净。",
+            "highlightor_android_lib": "用于引导和新手教学的 Compose 工具。运行时测量目标区域，其他区域会变暗，然后按序高亮，通过 builder 风格的 API 组织步骤。焦点外点击会被拦截，箭头和标签可以按主题定制。我在手势很多的页面做了实测，滚动和 fling 不会被破坏。代码体量小，读一遍就能根据需求改造。",
+            "trafficsense_kotlin": "一个结合 Android 与 IoT 的实时实验。应用读取位置更新，在 Google 地图上叠加路线，并根据拥堵和顺路上车的情况给出拼车建议。小型规则引擎在多条路线中做选择。数据层用朴素的 Kotlin 写法，逻辑清晰可跟踪，关键决策会打点记录，方便调参。适合作为移动出行项目的快速原型。",
+            "ndorokojo_kotlin": "做牲畜交易的简洁市集。卖家用短表单发帖，买家按类型和位置筛选，匹配后双方会收到通知。地图用 OSMDroid，应用保持轻量。列表针对入门机做了优化，依然响应及时。我补了一个小管理工具，处理垃圾信息，维持信息流的干净。",
+            "jukee_java": "用 Java 写的音乐播放器，支持托管歌单。歌单通过 Firebase 同步，朋友几秒内就能加载同一套曲目。播放由一个简洁的 service 负责，通知样式干净。UI 不做过度装饰，流畅度更好。存储层有清晰的接口，如果要换后台会很容易。这是个老派但依然顺手的 Android 示例。",
+            "my_heavy_equipment_kotlin": "面向一线场景的运维助手。扫描二维码即可拉取资产信息，记录离线保存，最后生成一份可分享的 PDF 汇总。REST 接口小而稳定，测试时容易 mock。离线操作会入队，网络恢复后自动重试。界面避免堆叠，流程把用户留在同一上下文里直到收工。",
+            "beataco_java_swing": "用于 Telegram 群发的桌面工具，强调可控与稳定。先写好内容，选目标，安排时间，然后在小日志窗口里看执行结果。对接 Telegram Bot API，会记住常用设置。界面用 Swing，默认配置合理，配了键盘快捷键，适合长时间操作。不是花哨路线，重点是省心。",
+            "beritain_kotlin": "追求可预期行为的 Android 新闻应用。架构是 MVVM，并且模块边界清晰，功能彼此不打结。文章静态加密存储走 SQLCipher，依赖用 Koin 管理。网络请求做了证书固定，后台刷新交给 WorkManager。空状态和差网都做过演练，失败也能给出清楚的反馈。",
+            "ecoquest_kotlin": "带一点游戏味道的绿色行动应用。用户选择小任务，积累积分，查看排行榜。技术栈是 MVVM 加 Firebase 做同步，配了简单的数据分析，看看哪些任务更容易坚持。提醒偏温和，可以自由静音。配色和点击区域都照顾到旧设备和大手指。",
+            "sakuku_kotlin": "追求安静体验的个人理财。余额和目标放在同一屏，逐层展开也不会迷路。图表我自己写了小控件，避免引入大体量依赖，同时对低内存设备做了优化。数据通过 Firebase 同步，换机很轻松。代码干净，新同学一天就能加一页。",
+            "examine_kotlin": "把安全当成默认流程的扫码器。读取内容后用 AES 加密，所有操作绑定到设备 id，方便审计。请求交给 Retrofit，审计轨迹易于导出。我补了清晰的失败提示，避免用户卡住。整体做法严格，但用起来不显笨重。",
+            "hangman_java": "一款轻量的安卓猜词小游戏。完全离线，不打扰。词库内置在应用里，进度本地保存，界面字号大、阅读友好。代码把游戏循环和视图拆得很清楚，适合拿来教学或演示。",
+            "bankit_java": "银行风格的示例应用，展示清晰的三板斧流程。登录、转账、明细沿用大家熟悉的模式，便于继续扩展。列表与表单都保持克制，代码坚持 Java 直写，阅读成本低。适合用来向干系人演示一条干净的实现路径。",
+            "laundry_compose": "面向洗衣服务的 Compose 界面。首页、服务、下单三处共享同一套设计系统，所有组件都有预览。状态持有者尽量变薄，主题一致，随时可以接上真实接口。我对长列表做了测量，在入门机上滚动也能保持顺滑。",
+            "picdf_compose": "把多张图片快速导出成一个 PDF 的小工具。选择照片，拖拽排序，填写标题，然后用 PdfDocument 导出。文件写完就弹出系统分享面板，同时保留一个最近列表方便回看。导出过程不阻塞主线程，界面始终跟手。",
+            "aromaloka_kotlin": "对照设计稿做的 UI 切图练习。密集区域交给 ConstraintLayout，适合加一点动效的地方用 MotionLayout。代码里补了间距和比例的备注，交接时更省事。目标不是再设计一遍，而是把原稿稳妥地落到工程里。",
+            "diabetless_kotlin": "面向医疗场景的 UI 切图，重心是平静和清晰。表单有明确标签和输入掩码，减少出错。配色按可访问性目标来选。导航层级浅，错误消息会指向具体字段。整体结构贴合常见模式，接入真实接口时不需要大调整。",
+            "painthings_kotlin": "艺术品电商的 UI 切图，更看重图片呈现。有网格，有干净的详情画廊，有简单购物车，还有可点击的假结账流程，方便端到端地走通。图片加载连贯，缩到小屏也不拥挤。思路是把视觉放在台前，把表单放在一边。",
+            "capstone_kotlin": "把几张页面串成一个可信流程的概念应用。导航直来直去，view model 管状态，repository 负责数据访问隔离。项目里带了一个很小的假后端，打开就能点，不用先搭服务。适合在一个冲刺的尾声做演示，然后继续当基座用。",
+            "cba_java": "用 Java 写的美妆店 UI，覆盖常见购物路径。商品列表、详情、购物车以及一个小的优惠券步骤都已就位。SQLite 做缓存，二次打开更快。代码遵循标准 Android 写法，尽量少引库，阅读体验更好。",
+            "gamography_swiftui": "一款 iOS 游戏目录应用，前端是干净的 SwiftUI。搜索和收藏在离线时也能使用，图片通过异步管线加载，网络层很薄，更换接口时压力更小。我专门调了长列表在旧设备上的表现，并为大字体做了几处无障碍优化。整体又快又易读。"
+        }
+    },
+    "contact": {
+        "title": "联系我",
+        "description": "让我们一起合作吧！在下方留言或直接发送电子邮件。",
+        "email_label": "电子邮件",
+        "phone_label": "电话 / 微信 / WhatsApp",
+        "find_me_at": "或者在以下平台找到我："
+    },
+    "footer": {
+        "copyright": "© 2025 由 Fakhri Rasyid Saputro 设计并编码"
+    },
+    "notfound": {
+        "message": "抱歉！您要找的页面不存在。",
+        "go_home": "返回首页"
+    }
+}

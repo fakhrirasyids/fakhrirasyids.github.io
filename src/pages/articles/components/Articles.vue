@@ -47,7 +47,7 @@
           >
             <!-- Thumbnail -->
             <img
-              :src="article.thumbnail"
+              :src="getThumbnail(article)"
               alt="Article Thumbnail"
               class="w-full sm:w-32 h-48 sm:h-20 object-cover rounded-md flex-shrink-0"
             />
@@ -73,6 +73,13 @@
                 v-html="stripHtml(article.description)"
               />
 
+              <!-- Click to see full detail (separate line) -->
+              <span
+                class="italic text-xs text-text-secondary-light dark:text-text-secondary-dark mt-1"
+              >
+                ({{ $t('projects.click_full_detail') }})
+              </span>
+
               <!-- Categories -->
               <div class="flex flex-wrap gap-1 mt-4">
                 <span
@@ -93,11 +100,8 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { mediumService } from '@/services/api/services/medium_services'
 import type { MediumItem } from '@/services/types/medium'
-
-const { t } = useI18n()
 
 const articles = ref<MediumItem[]>([])
 const isLoading = ref(true)
@@ -105,13 +109,26 @@ const isLoading = ref(true)
 onMounted(async () => {
   try {
     const response = await mediumService.getUserArticles()
-    articles.value = response.data.items
+
+    // Map and inject thumbnail from description
+    articles.value = response.data.items.map((article) => {
+      const match = article.description?.toString().match(/<img[^>]+src="([^">]+)"/)
+      const extractedThumbnail = match?.[1] || ''
+      return {
+        ...article,
+        thumbnail: extractedThumbnail || article.thumbnail,
+      }
+    })
   } catch (error) {
     console.error('Failed to fetch Medium articles:', error)
   } finally {
     isLoading.value = false
   }
 })
+
+function getThumbnail(article: MediumItem): string {
+  return article.thumbnail || '/placeholder.jpg'
+}
 
 function formatDate(pubDate: string): string {
   return new Date(pubDate).toLocaleDateString(undefined, {
