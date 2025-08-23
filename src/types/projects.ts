@@ -12,5 +12,6 @@ export interface Project {
   medium_link: string
   website_reference_link: string
   slideshow_link: string
+  docs_link: string
   i18nKey?: string
 }
