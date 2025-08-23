@@ -309,17 +309,6 @@ function measureAll() {
   filteredProjects.value.forEach(p => measureOne(p.id))
 }
 
-/** Title should be max 2 lines on mobile; no clamp on ≥sm screens */
-function titleClampClass() {
-  return 'line-clamp-2 sm:line-clamp-none'
-}
-
-/** If title is 2 lines on mobile → clamp desc to 2 lines, else keep 3 */
-function descClampClass(id: string) {
-  if (isMobile.value && titleTwoLines.value[id]) return 'line-clamp-2'
-  return 'line-clamp-3'
-}
-
 /* =========================
  * Filter sheet controls
  * =======================*/
