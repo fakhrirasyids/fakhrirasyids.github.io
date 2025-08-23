@@ -47,8 +47,8 @@
         "location": "Tangerang, Indonesia",
         "period": "February 2024 – June 2024",
         "responsibilities": [
-            "Implemented new features using Clean MVVM & MVP architecture and developed unit/UI tests achieving over 70% test coverage in Kotlin and Java codebases.",
-            "Refactored legacy modules and resolved bugs to enhance stability and performance of the Travel Activities section within the Traveloka Android app.",
+            "Refactored legacy modules and fixed bugs in the Traveloka Android app (50M+ downloads), improving responsiveness across device tiers and strengthening release stability.",
+            "Implemented new features end-to-end using Clean MVVM and MVP architecture. Wrote unit/UI tests across Kotlin and Java, lifting coverage to 70%+ and reducing regressions during releases.",
             "Researched and proposed integration strategies for Jetpack Compose and modern Android libraries to improve developer efficiency and UI responsiveness."
         ],
         "logo": "/assets/logo/asset-traveloka-logo.png"

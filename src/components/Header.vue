@@ -66,7 +66,7 @@
 
       <!-- Download CV -->
       <a
-        href="/cv.pdf"
+        href="assets/porto/cv/CV_Fakhri_Rasyid_Saputro.pdf"
         target="_blank"
         class="bg-inverted-light dark:bg-inverted-dark text-inverted-dark dark:text-inverted-light px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark transition"
       >
@@ -154,7 +154,7 @@
 
           <!-- CV -->
           <a
-            href="/cv.pdf"
+            href="assets/porto/cv/CV_Fakhri_Rasyid_Saputro.pdf"
             target="_blank"
             class="mt-4 text-center bg-inverted-light dark:bg-inverted-dark text-inverted-dark dark:text-inverted-light px-4 py-2 rounded-full font-medium hover:bg-border-dark transition"
             @click="isOpen = false"
