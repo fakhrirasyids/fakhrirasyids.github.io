@@ -35,7 +35,7 @@
         <!-- CV and projects -->
         <div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-start gap-2 sm:gap-4 text-sm py-6">
           <a
-            href="/cv.pdf"
+            href="assets/porto/cv/CV_Fakhri_Rasyid_Saputro.pdf"
             target="_blank"
             class="inline-flex self-center sm:self-auto bg-green-light dark:bg-green-dark text-inverted-dark px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark transition"
           >

@@ -47,9 +47,9 @@
                 "location": "印度尼西亚 坦格朗",
                 "period": "2024年2月 – 2024年6月",
                 "responsibilities": [
-                    "使用 Clean MVVM 与 MVP 架构实现新功能，并开发单元/UI 测试，使 Kotlin 和 Java 代码库的测试覆盖率超过 70%。",
-                    "重构旧模块并修复 Bug，提高 Traveloka Android 应用中旅行活动部分的稳定性和性能。",
-                    "研究并提出 Jetpack Compose 与现代 Android 库的集成方案，以提升开发效率和界面响应速度。"
+                    "在 Traveloka Android 应用（下载量 5000万+）中重构遗留模块并修复 Bug，提升跨设备档位的响应速度并增强版本发布稳定性。",
+                    "基于 Clean MVVM 与 MVP 架构端到端实现新功能。编写 Kotlin 与 Java 的单元/界面测试，将覆盖率提升至 70%+，并显著降低发布期回归。",
+                    "调研并提出 Jetpack Compose 及现代 Android 库的集成策略，以提升开发效率与界面响应速度。"
                 ],
                 "logo": "/assets/logo/asset-traveloka-logo.png"
             },
