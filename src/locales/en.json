@@ -33,11 +33,11 @@
         "title": "Mobile Developer",
         "company": "Fischer Medical Ventures",
         "location": "Central Region, Singapore",
-        "period": "September 2024 – March 2025",
+        "period": "January 2025 – Present",
         "responsibilities": [
-            "Developed production-grade Android applications that integrated with medical hardware using USB and Bluetooth Low Energy (BLE), enabling real-time device communication and control.",
-            "Led technical research initiatives into BLE protocols, video conferencing SDKs, and on-device machine learning models (TensorFlow Lite) for real-time diagnostics and embedded AI use cases.",
-            "Collaborated with cross-functional teams including firmware engineers and backend developers to deliver high-reliability Android apps for medical use."
+            "Delivered production Mobile apps that connect to 10+ medical devices (USB/BLE), enabling live streaming, calibration, and remote control with resilient connections and fault-tolerant workflows used by clinicians.",
+            "Researched and prototyped BLE GATT, real-time video, and on-device ML. Turned findings into reference modules and decision docs that accelerated production rollouts.",
+            "Partnered with firmware and backend teams to define protocols and harden flows, shipping clinic-ready Mobile apps with robust offline/retry and end-to-end observability."
         ],
         "logo": "/assets/logo/asset-fmv-logo.png"
         },
@@ -55,13 +55,13 @@
         },
         {
         "title": "Mobile Developer",
-        "company": "Freelanxx",
+        "company": "Freelanxx.it",
         "location": "Semarang, Indonesia",
-        "period": "January 2022 – January 2024",
+        "period": "January 2022 – February 2024",
         "responsibilities": [
-            "Designed, developed, and deployed cross-platform mobile applications using Kotlin, Java, and Flutter for diverse clients across healthcare, education, and retail sectors.",
-            "Built RESTful API backends using Node.js and Laravel to support mobile features such as authentication, real-time updates, and secure data storage.",
-            "Led agile-based development sprints, coordinated with remote teams, and maintained version control using GitHub and GitLab CI/CD pipelines."
+            "Designed, built, and shipped 20+ mobile apps across education and retail using Kotlin/Java (Android) and Flutter (cross-platform).",
+            "Led a 4-person team, ran Agile sprints, coordinated cross-functionally, and standardized CI/CD across GitHub, GitLab, and CircleCI.",
+            "Built RESTful API backends using Node.js and Laravel to support mobile features such as authentication, real-time updates, and secure data storage."
         ],
         "logo": "/assets/logo/asset-freelanxx-logo.png"
         },
@@ -71,9 +71,8 @@
         "location": "Indonesia",
         "period": "July 2022 – August 2022",
         "responsibilities": [
-            "Built and maintained Android application features using Java and Kotlin, integrated Firebase services including Realtime Database and Crashlytics.",
-            "Practiced version control (Git) and participated in collaborative code reviews as part of a remote internship program simulating real-world development environments.",
-            "Optimized existing app performance through profiling and refactoring efforts aligned with Clean Architecture principles."
+            "Delivered Android features in Kotlin with Firebase Realtime Database (live updates) and Crashlytics (instrumentation, alerting), reducing repeat crash types during the program.",
+            "Practiced version control (Git) and participated in collaborative code reviews as part of a remote internship program simulating real-world development environments."
         ],
         "logo": "/assets/logo/asset-schoters-logo.jpg"
         }
