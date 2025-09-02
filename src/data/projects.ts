@@ -178,7 +178,7 @@ export const projects: Project[] = [
     image: '/assets/porto/library_android_leech.png',
     technologies: ['Android Library', 'Kotlin', 'Coroutines', 'Clean Architecture'],
     platforms: ['Android'],
-    github_link: 'https://github.com/fakhrirasyids/Jukee',
+    github_link: 'https://github.com/fakhrirasyids/leech',
     app_link: '',
     appstore_link: '',
     playstore_link: '',
