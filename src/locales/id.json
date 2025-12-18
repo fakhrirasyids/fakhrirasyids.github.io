@@ -42,6 +42,17 @@
         "logo": "/assets/logo/asset-fmv-logo.png"
         },
         {
+            "title": "iOS Developer",
+            "company": "Owlies",
+            "location": "Yogyakarta, Indonesia",
+            "period": "Oktober 2025 – Desember 2025",
+            "responsibilities": [
+            "Merilis fitur iOS end-to-end menggunakan Clean Architecture dan MVVM di Swift, didukung rangkaian pengujian unit + UI yang komprehensif untuk meningkatkan kepercayaan diri saat rilis dan mengurangi regresi di produksi.",
+            "Mengimplementasikan Superwall Paywall secara end-to-end di iOS (aturan pemicu, penayangan paywall, pemetaan produk, validasi entitlement, dan A/B testing), termasuk prompt trial yang ditunda 5 detik yang meningkatkan niat pembelian dan menaikkan konversi ~70% (trial-to-paid / paywall-to-purchase)."
+            ],
+            "logo": "/assets/logo/asset-owlies-logo.jpg"
+        },
+        {
         "title": "Android Engineer Intern",
         "company": "Traveloka (Departemen Aktivitas Perjalanan)",
         "location": "Tangerang, Indonesia",

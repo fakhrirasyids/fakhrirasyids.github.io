@@ -42,6 +42,17 @@
                 "logo": "/assets/logo/asset-fmv-logo.png"
             },
             {
+                "title": "iOS 开发工程师",
+                "company": "Owlies",
+                "location": "印度尼西亚，日惹",
+                "period": "2025年10月 – 2025年12月",
+                "responsibilities": [
+                "使用 Swift 基于 Clean Architecture 与 MVVM 交付端到端 iOS 功能，并配套完善的单元测试与 UI 测试套件，以提升发布信心并减少生产环境回归。",
+                "在 iOS 端端到端落地 Superwall 付费墙（触发规则、付费墙展示、产品映射、权益/Entitlement 校验与 A/B 测试），并加入延迟 5 秒的试用提示，提升购买意愿，使转化率提升约 70%（trial-to-paid / paywall-to-purchase）。"
+                ],
+                "logo": "/assets/logo/asset-owlies-logo.jpg"
+            },
+            {
                 "title": "Android 工程师实习生",
                 "company": "Traveloka（旅行活动部门）",
                 "location": "印度尼西亚 坦格朗",
