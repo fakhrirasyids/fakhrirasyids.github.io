@@ -29,11 +29,22 @@
             class="relative z-10 border-[10px] border-surface-light dark:border-surface-dark
                   w-[220px] h-[270px] md:w-[360px] md:h-[410px] overflow-hidden"
           >
-            <img
-              src="/assets/me/asset-fakhri-standing.jpeg"
-              alt="About Image"
-              class="w-full h-full object-cover"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="/assets/me/asset-fakhri-standing-440.webp 440w, /assets/me/asset-fakhri-standing-720.webp 720w"
+                sizes="(min-width: 768px) 360px, 220px"
+              />
+              <img
+                src="/assets/me/asset-fakhri-standing.jpeg"
+                alt="Fakhri standing"
+                width="720"
+                height="1107"
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover"
+              />
+            </picture>
           </div>
         </div>
 

@@ -57,35 +57,35 @@
           <!-- Project Cards -->
           <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
             <RouterLink
-              v-for="project in filteredProjects"
+              v-for="(project, projectIndex) in filteredProjects"
               :key="project.id"
               class="rounded-xl shadow-md overflow-hidden bg-background-light dark:bg-surfaceVariant-dark block"
               :to="{ name: 'ProjectDetail', params: { id: project.id } }"
             >
               <!-- Image -->
               <div class="bg-surface-light dark:bg-surface-dark p-4 h-48 flex items-center justify-center">
-                <img :src="project.image" :alt="project.name" class="h-full w-auto object-contain rounded-lg" />
+                <img
+                  :src="project.image"
+                  :alt="project.name"
+                  :loading="projectIndex < 4 ? 'eager' : 'lazy'"
+                  :fetchpriority="projectIndex < 4 ? 'high' : 'auto'"
+                  decoding="async"
+                  class="h-full w-auto object-contain rounded-lg"
+                />
               </div>
 
               <!-- Content -->
               <div class="p-4 flex flex-col h-[200px]">
                 <!-- Title: mobile max 2 lines (ellipsize), desktop un-clamped -->
                 <h3
-                  :ref="setTitleRef(project.id)"
                   class="text-lg font-semibold text-text-primary-light dark:text-text-primary-dark line-clamp-2 sm:unclamp"
                 >
                   {{ project.name }}
                 </h3>
 
-                <!-- Description:
-                     - Mobile: if title is exactly 2 lines -> clamp to 2, else clamp to 3
-                     - Desktop: keep 3 lines
-                -->
+                <!-- Description -->
                 <p
-                  :class="[
-                    'text-sm mt-2 text-text-secondary-light dark:text-text-secondary-dark',
-                    titleTwoLines[project.id] ? 'line-clamp-2 sm:line-clamp-3-desktop' : 'line-clamp-3'
-                  ]"
+                  class="text-sm mt-2 text-text-secondary-light dark:text-text-secondary-dark line-clamp-3"
                 >
                   {{ project.i18nKey ? t(project.i18nKey) : project.description }}
                 </p>
@@ -195,7 +195,6 @@ import {
   onMounted,
   onBeforeUnmount,
   nextTick,
-  type ComponentPublicInstance,
 } from 'vue'
 import FilterPanel from '@/components/FilterPanel.vue'
 import { useI18n } from 'vue-i18n'
@@ -252,64 +251,6 @@ const totalCount = computed(() => allProjects.value.length)
 const shownCount = computed(() => filteredProjects.value.length)
 
 /* =========================
- * Mobile title measurement → drives desc clamping
- * =======================*/
-const isMobile = ref(false)
-function updateIsMobile() {
-  isMobile.value = window.matchMedia('(max-width: 639px)').matches
-}
-
-/** For each card title, track if it wraps to ≥2 lines on mobile */
-const titleTwoLines = ref<Record<string, boolean>>({})
-const titleElMap = new Map<string, HTMLElement>()
-const roMap = new Map<string, ResizeObserver>()
-
-/** Vue function-ref with the correct VNodeRef signature; narrow to HTMLElement safely */
-function setTitleRef(id: string) {
-  return (refEl: Element | ComponentPublicInstance | null) => {
-    const el = refEl instanceof HTMLElement ? refEl : null
-
-    // Clean up any old observer if the ref changed
-    const prev = titleElMap.get(id)
-    if (prev && prev !== el) {
-      const ro = roMap.get(id)
-      if (ro) ro.disconnect()
-      roMap.delete(id)
-      titleElMap.delete(id)
-    }
-
-    // Register new observer
-    if (el) {
-      titleElMap.set(id, el)
-      const ro = new ResizeObserver(() => measureOne(id))
-      ro.observe(el)
-      roMap.set(id, ro)
-
-      // initial measure after DOM paints
-      requestAnimationFrame(() => measureOne(id))
-    }
-  }
-}
-
-function measureOne(id: string) {
-  if (!isMobile.value) {
-    titleTwoLines.value[id] = false
-    return
-  }
-  const el = titleElMap.get(id)
-  if (!el) return
-  const cs = getComputedStyle(el)
-  const lh = parseFloat(cs.lineHeight || '0')
-  if (!lh) return
-  const lines = Math.round(el.clientHeight / lh)
-  titleTwoLines.value[id] = lines >= 2
-}
-
-function measureAll() {
-  filteredProjects.value.forEach(p => measureOne(p.id))
-}
-
-/* =========================
  * Filter sheet controls
  * =======================*/
 function lockScroll() { document.documentElement.style.overflow = 'hidden' }
@@ -341,36 +282,24 @@ watch(isFilterOpen, async (open) => {
   }
 })
 
-watch(filteredProjects, async () => {
-  await nextTick()
-  measureAll()
-})
-
-const onResize = () => { updateIsMobile(); measureAll() }
 let mq: MediaQueryList | null = null
-const mqHandler = () => { updateIsMobile(); measureAll() }
+const mqHandler = () => {
+  if (!mq?.matches) closeFilter()
+}
 
 onMounted(() => {
   unlockScroll()
-  updateIsMobile()
-  window.addEventListener('resize', onResize)
   mq = window.matchMedia('(max-width: 639px)')
   if (mq.addEventListener) mq.addEventListener('change', mqHandler)
   else (mq as any).addListener(mqHandler) // Safari < 14
-
-  nextTick(measureAll)
 })
 
 onBeforeUnmount(() => {
   unlockScroll()
-  window.removeEventListener('resize', onResize)
   if (mq) {
     if (mq.removeEventListener) mq.removeEventListener('change', mqHandler)
     else (mq as any).removeListener(mqHandler)
   }
-  roMap.forEach(ro => ro.disconnect())
-  roMap.clear()
-  titleElMap.clear()
 })
 
 /* =========================

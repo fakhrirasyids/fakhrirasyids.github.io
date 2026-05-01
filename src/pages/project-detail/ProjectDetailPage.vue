@@ -9,6 +9,8 @@
     <img
         :src="project.image"
         alt=""
+        loading="lazy"
+        decoding="async"
         class="absolute inset-0 w-full h-full object-cover blur-md scale-105 brightness-90"
     />
     <div class="absolute inset-0 bg-black/20"></div>
@@ -51,6 +53,7 @@
                    border-4 border-surface-light dark:border-surface-dark shadow-xl"
             decoding="async"
             loading="eager"
+            fetchpriority="high"
           />
         </div>
 
@@ -189,4 +192,3 @@ const actionLinks = computed(() => {
   return links
 })
 </script>
-

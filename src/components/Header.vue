@@ -57,6 +57,7 @@
       <select
         @change="switchLanguage"
         :value="locale"
+        :disabled="isSwitchingLocale"
         class="bg-transparent text-text-muted-light dark:text-text-muted-dark border border-border-light dark:border-border-dark px-2 py-1 rounded-md text-sm"
       >
         <option value="en">🇺🇸 EN</option>
@@ -145,6 +146,7 @@
           <select
             @change="switchLanguage"
             :value="locale"
+            :disabled="isSwitchingLocale"
             class="w-full mt-2 bg-transparent text-text-muted-light dark:text-text-muted-dark border border-border-light dark:border-border-dark px-3 py-2 rounded-md text-sm"
           >
             <option value="en">🇺🇸 EN</option>
@@ -171,15 +173,25 @@
 import { ref } from 'vue'
 import { useDarkMode } from '@/composables/useDarkMode'
 import { useI18n } from 'vue-i18n'
+import { setLocale, supportedLocales, type AppLocale } from '@/plugins/i18n'
 
 const isOpen = ref(false)
+const isSwitchingLocale = ref(false)
 const { isDark, toggleDark } = useDarkMode()
 const { locale } = useI18n()
 
-const switchLanguage = (event: Event) => {
+const switchLanguage = async (event: Event) => {
   const target = event.target as HTMLSelectElement
-  locale.value = target.value
-  localStorage.setItem('locale', target.value)
+  const nextLocale = target.value as AppLocale
+
+  if (!supportedLocales.includes(nextLocale)) return
+
+  isSwitchingLocale.value = true
+  try {
+    await setLocale(nextLocale)
+  } finally {
+    isSwitchingLocale.value = false
+  }
 }
 </script>
 
