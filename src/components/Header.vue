@@ -6,13 +6,13 @@
     <!-- Logo -->
     <RouterLink
       to="/"
-      class="text-2xl font-bold tracking-wide text-text-primary-light dark:text-text-primary-dark"
+      class="whitespace-nowrap text-2xl font-bold text-text-primary-light dark:text-text-primary-dark"
     >
       &lt;fakhrirasyids /&gt;
     </RouterLink>
 
     <!-- Desktop Nav -->
-    <nav class="hidden md:flex items-center space-x-6">
+    <nav class="hidden lg:flex items-center space-x-6">
       <RouterLink
         to="/"
         class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark transition"
@@ -69,7 +69,7 @@
       <a
         href="assets/porto/cv/CV_Fakhri_Rasyid_Saputro.pdf"
         target="_blank"
-        class="bg-inverted-light dark:bg-inverted-dark text-inverted-dark dark:text-inverted-light px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark transition"
+        class="whitespace-nowrap bg-inverted-light dark:bg-inverted-dark text-inverted-dark dark:text-inverted-light px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark transition"
       >
         {{ $t('header.download_cv') }}
       </a>
@@ -77,7 +77,7 @@
 
     <!-- Mobile Toggle Button -->
     <button
-      class="md:hidden text-2xl z-50 text-text-primary-light dark:text-text-primary-dark"
+      class="lg:hidden text-2xl z-50 text-text-primary-light dark:text-text-primary-dark"
       @click="isOpen = true"
     >
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -104,7 +104,7 @@
         <div class="flex justify-between items-center">
           <RouterLink
             to="/"
-            class="text-2xl font-bold tracking-wide text-text-primary-light dark:text-text-primary-dark"
+            class="whitespace-nowrap text-2xl font-bold text-text-primary-light dark:text-text-primary-dark"
             @click="isOpen = false"
           >
             &lt;fakhrirasyids /&gt;

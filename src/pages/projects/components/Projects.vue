@@ -105,11 +105,11 @@
         tag="div"
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
       >
-        <button
+        <RouterLink
           v-for="(project, i) in filteredProjects"
           :key="project.id"
-          @click="openDetail(project)"
-          class="group text-left rounded-2xl overflow-hidden bg-surface-light dark:bg-surfaceVariant-dark border border-onSurface-light/50 dark:border-onSurface-dark/50 hover:border-brand-light/40 dark:hover:border-brand-dark/40 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light dark:focus-visible:ring-brand-dark"
+          :to="projectDetailTo(project)"
+          class="group text-left rounded-lg overflow-hidden bg-surface-light dark:bg-surfaceVariant-dark border border-onSurface-light/50 dark:border-onSurface-dark/50 hover:border-brand-light/40 dark:hover:border-brand-dark/40 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light dark:focus-visible:ring-brand-dark"
         >
           <!-- Thumbnail -->
           <div class="relative overflow-hidden bg-background-light dark:bg-surface-dark h-44">
@@ -167,7 +167,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>
           </div>
-        </button>
+        </RouterLink>
       </TransitionGroup>
 
       <!-- Empty state -->
@@ -268,12 +268,6 @@
       </div>
     </transition>
 
-    <!-- Project Detail Modal -->
-    <ProjectDetail
-      :open="!!selectedProject"
-      :project="selectedProject"
-      @update:open="(v) => { if (!v) selectedProject = null }"
-    />
   </section>
 </template>
 
@@ -282,12 +276,10 @@ import { ref, computed, watch, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Project } from '@/types/projects'
 import { projects as projectsData } from '@/data/projects'
-import ProjectDetail from './ProjectDetail.vue'
 
 const { t } = useI18n()
 
 const allProjects = ref<Project[]>([...projectsData])
-const selectedProject = ref<Project | null>(null)
 const showTechFilter = ref(false)
 const isMobileFilterOpen = ref(false)
 const sheetEl = ref<HTMLElement | null>(null)
@@ -336,8 +328,21 @@ function clearAll() {
   selectedPlatforms.value = []
 }
 
-function openDetail(p: Project) {
-  selectedProject.value = p
+function slugify(value: string) {
+  return value
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+function projectDetailTo(project: Project) {
+  return {
+    name: 'ProjectDetail',
+    params: { projectRef: project.path ?? project.slug ?? slugify(project.name) },
+  }
 }
 
 function openMobileFilter() {
