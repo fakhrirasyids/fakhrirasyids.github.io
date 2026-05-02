@@ -49,6 +49,8 @@
             <img
               :src="getThumbnail(article)"
               alt="Article Thumbnail"
+              loading="lazy"
+              decoding="async"
               class="w-full sm:w-32 h-48 sm:h-20 object-cover rounded-md flex-shrink-0"
             />
 
@@ -70,8 +72,9 @@
               <!-- Description -->
               <p
                 class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-2 line-clamp-3"
-                v-html="stripHtml(article.description)"
-              />
+              >
+                {{ article.excerpt }}
+              </p>
 
               <!-- Click to see full detail (separate line) -->
               <span
@@ -103,7 +106,12 @@ import { ref, onMounted } from 'vue'
 import { mediumService } from '@/services/api/services/medium_services'
 import type { MediumItem } from '@/services/types/medium'
 
-const articles = ref<MediumItem[]>([])
+type ArticleCard = MediumItem & {
+  excerpt: string
+  thumbnail: string
+}
+
+const articles = ref<ArticleCard[]>([])
 const isLoading = ref(true)
 
 onMounted(async () => {
@@ -117,6 +125,7 @@ onMounted(async () => {
       return {
         ...article,
         thumbnail: extractedThumbnail || article.thumbnail,
+        excerpt: stripHtml(article.description),
       }
     })
   } catch (error) {
@@ -126,7 +135,7 @@ onMounted(async () => {
   }
 })
 
-function getThumbnail(article: MediumItem): string {
+function getThumbnail(article: ArticleCard): string {
   return article.thumbnail || '/placeholder.jpg'
 }
 
@@ -148,6 +157,8 @@ function stripHtml(html: string): string {
 <style scoped>
 .line-clamp-3 {
   display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }

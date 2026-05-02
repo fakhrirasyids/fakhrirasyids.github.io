@@ -52,6 +52,10 @@
             <img
               src="/assets/icons/asset-github-icon.png"
               alt="GitHub"
+              width="24"
+              height="24"
+              loading="lazy"
+              decoding="async"
               class="w-6 h-6 transition duration-300 opacity-75 hover:opacity-100 dark:invert dark:brightness-75"
             />
           </a>
@@ -65,6 +69,10 @@
             <img
               src="/assets/icons/asset-linkedin-icon.png"
               alt="LinkedIn"
+              width="24"
+              height="24"
+              loading="lazy"
+              decoding="async"
               class="w-6 h-6 transition duration-300 opacity-75 hover:opacity-100 dark:invert dark:brightness-75"
             />
           </a>
@@ -78,6 +86,10 @@
             <img
               src="/assets/icons/asset-medium-icon.png"
               alt="Medium"
+              width="24"
+              height="24"
+              loading="lazy"
+              decoding="async"
               class="h-6 w-auto transition duration-300 opacity-75 hover:opacity-100 dark:invert dark:brightness-75"
             />
           </a>

@@ -6,13 +6,13 @@
     <!-- Logo -->
     <RouterLink
       to="/"
-      class="text-2xl font-bold tracking-wide text-text-primary-light dark:text-text-primary-dark"
+      class="whitespace-nowrap text-2xl font-bold text-text-primary-light dark:text-text-primary-dark"
     >
       &lt;fakhrirasyids /&gt;
     </RouterLink>
 
     <!-- Desktop Nav -->
-    <nav class="hidden md:flex items-center space-x-6">
+    <nav class="hidden lg:flex items-center space-x-6">
       <RouterLink
         to="/"
         class="text-text-muted-light dark:text-text-muted-dark hover:text-brand-light dark:hover:text-brand-dark transition"
@@ -57,6 +57,7 @@
       <select
         @change="switchLanguage"
         :value="locale"
+        :disabled="isSwitchingLocale"
         class="bg-transparent text-text-muted-light dark:text-text-muted-dark border border-border-light dark:border-border-dark px-2 py-1 rounded-md text-sm"
       >
         <option value="en">🇺🇸 EN</option>
@@ -66,9 +67,10 @@
 
       <!-- Download CV -->
       <a
-        href="assets/porto/cv/CV_Fakhri_Rasyid_Saputro.pdf"
+        :href="CV_PATH"
         target="_blank"
-        class="bg-inverted-light dark:bg-inverted-dark text-inverted-dark dark:text-inverted-light px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark transition"
+        rel="noopener noreferrer"
+        class="whitespace-nowrap bg-inverted-light dark:bg-inverted-dark text-inverted-dark dark:text-inverted-light px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark transition"
       >
         {{ $t('header.download_cv') }}
       </a>
@@ -76,7 +78,7 @@
 
     <!-- Mobile Toggle Button -->
     <button
-      class="md:hidden text-2xl z-50 text-text-primary-light dark:text-text-primary-dark"
+      class="lg:hidden text-2xl z-50 text-text-primary-light dark:text-text-primary-dark"
       @click="isOpen = true"
     >
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -103,7 +105,7 @@
         <div class="flex justify-between items-center">
           <RouterLink
             to="/"
-            class="text-2xl font-bold tracking-wide text-text-primary-light dark:text-text-primary-dark"
+            class="whitespace-nowrap text-2xl font-bold text-text-primary-light dark:text-text-primary-dark"
             @click="isOpen = false"
           >
             &lt;fakhrirasyids /&gt;
@@ -145,6 +147,7 @@
           <select
             @change="switchLanguage"
             :value="locale"
+            :disabled="isSwitchingLocale"
             class="w-full mt-2 bg-transparent text-text-muted-light dark:text-text-muted-dark border border-border-light dark:border-border-dark px-3 py-2 rounded-md text-sm"
           >
             <option value="en">🇺🇸 EN</option>
@@ -154,8 +157,9 @@
 
           <!-- CV -->
           <a
-            href="assets/porto/cv/CV_Fakhri_Rasyid_Saputro.pdf"
+            :href="CV_PATH"
             target="_blank"
+            rel="noopener noreferrer"
             class="mt-4 text-center bg-inverted-light dark:bg-inverted-dark text-inverted-dark dark:text-inverted-light px-4 py-2 rounded-full font-medium hover:bg-border-dark transition"
             @click="isOpen = false"
           >
@@ -171,15 +175,26 @@
 import { ref } from 'vue'
 import { useDarkMode } from '@/composables/useDarkMode'
 import { useI18n } from 'vue-i18n'
+import { setLocale, supportedLocales, type AppLocale } from '@/plugins/i18n'
+import { CV_PATH } from '@/constants/assets'
 
 const isOpen = ref(false)
+const isSwitchingLocale = ref(false)
 const { isDark, toggleDark } = useDarkMode()
 const { locale } = useI18n()
 
-const switchLanguage = (event: Event) => {
+const switchLanguage = async (event: Event) => {
   const target = event.target as HTMLSelectElement
-  locale.value = target.value
-  localStorage.setItem('locale', target.value)
+  const nextLocale = target.value as AppLocale
+
+  if (!supportedLocales.includes(nextLocale)) return
+
+  isSwitchingLocale.value = true
+  try {
+    await setLocale(nextLocale)
+  } finally {
+    isSwitchingLocale.value = false
+  }
 }
 </script>
 

@@ -1,5 +1,8 @@
 export interface Project {
   id: string
+  slug?: string
+  path?: string
+  aliases?: string[]
   name: string
   description: string
   image: string

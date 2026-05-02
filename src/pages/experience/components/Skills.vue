@@ -22,7 +22,15 @@
           :key="index"
           class="flex flex-col items-center space-y-2"
         >
-          <img :src="skill.icon" :alt="skill.name" class="w-10 h-10 object-contain" />
+          <img
+            :src="skill.icon"
+            :alt="skill.name"
+            width="40"
+            height="40"
+            loading="lazy"
+            decoding="async"
+            class="w-10 h-10 object-contain"
+          />
           <span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">
             {{ skill.name }}
           </span>

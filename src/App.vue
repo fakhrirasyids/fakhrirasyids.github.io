@@ -1,10 +1,3 @@
 <template>
-  <div>
-    <LoadingPage />
-    <router-view />
-  </div>
+  <router-view />
 </template>
-
-<script setup>
-import LoadingPage from '@/pages/loading/LoadingPage.vue'
-</script>

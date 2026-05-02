@@ -23,10 +23,10 @@ const router = createRouter({
           component: () => import('@/pages/projects/ProjectsPage.vue'),
         },
         {
-          path: 'projects/:id',
+          path: 'projects/:projectRef(.*)',
           name: 'ProjectDetail',
           component: () => import('@/pages/project-detail/ProjectDetailPage.vue'),
-          props: true, // passes route.params.name as prop
+          alias: ['/project/:projectRef(.*)', '/work/:projectRef(.*)'],
         },
         {
           path: 'articles',

@@ -35,8 +35,9 @@
         <!-- CV and projects -->
         <div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-start gap-2 sm:gap-4 text-sm py-6">
           <a
-            href="assets/porto/cv/CV_Fakhri_Rasyid_Saputro.pdf"
+            :href="CV_PATH"
             target="_blank"
+            rel="noopener noreferrer"
             class="inline-flex self-center sm:self-auto bg-green-light dark:bg-green-dark text-inverted-dark px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark transition"
           >
             {{ $t('header.download_cv') }}
@@ -65,6 +66,9 @@
             <img
               src="/assets/icons/asset-github-icon.png"
               alt="GitHub"
+              width="24"
+              height="24"
+              decoding="async"
               class="w-6 h-6 transition duration-300 opacity-75 hover:opacity-100 dark:invert dark:brightness-75"
             />
           </a>
@@ -78,6 +82,9 @@
             <img
               src="/assets/icons/asset-linkedin-icon.png"
               alt="LinkedIn"
+              width="24"
+              height="24"
+              decoding="async"
               class="w-6 h-6 transition duration-300 opacity-75 hover:opacity-100 dark:invert dark:brightness-75"
             />
           </a>
@@ -91,6 +98,9 @@
             <img
               src="/assets/icons/asset-medium-icon.png"
               alt="Medium"
+              width="24"
+              height="24"
+              decoding="async"
               class="h-6 w-auto transition duration-300 opacity-75 hover:opacity-100 dark:invert dark:brightness-75"
             />
           </a>
@@ -113,11 +123,22 @@
           class="relative z-10 border-[10px] border-background-light dark:border-background-dark
                 w-[220px] h-[220px] md:w-[360px] md:h-[360px] overflow-hidden"
         >
-          <img
-            src="/assets/me/asset-fakhri.jpg"
-            alt="Hero"
-            class="w-full h-full object-cover"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/assets/me/asset-fakhri-440.webp 440w, /assets/me/asset-fakhri-720.webp 720w"
+              sizes="(min-width: 768px) 360px, 220px"
+            />
+            <img
+              src="/assets/me/asset-fakhri-720.webp"
+              alt="Fakhri Rasyid Saputro"
+              width="720"
+              height="1080"
+              fetchpriority="high"
+              decoding="async"
+              class="w-full h-full object-cover"
+            />
+          </picture>
         </div>
       </div>
     </section>
@@ -125,14 +146,18 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { CV_PATH } from '@/constants/assets'
 
 const typedText = ref('')
-const descriptions = ['Mobile Developer', 'Software Engineer']
+const descriptions = ['Tech Lead', 'Mobile Engineer', 'Software Engineer']
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 let currentIndex = 0
 let charIndex = 0
 let isDeleting = false
+let typeTimer
+let snakeTimer
 const typeSpeed = 100
 const deleteSpeed = 60
 const pauseTime = 1000
@@ -145,9 +170,9 @@ function typeLoop() {
     charIndex++
     if (charIndex === currentText.length) {
       isDeleting = true
-      setTimeout(typeLoop, pauseTime)
+      typeTimer = setTimeout(typeLoop, pauseTime)
     } else {
-      setTimeout(typeLoop, typeSpeed)
+      typeTimer = setTimeout(typeLoop, typeSpeed)
     }
   } else {
     typedText.value = currentText.substring(0, charIndex - 1)
@@ -155,9 +180,9 @@ function typeLoop() {
     if (charIndex === 0) {
       isDeleting = false
       currentIndex = (currentIndex + 1) % descriptions.length
-      setTimeout(typeLoop, 300)
+      typeTimer = setTimeout(typeLoop, 300)
     } else {
-      setTimeout(typeLoop, deleteSpeed)
+      typeTimer = setTimeout(typeLoop, deleteSpeed)
     }
   }
 }
@@ -215,15 +240,25 @@ function startSnakeAnimation() {
     })
 
     head = getNextIndex(head)
-    setTimeout(step, 180) // slower step
+    snakeTimer = setTimeout(step, 180)
   }
 
   step()
 }
 
 onMounted(() => {
+  if (prefersReducedMotion) {
+    typedText.value = descriptions[0]
+    return
+  }
+
   typeLoop()
   startSnakeAnimation()
+})
+
+onBeforeUnmount(() => {
+  clearTimeout(typeTimer)
+  clearTimeout(snakeTimer)
 })
 </script>
 
@@ -257,6 +292,17 @@ onMounted(() => {
   background-color: #E2E6EC;
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-waving-hand,
+  .animate-blink {
+    animation: none;
+  }
+
+  .bg-blink-cell {
+    transition: none;
+  }
 }
 .dark .bg-blink-cell {
   background-color: #1A1F36;

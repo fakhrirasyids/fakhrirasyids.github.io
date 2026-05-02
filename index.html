@@ -4,14 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/assets/logo/asset-fakhri-porto-logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous"
+    <meta
+      name="description"
+      content="Portfolio of Fakhri Rasyid Saputro, a mobile developer and software engineer."
     />
-    
-    <title>Fakhri - Porto</title>
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/me/asset-fakhri-720.webp"
+      imagesrcset="/assets/me/asset-fakhri-440.webp 440w, /assets/me/asset-fakhri-720.webp 720w"
+      imagesizes="(min-width: 768px) 360px, 220px"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <script>
+      try {
+        if ((localStorage.getItem('theme') || 'dark') === 'dark') {
+          document.documentElement.classList.add('dark')
+        }
+      } catch (_) {
+        document.documentElement.classList.add('dark')
+      }
+    </script>
+
+    <title>Fakhri Rasyid Saputro | Portfolio</title>
   </head>
   <body>
     <div id="app"></div>

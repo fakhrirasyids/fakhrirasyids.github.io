@@ -1,25 +1,18 @@
 import { createApp } from 'vue'
 import App from '@/App.vue'
 import router from '@/router/'
-import { createI18n } from 'vue-i18n'
+import { getInitialLocale, i18n, loadLocale, setLocale } from '@/plugins/i18n'
 import { installI18nGlobalT } from '@/plugins/i18n-global'
-
-import en from '@/locales/en.json'
-import id from '@/locales/id.json'
-import zh from '@/locales/zh.json'
 
 import '@/styles/tailwind.css'
 
-const i18n = createI18n({
-  legacy: false,
-  locale: 'en',
-  fallbackLocale: 'en',
-  messages: {
-    en,
-    id,
-    zh
-  }
-})
+const initialLocale = getInitialLocale()
+
+await Promise.all([
+  loadLocale('en'),
+  initialLocale === 'en' ? Promise.resolve() : loadLocale(initialLocale),
+])
+await setLocale(initialLocale)
 
 const app = createApp(App)
 

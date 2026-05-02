@@ -28,6 +28,10 @@
               <img
                 :src="exp.logo"
                 :alt="exp.company"
+                width="56"
+                height="56"
+                loading="lazy"
+                decoding="async"
                 class="w-14 h-14 object-contain"
               />
             </div>

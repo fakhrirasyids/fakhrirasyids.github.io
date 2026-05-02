@@ -1,226 +1,292 @@
 <template>
-  <section id="projects" class="py-12 px-6">
+  <section id="projects" class="py-16 px-4 sm:px-6 min-h-screen">
     <div class="max-w-7xl mx-auto">
-      <!-- Section Label -->
-      <div class="text-center">
-        <span
-          class="bg-onSurface-light dark:bg-onSurface-dark text-text-secondary-light dark:text-text-secondary-dark text-xs tracking-widest rounded-full py-2 px-3"
-        >
+
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <span class="inline-flex items-center gap-1.5 bg-brand-light/10 dark:bg-brand-dark/15 text-brand-light dark:text-brand-dark text-xs font-semibold tracking-widest uppercase rounded-full py-1.5 px-4 mb-5">
           {{ t('projects.label') }}
         </span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary-light dark:text-text-primary-dark leading-tight">
+          {{ t('projects.title') }}
+        </h2>
       </div>
 
-      <!-- Title -->
-      <h2
-        class="text-l md:text-xl font-medium mb-8 text-text-primary-light dark:text-text-primary-dark py-4 text-center mt-6"
-      >
-        {{ t('projects.title') }}
-      </h2>
-
-      <!-- Mobile: count (left) + Filter toggle (right) -->
-      <div class="flex items-center justify-between gap-4 mb-4 sm:hidden">
-        <span class="text-xs text-text-primary-light dark:text-text-primary-dark">
-          {{ t('projects.showing', { shown: shownCount, total: totalCount }) }}
-        </span>
+      <!-- Platform quick-filter pills (always visible) -->
+      <div class="flex flex-wrap justify-center gap-2 mb-8">
+        <!-- All pill -->
         <button
-          @click="openFilter()"
-          class="p-2 border rounded text-sm text-text-primary-light dark:text-text-primary-dark border-onSurface-light/50 dark:border-onSurface-dark/50"
-          aria-haspopup="dialog"
-          :aria-expanded="isFilterOpen"
-          :aria-controls="'mobile-filter-sheet'"
+          @click="selectedPlatforms = []"
+          :class="[
+            'px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200',
+            selectedPlatforms.length === 0
+              ? 'bg-brand-light dark:bg-brand-dark text-white shadow-md scale-105'
+              : 'bg-onSurface-light dark:bg-onSurface-dark text-text-secondary-light dark:text-text-secondary-dark hover:scale-105'
+          ]"
         >
-          {{ isFilterOpen ? '✖' : '🔍' }} {{ t('projects.filter') }}
+          All
+        </button>
+        <button
+          v-for="plat in availablePlatforms"
+          :key="plat"
+          @click="togglePlatform(plat)"
+          :class="[
+            'px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200',
+            selectedPlatforms.includes(plat)
+              ? 'bg-brand-light dark:bg-brand-dark text-white shadow-md scale-105'
+              : 'bg-onSurface-light dark:bg-onSurface-dark text-text-secondary-light dark:text-text-secondary-dark hover:scale-105'
+          ]"
+        >
+          {{ plat }}
         </button>
       </div>
 
-      <!-- DESKTOP: Global top bar -->
-      <div class="hidden sm:flex items-center justify-end mb-4">
-        <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark">
+      <!-- Count + Desktop tech-filter toggle -->
+      <div class="flex items-center justify-between mb-6 gap-3">
+        <span class="text-xs text-text-muted-light dark:text-text-muted-dark">
           {{ t('projects.showing', { shown: shownCount, total: totalCount }) }}
         </span>
+        <div class="flex items-center gap-2">
+          <!-- Clear (only when active) -->
+          <button
+            v-if="hasActiveFilters"
+            @click="clearAll"
+            class="text-xs px-3 py-1.5 rounded-full border border-red-400 dark:border-red-500 text-red-500 dark:text-red-400 hover:bg-red-500 hover:text-white dark:hover:bg-red-500 dark:hover:text-white transition-all duration-200"
+          >
+            {{ t('projects.clear') }}
+          </button>
+          <!-- Tech filter toggle (desktop) -->
+          <button
+            @click="showTechFilter = !showTechFilter"
+            :class="[
+              'hidden sm:flex items-center gap-1.5 text-xs px-3.5 py-1.5 rounded-full border transition-all duration-200',
+              showTechFilter
+                ? 'bg-brand-light dark:bg-brand-dark text-white border-brand-light dark:border-brand-dark'
+                : 'border-onSurface-light dark:border-onSurface-dark text-text-secondary-light dark:text-text-secondary-dark hover:border-brand-light dark:hover:border-brand-dark'
+            ]"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            {{ t('projects.technologies') }}
+          </button>
+          <!-- Mobile filter btn -->
+          <button
+            @click="openMobileFilter"
+            class="sm:hidden flex items-center gap-1.5 text-xs px-3.5 py-1.5 rounded-full border border-onSurface-light dark:border-onSurface-dark text-text-secondary-light dark:text-text-secondary-dark"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            {{ t('projects.filter') }}
+            <span v-if="hasActiveFilters" class="w-2 h-2 rounded-full bg-brand-light dark:bg-brand-dark"></span>
+          </button>
+        </div>
       </div>
 
-      <!-- Layout -->
-      <div class="flex flex-col sm:flex-row gap-6">
-        <!-- Filter Sidebar (Desktop) -->
-        <aside class="hidden sm:block w-full sm:w-1/5 space-y-6">
-          <FilterPanel
-            :availableTechnologies="availableTechnologies"
-            :availablePlatforms="availablePlatforms"
-            v-model:selectedTechnologies="selectedTechnologies"
-            v-model:selectedPlatforms="selectedPlatforms"
-          />
-        </aside>
-
-        <!-- Right column (desktop): grid only -->
-        <div class="w-full sm:w-4/5">
-          <!-- Project Cards -->
-          <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
-            <RouterLink
-              v-for="project in filteredProjects"
-              :key="project.id"
-              class="rounded-xl shadow-md overflow-hidden bg-background-light dark:bg-surfaceVariant-dark block"
-              :to="{ name: 'ProjectDetail', params: { id: project.id } }"
-            >
-              <!-- Image -->
-              <div class="bg-surface-light dark:bg-surface-dark p-4 h-48 flex items-center justify-center">
-                <img :src="project.image" :alt="project.name" class="h-full w-auto object-contain rounded-lg" />
-              </div>
-
-              <!-- Content -->
-              <div class="p-4 flex flex-col h-[200px]">
-                <!-- Title: mobile max 2 lines (ellipsize), desktop un-clamped -->
-                <h3
-                  :ref="setTitleRef(project.id)"
-                  class="text-lg font-semibold text-text-primary-light dark:text-text-primary-dark line-clamp-2 sm:unclamp"
-                >
-                  {{ project.name }}
-                </h3>
-
-                <!-- Description:
-                     - Mobile: if title is exactly 2 lines -> clamp to 2, else clamp to 3
-                     - Desktop: keep 3 lines
-                -->
-                <p
-                  :class="[
-                    'text-sm mt-2 text-text-secondary-light dark:text-text-secondary-dark',
-                    titleTwoLines[project.id] ? 'line-clamp-2 sm:line-clamp-3-desktop' : 'line-clamp-3'
-                  ]"
-                >
-                  {{ project.i18nKey ? t(project.i18nKey) : project.description }}
-                </p>
-
-                <!-- Technologies -->
-                <div class="flex gap-2 text-xs mt-auto flex-wrap mt-3">
-                  <span
-                    v-for="(tech, techIndex) in project.technologies"
-                    :key="techIndex"
-                    class="bg-onSurface-light dark:bg-onSurface-dark text-text-secondary-light dark:text-text-secondary-dark px-2 py-1 rounded"
-                  >
-                    {{ tech }}
-                  </span>
-                </div>
-              </div>
-            </RouterLink>
-          </div>
-
-          <!-- No Projects -->
-          <div
-            v-if="filteredProjects.length === 0"
-            class="text-center text-sm mt-10 text-text-secondary-light dark:text-text-secondary-dark"
+      <!-- Desktop tech chips (collapsible) -->
+      <transition name="slide-fade">
+        <div v-if="showTechFilter" class="hidden sm:flex flex-wrap gap-2 mb-6 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark border border-onSurface-light/40 dark:border-onSurface-dark/40">
+          <button
+            v-for="tech in availableTechnologies"
+            :key="tech"
+            @click="toggleTech(tech)"
+            :class="[
+              'px-3 py-1 rounded-full text-xs font-medium transition-all duration-150',
+              selectedTechnologies.includes(tech)
+                ? 'bg-brand-light dark:bg-brand-dark text-white'
+                : 'bg-onSurface-light dark:bg-onSurface-dark text-text-secondary-light dark:text-text-secondary-dark hover:bg-brand-light/10 dark:hover:bg-brand-dark/20'
+            ]"
           >
-            {{ t('projects.none') }}
-          </div>
+            {{ tech }}
+          </button>
         </div>
+      </transition>
+
+      <!-- Project Grid -->
+      <TransitionGroup
+        name="cards"
+        tag="div"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+      >
+        <RouterLink
+          v-for="(project, i) in filteredProjects"
+          :key="project.id"
+          :to="projectDetailTo(project)"
+          class="group text-left rounded-lg overflow-hidden bg-surface-light dark:bg-surfaceVariant-dark border border-onSurface-light/50 dark:border-onSurface-dark/50 hover:border-brand-light/40 dark:hover:border-brand-dark/40 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light dark:focus-visible:ring-brand-dark"
+        >
+          <!-- Thumbnail -->
+          <div class="relative overflow-hidden bg-background-light dark:bg-surface-dark h-44">
+            <img
+              :src="project.image"
+              :alt="project.name"
+              :loading="i < 6 ? 'eager' : 'lazy'"
+              :fetchpriority="i < 6 ? 'high' : 'auto'"
+              decoding="async"
+              class="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+            />
+            <!-- Platform badges overlay -->
+            <div class="absolute top-2 right-2 flex flex-wrap gap-1 justify-end">
+              <span
+                v-for="plat in project.platforms"
+                :key="plat"
+                class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-black/40 dark:bg-white/10 backdrop-blur-sm text-white"
+              >
+                {{ plat }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="p-4 flex flex-col gap-3">
+            <div>
+              <h3 class="font-semibold text-sm text-text-primary-light dark:text-text-primary-dark line-clamp-2 leading-snug">
+                {{ project.name }}
+              </h3>
+              <p class="text-xs mt-1.5 text-text-muted-light dark:text-text-muted-dark line-clamp-2 leading-relaxed">
+                {{ project.i18nKey ? t(project.i18nKey) : project.description }}
+              </p>
+            </div>
+
+            <!-- Tech chips -->
+            <div class="flex flex-wrap gap-1.5">
+              <span
+                v-for="(tech, ti) in project.technologies.slice(0, 4)"
+                :key="ti"
+                class="text-[10px] px-2 py-0.5 rounded-full bg-onSurface-light dark:bg-onSurface-dark text-text-secondary-light dark:text-text-secondary-dark"
+              >
+                {{ tech }}
+              </span>
+              <span
+                v-if="project.technologies.length > 4"
+                class="text-[10px] px-2 py-0.5 rounded-full bg-brand-light/10 dark:bg-brand-dark/15 text-brand-light dark:text-brand-dark font-medium"
+              >
+                +{{ project.technologies.length - 4 }}
+              </span>
+            </div>
+
+            <!-- CTA hint -->
+            <div class="flex items-center gap-1 text-[11px] font-medium text-brand-light dark:text-brand-dark mt-auto pt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <span>{{ t('projects.click_full_detail') }}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </RouterLink>
+      </TransitionGroup>
+
+      <!-- Empty state -->
+      <div
+        v-if="filteredProjects.length === 0"
+        class="text-center py-20"
+      >
+        <div class="text-4xl mb-3">🔍</div>
+        <p class="text-sm text-text-muted-light dark:text-text-muted-dark">{{ t('projects.none') }}</p>
+        <button @click="clearAll" class="mt-4 text-xs text-brand-light dark:text-brand-dark underline underline-offset-2">
+          {{ t('projects.clear') }}
+        </button>
       </div>
     </div>
 
-    <!-- ===== MOBILE OVERLAY FILTER (Sheet) ===== -->
+    <!-- Mobile filter sheet -->
     <transition name="overlay-fade">
       <div
-        v-if="isFilterOpen"
+        v-if="isMobileFilterOpen"
         class="fixed inset-0 z-[60] sm:hidden"
         role="dialog"
-        :aria-labelledby="'mobile-filter-title'"
-        :aria-modal="true"
-        id="mobile-filter-sheet"
-        @keydown.esc="closeFilter"
+        aria-modal="true"
+        @keydown.esc="closeMobileFilter"
       >
-        <!-- Backdrop -->
-        <div class="absolute inset-0 bg-black/40 backdrop-blur-[1px]" @click="closeFilter"></div>
-
-        <!-- Sheet -->
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-[2px]" @click="closeMobileFilter"></div>
         <transition name="sheet-up">
           <div
-            v-show="isFilterOpen"
-            class="absolute inset-x-0 bottom-0 max-h-[85vh] rounded-t-2xl
-                   bg-surface-light dark:bg-surface-dark
-                   border-t border-onSurface-light/40 dark:border-onSurface-dark/40
-                   shadow-2xl p-4 overflow-y-auto"
+            v-show="isMobileFilterOpen"
+            class="absolute inset-x-0 bottom-0 max-h-[80vh] rounded-t-2xl bg-surface-light dark:bg-surface-dark border-t border-onSurface-light/30 dark:border-onSurface-dark/30 shadow-2xl overflow-y-auto"
             ref="sheetEl"
             tabindex="-1"
           >
-            <!-- Sheet header -->
-            <div class="flex items-center justify-between pb-3 border-b border-onSurface-light/30 dark:border-onSurface-dark/30">
-              <div class="flex items-center gap-2">
-                <span class="text-lg font-medium text-text-primary-light dark:text-text-primary-dark" id="mobile-filter-title">
-                  {{ t('projects.filter') }}
-                </span>
-                <span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">
-                  · {{ t('projects.showing', { shown: shownCount, total: totalCount }) }}
-                </span>
-              </div>
-              <div class="flex items-center gap-2">
+            <!-- Handle -->
+            <div class="flex justify-center pt-3 pb-1">
+              <div class="w-10 h-1 rounded-full bg-onSurface-light dark:bg-onSurface-dark"></div>
+            </div>
+
+            <!-- Header -->
+            <div class="flex items-center justify-between px-5 py-3 border-b border-onSurface-light/20 dark:border-onSurface-dark/20">
+              <span class="font-semibold text-sm text-text-primary-light dark:text-text-primary-dark">{{ t('projects.filter') }}</span>
+              <div class="flex gap-2">
                 <button
-                  class="text-sm px-3 py-1.5 rounded-lg border border-red-600 dark:border-red-400
-                         bg-red-500 hover:bg-red-600
-                         text-white transition"
                   @click="clearAll"
+                  class="text-xs px-3 py-1.5 rounded-full border border-red-400 text-red-500 hover:bg-red-500 hover:text-white transition"
                 >
                   {{ t('projects.clear') }}
                 </button>
-
                 <button
-                  class="text-sm px-3 py-1.5 rounded-lg border border-green-600 dark:border-green-400
-                         bg-green-500 hover:bg-green-600
-                         text-white transition"
-                  @click="closeFilter"
+                  @click="closeMobileFilter"
+                  class="text-xs px-3 py-1.5 rounded-full bg-brand-light dark:bg-brand-dark text-white"
                 >
                   {{ t('projects.apply') }}
                 </button>
               </div>
             </div>
 
-            <!-- Filter body -->
-            <div class="pt-4">
-              <FilterPanel
-                :availableTechnologies="availableTechnologies"
-                :availablePlatforms="availablePlatforms"
-                v-model:selectedTechnologies="selectedTechnologies"
-                v-model:selectedPlatforms="selectedPlatforms"
-              />
+            <!-- Platform -->
+            <div class="px-5 pt-4 pb-2">
+              <p class="text-xs font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-widest mb-3">{{ t('projects.platform') }}</p>
+              <div class="flex flex-wrap gap-2">
+                <button
+                  v-for="plat in availablePlatforms"
+                  :key="plat"
+                  @click="togglePlatform(plat)"
+                  :class="[
+                    'px-3.5 py-1.5 rounded-full text-xs font-medium transition',
+                    selectedPlatforms.includes(plat)
+                      ? 'bg-brand-light dark:bg-brand-dark text-white'
+                      : 'bg-onSurface-light dark:bg-onSurface-dark text-text-secondary-light dark:text-text-secondary-dark'
+                  ]"
+                >
+                  {{ plat }}
+                </button>
+              </div>
+            </div>
+
+            <!-- Technologies -->
+            <div class="px-5 pt-4 pb-8">
+              <p class="text-xs font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-widest mb-3">{{ t('projects.technologies') }}</p>
+              <div class="flex flex-wrap gap-2">
+                <button
+                  v-for="tech in availableTechnologies"
+                  :key="tech"
+                  @click="toggleTech(tech)"
+                  :class="[
+                    'px-3.5 py-1.5 rounded-full text-xs font-medium transition',
+                    selectedTechnologies.includes(tech)
+                      ? 'bg-brand-light dark:bg-brand-dark text-white'
+                      : 'bg-onSurface-light dark:bg-onSurface-dark text-text-secondary-light dark:text-text-secondary-dark'
+                  ]"
+                >
+                  {{ tech }}
+                </button>
+              </div>
             </div>
           </div>
         </transition>
       </div>
     </transition>
+
   </section>
 </template>
 
 <script setup lang="ts">
-import {
-  ref,
-  computed,
-  watch,
-  onMounted,
-  onBeforeUnmount,
-  nextTick,
-  type ComponentPublicInstance,
-} from 'vue'
-import FilterPanel from '@/components/FilterPanel.vue'
+import { ref, computed, watch, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Project } from '@/types/projects'
 import { projects as projectsData } from '@/data/projects'
 
 const { t } = useI18n()
 
-/* =========================
- * Data
- * =======================*/
 const allProjects = ref<Project[]>([...projectsData])
-
-/* =========================
- * Filter sheet state
- * =======================*/
-const isFilterOpen = ref(false)
+const showTechFilter = ref(false)
+const isMobileFilterOpen = ref(false)
 const sheetEl = ref<HTMLElement | null>(null)
-const previouslyFocused = ref<HTMLElement | null>(null)
 
-/* Selected filters */
 const selectedTechnologies = ref<string[]>([])
 const selectedPlatforms = ref<string[]>([])
 
-/* Available chips */
 const availableTechnologies = computed(() => {
   const set = new Set<string>()
   allProjects.value.forEach(p => p.technologies.forEach(t => set.add(t)))
@@ -233,194 +299,120 @@ const availablePlatforms = computed(() => {
   return Array.from(set).sort()
 })
 
-/* Filtering */
 const filteredProjects = computed(() =>
-  allProjects.value.filter(project => {
-    const matchesTech =
-      selectedTechnologies.value.length === 0 ||
-      project.technologies.some(tech => selectedTechnologies.value.includes(tech))
-
-    const matchesPlatform =
-      selectedPlatforms.value.length === 0 ||
-      project.platforms.some(plat => selectedPlatforms.value.includes(plat))
-
-    return matchesTech && matchesPlatform
-  }),
+  allProjects.value.filter(p => {
+    const okTech = selectedTechnologies.value.length === 0 || p.technologies.some(t => selectedTechnologies.value.includes(t))
+    const okPlat = selectedPlatforms.value.length === 0 || p.platforms.some(pl => selectedPlatforms.value.includes(pl))
+    return okTech && okPlat
+  })
 )
 
 const totalCount = computed(() => allProjects.value.length)
 const shownCount = computed(() => filteredProjects.value.length)
+const hasActiveFilters = computed(() => selectedTechnologies.value.length > 0 || selectedPlatforms.value.length > 0)
 
-/* =========================
- * Mobile title measurement → drives desc clamping
- * =======================*/
-const isMobile = ref(false)
-function updateIsMobile() {
-  isMobile.value = window.matchMedia('(max-width: 639px)').matches
+function toggleTech(tech: string) {
+  selectedTechnologies.value = selectedTechnologies.value.includes(tech)
+    ? selectedTechnologies.value.filter(x => x !== tech)
+    : [...selectedTechnologies.value, tech]
 }
 
-/** For each card title, track if it wraps to ≥2 lines on mobile */
-const titleTwoLines = ref<Record<string, boolean>>({})
-const titleElMap = new Map<string, HTMLElement>()
-const roMap = new Map<string, ResizeObserver>()
-
-/** Vue function-ref with the correct VNodeRef signature; narrow to HTMLElement safely */
-function setTitleRef(id: string) {
-  return (refEl: Element | ComponentPublicInstance | null) => {
-    const el = refEl instanceof HTMLElement ? refEl : null
-
-    // Clean up any old observer if the ref changed
-    const prev = titleElMap.get(id)
-    if (prev && prev !== el) {
-      const ro = roMap.get(id)
-      if (ro) ro.disconnect()
-      roMap.delete(id)
-      titleElMap.delete(id)
-    }
-
-    // Register new observer
-    if (el) {
-      titleElMap.set(id, el)
-      const ro = new ResizeObserver(() => measureOne(id))
-      ro.observe(el)
-      roMap.set(id, ro)
-
-      // initial measure after DOM paints
-      requestAnimationFrame(() => measureOne(id))
-    }
-  }
+function togglePlatform(plat: string) {
+  selectedPlatforms.value = selectedPlatforms.value.includes(plat)
+    ? selectedPlatforms.value.filter(x => x !== plat)
+    : [...selectedPlatforms.value, plat]
 }
 
-function measureOne(id: string) {
-  if (!isMobile.value) {
-    titleTwoLines.value[id] = false
-    return
-  }
-  const el = titleElMap.get(id)
-  if (!el) return
-  const cs = getComputedStyle(el)
-  const lh = parseFloat(cs.lineHeight || '0')
-  if (!lh) return
-  const lines = Math.round(el.clientHeight / lh)
-  titleTwoLines.value[id] = lines >= 2
-}
-
-function measureAll() {
-  filteredProjects.value.forEach(p => measureOne(p.id))
-}
-
-/* =========================
- * Filter sheet controls
- * =======================*/
-function lockScroll() { document.documentElement.style.overflow = 'hidden' }
-function unlockScroll() { document.documentElement.style.overflow = '' }
-
-function openFilter() {
-  previouslyFocused.value = document.activeElement as HTMLElement | null
-  isFilterOpen.value = true
-}
-function closeFilter() {
-  isFilterOpen.value = false
-}
 function clearAll() {
   selectedTechnologies.value = []
   selectedPlatforms.value = []
 }
 
-/* =========================
- * Watchers & lifecycle
- * =======================*/
-watch(isFilterOpen, async (open) => {
+function slugify(value: string) {
+  return value
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+function projectDetailTo(project: Project) {
+  return {
+    name: 'ProjectDetail',
+    params: { projectRef: project.path ?? project.slug ?? slugify(project.name) },
+  }
+}
+
+function openMobileFilter() {
+  isMobileFilterOpen.value = true
+}
+function closeMobileFilter() {
+  isMobileFilterOpen.value = false
+}
+
+watch(isMobileFilterOpen, async (open) => {
   if (open) {
-    lockScroll()
+    document.documentElement.style.overflow = 'hidden'
     await nextTick()
     sheetEl.value?.focus()
   } else {
-    unlockScroll()
-    previouslyFocused.value?.focus?.()
+    document.documentElement.style.overflow = ''
   }
 })
 
-watch(filteredProjects, async () => {
-  await nextTick()
-  measureAll()
-})
-
-const onResize = () => { updateIsMobile(); measureAll() }
 let mq: MediaQueryList | null = null
-const mqHandler = () => { updateIsMobile(); measureAll() }
+const mqHandler = () => { if (!mq?.matches) closeMobileFilter() }
 
 onMounted(() => {
-  unlockScroll()
-  updateIsMobile()
-  window.addEventListener('resize', onResize)
+  document.documentElement.style.overflow = ''
   mq = window.matchMedia('(max-width: 639px)')
-  if (mq.addEventListener) mq.addEventListener('change', mqHandler)
-  else (mq as any).addListener(mqHandler) // Safari < 14
-
-  nextTick(measureAll)
+  mq.addEventListener('change', mqHandler)
 })
 
 onBeforeUnmount(() => {
-  unlockScroll()
-  window.removeEventListener('resize', onResize)
-  if (mq) {
-    if (mq.removeEventListener) mq.removeEventListener('change', mqHandler)
-    else (mq as any).removeListener(mqHandler)
-  }
-  roMap.forEach(ro => ro.disconnect())
-  roMap.clear()
-  titleElMap.clear()
+  document.documentElement.style.overflow = ''
+  mq?.removeEventListener('change', mqHandler)
 })
-
-/* =========================
- * Expose to template
- * =======================*/
 </script>
 
-
 <style scoped>
-/* Generic clamp helpers */
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+/* Card grid animation */
+.cards-move,
+.cards-enter-active,
+.cards-leave-active {
+  transition: all 0.3s ease;
 }
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.cards-enter-from,
+.cards-leave-to {
+  opacity: 0;
+  transform: scale(0.97) translateY(8px);
 }
-/* Desktop: always show 3 lines for description when forced */
-@media (min-width: 640px) {
-  .sm\:line-clamp-3-desktop {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  /* Unclamp title on desktop */
-  .sm\:unclamp {
-    display: block !important;
-    -webkit-line-clamp: unset !important;
-    overflow: visible !important;
-  }
+.cards-leave-active {
+  position: absolute;
 }
 
-/* Fades backdrop (existing) */
+/* Tech panel slide */
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.2s ease;
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+/* Overlay fade */
 .overlay-fade-enter-active,
 .overlay-fade-leave-active { transition: opacity 0.2s ease; }
 .overlay-fade-enter-from,
 .overlay-fade-leave-to { opacity: 0; }
 
-/* Sheet slides up (existing) */
+/* Sheet slide up */
 .sheet-up-enter-active,
 .sheet-up-leave-active { transition: transform 0.25s ease, opacity 0.25s ease; }
 .sheet-up-enter-from,
-.sheet-up-leave-to { transform: translateY(12px); opacity: 0; }
+.sheet-up-leave-to { transform: translateY(20px); opacity: 0; }
 </style>
