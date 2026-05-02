@@ -26,68 +26,68 @@
         "title": "Some thoughts and writings I've published recently:"
     },
     "experience": {
-    "label": "Experience",
-    "title": "Here is a quick summary of my most recent experiences:",
-    "items": [
-        {
-        "title": "Mobile Developer",
-        "company": "Fischer Medical Ventures",
-        "location": "Central Region, Singapore",
-        "period": "January 2025 – Present",
-        "responsibilities": [
-            "Delivered production Mobile apps that connect to 10+ medical devices (USB/BLE), enabling live streaming, calibration, and remote control with resilient connections and fault-tolerant workflows used by clinicians.",
-            "Researched and prototyped BLE GATT, real-time video, and on-device ML. Turned findings into reference modules and decision docs that accelerated production rollouts.",
-            "Partnered with firmware and backend teams to define protocols and harden flows, shipping clinic-ready Mobile apps with robust offline/retry and end-to-end observability."
-        ],
-        "logo": "/assets/logo/asset-fmv-logo.png"
-        },
-        {
-        "title": "iOS Developer",
-        "company": "Owlies",
-        "location": "Yogyakarta, Indonesia",
-        "period": "October 2025 – December 2025",
-        "responsibilities": [
-            "Shipped end-to-end iOS features using Clean Architecture and MVVM in Swift, supported by comprehensive unit + UI test suites to improve release confidence and reduce production regressions.",
-            "Implemented Superwall Paywall end-to-end on iOS (trigger rules, paywall presentation, product mapping, entitlement validation, and A/B testing), including a 5-second delayed trial prompt that improved purchase intent and increased conversion by ~70% (trial-to-paid / paywall-to-purchase)."
-        ],
-        "logo": "/assets/logo/asset-owlies-logo.jpg"
-        },
-        {
-        "title": "Android Engineer Intern",
-        "company": "Traveloka (Travel Activities Department)",
-        "location": "Tangerang, Indonesia",
-        "period": "February 2024 – June 2024",
-        "responsibilities": [
-            "Refactored legacy modules and fixed bugs in the Traveloka Android app (50M+ downloads), improving responsiveness across device tiers and strengthening release stability.",
-            "Implemented new features end-to-end using Clean MVVM and MVP architecture. Wrote unit/UI tests across Kotlin and Java, lifting coverage to 70%+ and reducing regressions during releases.",
-            "Researched and proposed integration strategies for Jetpack Compose and modern Android libraries to improve developer efficiency and UI responsiveness."
-        ],
-        "logo": "/assets/logo/asset-traveloka-logo.png"
-        },
-        {
-        "title": "Mobile Developer",
-        "company": "Freelanxx.it",
-        "location": "Semarang, Indonesia",
-        "period": "January 2022 – February 2024",
-        "responsibilities": [
-            "Designed, built, and shipped 20+ mobile apps across education and retail using Kotlin/Java (Android) and Flutter (cross-platform).",
-            "Led a 4-person team, ran Agile sprints, coordinated cross-functionally, and standardized CI/CD across GitHub, GitLab, and CircleCI.",
-            "Built RESTful API backends using Node.js and Laravel to support mobile features such as authentication, real-time updates, and secure data storage."
-        ],
-        "logo": "/assets/logo/asset-freelanxx-logo.png"
-        },
-        {
-        "title": "Mobile Developer Intern",
-        "company": "Schoters (Project-Based Internship)",
-        "location": "Indonesia",
-        "period": "July 2022 – August 2022",
-        "responsibilities": [
-            "Delivered Android features in Kotlin with Firebase Realtime Database (live updates) and Crashlytics (instrumentation, alerting), reducing repeat crash types during the program.",
-            "Practiced version control (Git) and participated in collaborative code reviews as part of a remote internship program simulating real-world development environments."
-        ],
-        "logo": "/assets/logo/asset-schoters-logo.jpg"
-        }
-    ]
+        "label": "Experience",
+        "title": "Here is a quick summary of my most recent experiences:",
+        "items": [
+            {
+                "title": "Mobile Developer",
+                "company": "Fischer Medical Ventures",
+                "location": "Central Region, Singapore",
+                "period": "January 2025 – Present",
+                "responsibilities": [
+                    "Delivered production Mobile apps that connect to 10+ medical devices (USB/BLE), enabling live streaming, calibration, and remote control with resilient connections and fault-tolerant workflows used by clinicians.",
+                    "Researched and prototyped BLE GATT, real-time video, and on-device ML. Turned findings into reference modules and decision docs that accelerated production rollouts.",
+                    "Partnered with firmware and backend teams to define protocols and harden flows, shipping clinic-ready Mobile apps with robust offline/retry and end-to-end observability."
+                ],
+                "logo": "/assets/logo/asset-fmv-logo.png"
+            },
+            {
+                "title": "iOS Developer",
+                "company": "Owlies",
+                "location": "Yogyakarta, Indonesia",
+                "period": "October 2025 – December 2025",
+                "responsibilities": [
+                    "Shipped end-to-end iOS features using Clean Architecture and MVVM in Swift, supported by comprehensive unit + UI test suites to improve release confidence and reduce production regressions.",
+                    "Implemented Superwall Paywall end-to-end on iOS (trigger rules, paywall presentation, product mapping, entitlement validation, and A/B testing), including a 5-second delayed trial prompt that improved purchase intent and increased conversion by ~70% (trial-to-paid / paywall-to-purchase)."
+                ],
+                "logo": "/assets/logo/asset-owlies-logo.jpg"
+            },
+            {
+                "title": "Android Engineer Intern",
+                "company": "Traveloka (Travel Activities Department)",
+                "location": "Tangerang, Indonesia",
+                "period": "February 2024 – June 2024",
+                "responsibilities": [
+                    "Refactored legacy modules and fixed bugs in the Traveloka Android app (50M+ downloads), improving responsiveness across device tiers and strengthening release stability.",
+                    "Implemented new features end-to-end using Clean MVVM and MVP architecture. Wrote unit/UI tests across Kotlin and Java, lifting coverage to 70%+ and reducing regressions during releases.",
+                    "Researched and proposed integration strategies for Jetpack Compose and modern Android libraries to improve developer efficiency and UI responsiveness."
+                ],
+                "logo": "/assets/logo/asset-traveloka-logo.png"
+            },
+            {
+                "title": "Mobile Developer",
+                "company": "Freelanxx.it",
+                "location": "Semarang, Indonesia",
+                "period": "January 2022 – February 2024",
+                "responsibilities": [
+                    "Designed, built, and shipped 20+ mobile apps across education and retail using Kotlin/Java (Android) and Flutter (cross-platform).",
+                    "Led a 4-person team, ran Agile sprints, coordinated cross-functionally, and standardized CI/CD across GitHub, GitLab, and CircleCI.",
+                    "Built RESTful API backends using Node.js and Laravel to support mobile features such as authentication, real-time updates, and secure data storage."
+                ],
+                "logo": "/assets/logo/asset-freelanxx-logo.png"
+            },
+            {
+                "title": "Mobile Developer Intern",
+                "company": "Schoters (Project-Based Internship)",
+                "location": "Indonesia",
+                "period": "July 2022 – August 2022",
+                "responsibilities": [
+                    "Delivered Android features in Kotlin with Firebase Realtime Database (live updates) and Crashlytics (instrumentation, alerting), reducing repeat crash types during the program.",
+                    "Practiced version control (Git) and participated in collaborative code reviews as part of a remote internship program simulating real-world development environments."
+                ],
+                "logo": "/assets/logo/asset-schoters-logo.jpg"
+            }
+        ]
     },
     "projects": {
         "label": "Projects",
@@ -101,9 +101,9 @@
         "click_full_detail": "click to see full detail",
         "showing": "Showing {shown} of {total} projects",
         "items": {
-            "stethoscope_project": "The Stethoscope app is a mobile application purpose-built for healthcare professionals to capture, review, and manage digital stethoscope recordings at the point of care. Running on Android and iOS, it pairs with BLE-enabled stethoscopes to stream high-fidelity heart and lung sounds, visualize them in real time, and attach recordings to patient encounters for longitudinal tracking.",
-            "xray_project": "The X-Ray App is a native Android tablet tool built for Digihealth’s clinical kiosks. It connects directly to X-ray equipment in the room, pulls DICOM studies from remote imaging systems, and puts clean, responsive image review in a doctor’s hands at the point of care. Doctors can label findings, draw regions of interest, measure angles and distances, and fine tune contrast and window or level. The image toolkit is powered by OpenCV and a precise color picker, so annotations and edits remain consistent across cases. Everything is designed for tablet ergonomics, from pinch and zoom to quick toggles for overlays and presets. The app follows an offline first model. Studies, edits, and notes are stored locally when a connection is unavailable, then synced back to the backend as soon as the device is online. In practice that means rounds and consultations never pause for network conditions, while records still land in the right place once connectivity returns.",
-            "digihealth_kiosk_project": "The Health Kiosk is an Android-based tablet application developed to run on tablets embedded within Digihealth ATM units, which are deployed in public areas such as clinics and hospitals. It offers a self-service healthcare experience, allowing patients to access essential health services efficiently and independently. This system connects to a centralized backend via secure RESTful APIs to handle authentication, data synchronization, appointment scheduling, and more. The kiosk integrates with various medical devices including digital weight scales, height sensors, oximeters, blood pressure monitors, and thermometers to collect real-time health vitals from users. To enhance the quality of care, the kiosk also integrates with AI modules for health risk predictions, symptom triage, and intelligent health recommendations based on collected data. Patients can log in, manage appointments, join queue systems, and review medical records directly from the interface.",
+            "stethoscope_project": "The Stethoscope app is a Kotlin Multiplatform application built with Jetpack Compose, running natively on Android and iOS from a single shared codebase. It pairs with BLE-enabled stethoscopes to stream high-fidelity heart and lung sounds and visualize them in real time. Devices that support a USB connection can also be wired in directly for more stable, latency-free audio streaming. Recordings are attached to patient encounters for longitudinal tracking, and the offline-first data layer keeps sessions intact even without a network connection.",
+            "xray_project": "The 8xray app is a Kotlin Multiplatform application built with Jetpack Compose, running natively on Android, iOS, and Desktop from a single shared codebase. It communicates with X-ray hardware through native DLL and SO libraries, giving direct access to device controls, real-time image acquisition, and calibration routines at the hardware level. The app pulls DICOM studies, lets doctors label findings, draw regions of interest, measure angles and distances, and fine-tune contrast and window or level using an OpenCV-powered toolkit. Everything follows an offline-first model: studies, edits, and notes are stored locally and synced back to the backend when a connection is available, so rounds and consultations are never interrupted by network conditions.",
+            "digihealth_kiosk_project": "The Health Kiosk is a Kotlin Multiplatform application built with Jetpack Compose, running natively on Android, iOS, and Desktop from a single shared codebase. Deployed inside Digihealth ATM units in clinics and hospitals, it provides a self-service healthcare experience where patients can log in, join queues, schedule appointments, and review medical records. The kiosk connects to 10+ medical devices over BLE and USB, including weight scales, height sensors, oximeters, blood pressure monitors, and thermometers, collecting real-time vitals in a single session. AI modules handle health risk prediction, symptom triage, and intelligent recommendations based on the collected data. Shared domain logic covers device protocols, data synchronization, and offline queuing, while Compose Multiplatform renders a consistent, clinic-ready UI across all platforms.",
             "patient_health_companion_project": "The Patient Health Companion is a Flutter mobile app that brings the Digihealth kiosk experience to phones. It runs on Android and iOS with the same look and feel. The interface is clean and easy to tap. Patients can update their profile and health data. They can view or book appointments without calling the clinic. Video and chat visits work inside the app using Agora, with simple layouts that keep notes and messages visible. Daily tracking covers vitals, nutrition, sleep, and fitness goals. The app turns these inputs into clear trends and practical tips, with AI insights shown only when they help. The Companion connects to the Digihealth backend through secure REST APIs and WebSockets for live updates. Appointments, messages, and measurements stay in sync across kiosk and mobile. It feels like one continuous place for care at home, on the move, and in the clinic.",
             "teddy_project": "Released in Traveloka 1.1.1. I reworked ticket details to surface what travelers actually compare: baggage and change/refund rules, fare differences, seating and timing notes, and clear vendor terms in plain language. The layout prioritizes must-know info above the fold and reduces jargon, so users feel confident and move forward without bouncing between tabs.",
             "tweety_project": "Released in Traveloka 4.0.0. I updated a lot of pieces, from the carousel to ticket descriptions. I added a “Browse other tickets” section inside the ticket detail so users can check better times or prices without losing their place. Each alternative shows time differences, fare rules, seats left, baggage, and change or refund info, with quick sort and filter controls and clear comparison chips. I also tightened the booking flow from listing to attendee selection with smarter defaults and prefills, clearer step progress, and stronger error handling. The result is fewer interruptions and a smoother path to payment.",
@@ -132,7 +132,25 @@
             "painthings_kotlin": "Art marketplace slicing with attention to images. There is a grid, a detail view with a clean gallery, a simple cart, and a fake checkout so flows can be tested end to end. Image loading is smooth and the layout scales down to small screens. The point was to keep the visuals in front and keep the forms from getting in the way.",
             "capstone_kotlin": "Concept app that ties a few screens into a believable flow. Navigation is straightforward, view models own state, and repositories isolate data access. The project includes a small fake backend so people can click through without setting up services. It is the kind of base you can demo at the end of a sprint and then keep.",
             "cba_java": "Beauty shop UI in Java that covers the usual path. Product list, details, cart, and a small coupon step are in place. SQLite caches responses so the app feels quick after the first run. The code follows standard Android patterns and avoids heavy libraries so it is easy to read.",
-            "gamography_swiftui": "Game catalog for iOS with a clean SwiftUI front end. Search and favorites work offline, images load with async pipelines, and the network layer is thin so a new API can be swapped in without stress. I tuned list performance for older phones and built a couple of accessibility tweaks for large text. It feels fast yet still readable."
+            "gamography_swiftui": "Game catalog for iOS with a clean SwiftUI front end. Search and favorites work offline, images load with async pipelines, and the network layer is thin so a new API can be swapped in without stress. I tuned list performance for older phones and built a couple of accessibility tweaks for large text. It feels fast yet still readable.",
+            "fmv_pcr_multiplatform": "PCR diagnostic app built with Kotlin Multiplatform and Jetpack Compose, running natively on Android, iOS, and Desktop from a single shared codebase. The app pairs with the PCR device over BLE to start runs, stream real-time amplification curves, and display interpreted results. Shared domain logic covers device handshake, protocol parsing, result calculation, and offline caching, while Compose Multiplatform renders identical, high-fidelity UI across all three targets. The MVVM and Clean Architecture layers keep BLE communication strictly separate from presentation, making it straightforward to extend for new device variants without touching the UI.",
+            "cvdetect_multiplatform": "CVDetect is a Kotlin Multiplatform app with Jetpack Compose that performs cardiovascular screening by connecting to the CVDetect medical device over BLE. Shared business logic handles device discovery, measurement session management, waveform capture, and AI-assisted risk interpretation. Compose Multiplatform delivers a consistent, platform-native interface on Android and iOS, while the Clean Architecture structure isolates BLE communication from the clinical workflow UI, ensuring reliable operation even when the network is unavailable.",
+            "lunit_folder_uploader": "Desktop GUI tool built with Python and PySide6 for batch-uploading medical image folders to the Lunit 4T4TB platform. The interface lets operators select a root folder, preview the directory tree, configure upload settings, and monitor per-file progress in real time. Background workers handle the upload queue so the UI stays responsive during large transfers, and a built-in log panel captures errors with enough context to retry failed items without restarting the whole batch.",
+            "fmv_kiosk_website": "Product landing page for the Digihealth Health Kiosk built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The page presents the kiosk's feature set, connected device integrations, and clinical workflow with animated sections, responsive layout for desktop and mobile, and locale-aware content that switches instantly without a page reload.",
+            "fmv_xray_website": "Product landing page for the Digihealth X-Ray application built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The page showcases DICOM viewing, annotation tools, and offline-first workflow with clear visual sections, smooth scroll animations, and full localization that adapts content and layout direction for each language.",
+            "fmv_stethoscope_website": "Product landing page for the Digital Stethoscope app built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The page highlights BLE pairing, real-time waveform visualization, and patient record attachment with an animated hero, feature cards, and seamless language switching across all three locales.",
+            "fmv_pcr_website": "Product landing page for the PCR device built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The page presents the device's nucleic acid amplification workflow, rapid on-site diagnostic capabilities, and clinical use cases with an animated hero, feature highlights, and seamless language switching across all three locales.",
+            "fmv_fundoscope_website": "Product landing page for the Fundoscope device built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The page walks through the device's retinal imaging capabilities, AI-assisted screening workflow, and clinical integration points with a clean visual hierarchy and locale-aware copy.",
+            "fmv_pathology_website": "Product landing page for the Digital Pathology system built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The page presents whole-slide imaging, AI annotation assistance, and remote consultation features using responsive image grids, animated statistics, and full trilingual localization.",
+            "fmv_spirometer_website": "Product landing page for the Spirometer device built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The page covers pulmonary function testing workflow, real-time flow-volume loop display, and reporting features with a crisp layout and instant language switching.",
+            "fmv_ecg_website": "Product landing page for the ECG device built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The page presents 12-lead ECG capture, AI interpretation, and EHR export capabilities with animated waveform visuals, feature highlights, and full localization across all three languages.",
+            "fmv_enzyme_website": "Product landing page for the Enzyme analyzer built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The page details rapid enzyme assay workflows, sample-to-result timing, and device integration with clean section layouts and locale-aware content.",
+            "fmv_epc_website": "Product landing page for the EPC device built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The page outlines the device's diagnostic capabilities, integration with the Digihealth platform, and clinical use cases with responsive design and seamless trilingual support.",
+            "gtt_nano_website": "Corporate website for GTT Nano built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The site covers the company's nanotechnology products, research capabilities, and partnership enquiry flow with a modern design, smooth scroll transitions, and full localization.",
+            "pcr_for_pets_website": "Product landing page for PCR for Pets built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The page presents veterinary PCR diagnostics, species-specific test panels, and clinic integration with approachable visual design and locale-aware copy for three languages.",
+            "pets_healthcare_website": "Company website for a pets healthcare brand built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The site showcases veterinary services, wellness programs, and booking flow with a warm visual style, responsive layout, and seamless language switching.",
+            "sugar_company_website": "Corporate website for a sugar company built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The site presents production capacity, product lines, certifications, and partnership contacts with a clean industrial aesthetic and full trilingual localization.",
+            "fujian_medical_website": "Corporate website for Fujian Medical Engineering built with Vue, Tailwind CSS, and vue-i18n supporting English, Indonesian, and Chinese. The site covers medical equipment solutions, engineering services, and regional distribution with a professional layout, responsive grid sections, and complete localization across all three languages."
         }
     },
     "contact": {
@@ -143,7 +161,7 @@
         "find_me_at": "Or Find me at:"
     },
     "footer": {
-        "copyright": "© 2025 I Designed and coded by Fakhri Rasyid Saputro"
+        "copyright": "© 2026 I Designed and coded by Fakhri Rasyid Saputro"
     },
     "notfound": {
         "message": "Oops! The page you're looking for doesn't exist.",

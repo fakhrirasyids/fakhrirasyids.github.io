@@ -36,7 +36,7 @@
                 sizes="(min-width: 768px) 360px, 220px"
               />
               <img
-                src="/assets/me/asset-fakhri-standing.jpeg"
+                src="/assets/me/asset-fakhri-standing-720.webp"
                 alt="Fakhri standing"
                 width="720"
                 height="1107"

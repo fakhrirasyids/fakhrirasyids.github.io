@@ -26,68 +26,68 @@
         "title": "Beberapa pemikiran dan tulisan yang baru-baru ini saya publikasikan:"
     },
     "experience": {
-    "label": "Pengalaman",
-    "title": "Berikut adalah ringkasan singkat dari pengalaman terbaru saya:",
-    "items": [
-        {
-        "title": "Mobile Developer",
-        "company": "Fischer Medical Ventures",
-        "location": "Central Region, Singapura",
-        "period": "Januari 2025 – Sekarang",
-        "responsibilities": [
-            "Mengirimkan aplikasi mobile produksi yang terhubung ke 10+ perangkat medis (USB/BLE), mendukung streaming real time, kalibrasi, dan kendali jarak jauh dengan koneksi tangguh serta alur kerja toleran kesalahan yang dipakai klinisi.",
-            "Meneliti dan membuat prototipe BLE GATT, video real time, dan pembelajaran mesin di perangkat; mengubah temuan menjadi modul referensi dan dokumen keputusan yang mempercepat peluncuran ke produksi.",
-            "Berkolaborasi dengan tim firmware dan backend untuk mendefinisikan protokol dan memperkuat alur, merilis aplikasi mobile siap klinik dengan dukungan offline dan retry yang kuat serta observabilitas end to end."
-        ],
-        "logo": "/assets/logo/asset-fmv-logo.png"
-        },
-        {
-            "title": "iOS Developer",
-            "company": "Owlies",
-            "location": "Yogyakarta, Indonesia",
-            "period": "Oktober 2025 – Desember 2025",
-            "responsibilities": [
-            "Merilis fitur iOS end-to-end menggunakan Clean Architecture dan MVVM di Swift, didukung rangkaian pengujian unit + UI yang komprehensif untuk meningkatkan kepercayaan diri saat rilis dan mengurangi regresi di produksi.",
-            "Mengimplementasikan Superwall Paywall secara end-to-end di iOS (aturan pemicu, penayangan paywall, pemetaan produk, validasi entitlement, dan A/B testing), termasuk prompt trial yang ditunda 5 detik yang meningkatkan niat pembelian dan menaikkan konversi ~70% (trial-to-paid / paywall-to-purchase)."
-            ],
-            "logo": "/assets/logo/asset-owlies-logo.jpg"
-        },
-        {
-        "title": "Android Engineer Intern",
-        "company": "Traveloka (Departemen Aktivitas Perjalanan)",
-        "location": "Tangerang, Indonesia",
-        "period": "Februari 2024 – Juni 2024",
-        "responsibilities": [
-            "Merombak modul legacy dan memperbaiki bug pada aplikasi Traveloka Android (50M+ unduhan), meningkatkan responsivitas di berbagai kelas perangkat serta memperkuat stabilitas rilis.",
-            "Mengimplementasikan fitur end-to-end dengan arsitektur Clean MVVM dan MVP. Menulis unit/UI test di Kotlin dan Java, menaikkan cakupan hingga 70%+ dan menurunkan regresi saat rilis.",
-            "Meneliti dan mengusulkan strategi integrasi untuk Jetpack Compose dan pustaka Android modern guna meningkatkan efisiensi pengembang dan responsivitas UI."
-        ],
-        "logo": "/assets/logo/asset-traveloka-logo.png"
-        },
-        {
-        "title": "Mobile Developer",
-        "company": "Freelanxx.it",
-        "location": "Semarang, Indonesia",
-        "period": "Januari 2022 – Februari 2024",
-        "responsibilities": [
-            "Merancang, membangun, dan merilis 20+ aplikasi mobile di sektor edukasi dan ritel menggunakan Kotlin/Java (Android) dan Flutter (lintas platform).",
-            "Memimpin tim beranggotakan 4 orang, menjalankan sprint Agile, berkoordinasi lintas fungsi, dan menstandarkan CI/CD di GitHub, GitLab, dan CircleCI.",
-            "Membangun backend API RESTful dengan Node.js dan Laravel untuk mendukung fitur mobile seperti autentikasi, pembaruan real time, dan penyimpanan data yang aman."
-        ],
-        "logo": "/assets/logo/asset-freelanxx-logo.png"
-        },
-        {
-        "title": "Mobile Developer Intern",
-        "company": "Schoters (Magang Berbasis Proyek)",
-        "location": "Indonesia",
-        "period": "Juli 2022 – Agustus 2022",
-        "responsibilities": [
-            "Mengirimkan fitur Android berbasis Kotlin dengan integrasi Firebase Realtime Database (pembaruan langsung) dan Crashlytics (instrumentasi, peringatan), menurunkan jenis crash berulang selama program.",
-            "Menerapkan version control (Git) dan berpartisipasi dalam code review kolaboratif sebagai bagian dari program magang jarak jauh yang mensimulasikan lingkungan pengembangan nyata."
-        ],
-        "logo": "/assets/logo/asset-schoters-logo.jpg"
-        }
-    ]
+        "label": "Pengalaman",
+        "title": "Berikut adalah ringkasan singkat dari pengalaman terbaru saya:",
+        "items": [
+            {
+                "title": "Mobile Developer",
+                "company": "Fischer Medical Ventures",
+                "location": "Central Region, Singapura",
+                "period": "Januari 2025 – Sekarang",
+                "responsibilities": [
+                    "Mengirimkan aplikasi mobile produksi yang terhubung ke 10+ perangkat medis (USB/BLE), mendukung streaming real time, kalibrasi, dan kendali jarak jauh dengan koneksi tangguh serta alur kerja toleran kesalahan yang dipakai klinisi.",
+                    "Meneliti dan membuat prototipe BLE GATT, video real time, dan pembelajaran mesin di perangkat; mengubah temuan menjadi modul referensi dan dokumen keputusan yang mempercepat peluncuran ke produksi.",
+                    "Berkolaborasi dengan tim firmware dan backend untuk mendefinisikan protokol dan memperkuat alur, merilis aplikasi mobile siap klinik dengan dukungan offline dan retry yang kuat serta observabilitas end to end."
+                ],
+                "logo": "/assets/logo/asset-fmv-logo.png"
+            },
+            {
+                "title": "iOS Developer",
+                "company": "Owlies",
+                "location": "Yogyakarta, Indonesia",
+                "period": "Oktober 2025 – Desember 2025",
+                "responsibilities": [
+                    "Merilis fitur iOS end-to-end menggunakan Clean Architecture dan MVVM di Swift, didukung rangkaian pengujian unit + UI yang komprehensif untuk meningkatkan kepercayaan diri saat rilis dan mengurangi regresi di produksi.",
+                    "Mengimplementasikan Superwall Paywall secara end-to-end di iOS (aturan pemicu, penayangan paywall, pemetaan produk, validasi entitlement, dan A/B testing), termasuk prompt trial yang ditunda 5 detik yang meningkatkan niat pembelian dan menaikkan konversi ~70% (trial-to-paid / paywall-to-purchase)."
+                ],
+                "logo": "/assets/logo/asset-owlies-logo.jpg"
+            },
+            {
+                "title": "Android Engineer Intern",
+                "company": "Traveloka (Departemen Aktivitas Perjalanan)",
+                "location": "Tangerang, Indonesia",
+                "period": "Februari 2024 – Juni 2024",
+                "responsibilities": [
+                    "Merombak modul legacy dan memperbaiki bug pada aplikasi Traveloka Android (50M+ unduhan), meningkatkan responsivitas di berbagai kelas perangkat serta memperkuat stabilitas rilis.",
+                    "Mengimplementasikan fitur end-to-end dengan arsitektur Clean MVVM dan MVP. Menulis unit/UI test di Kotlin dan Java, menaikkan cakupan hingga 70%+ dan menurunkan regresi saat rilis.",
+                    "Meneliti dan mengusulkan strategi integrasi untuk Jetpack Compose dan pustaka Android modern guna meningkatkan efisiensi pengembang dan responsivitas UI."
+                ],
+                "logo": "/assets/logo/asset-traveloka-logo.png"
+            },
+            {
+                "title": "Mobile Developer",
+                "company": "Freelanxx.it",
+                "location": "Semarang, Indonesia",
+                "period": "Januari 2022 – Februari 2024",
+                "responsibilities": [
+                    "Merancang, membangun, dan merilis 20+ aplikasi mobile di sektor edukasi dan ritel menggunakan Kotlin/Java (Android) dan Flutter (lintas platform).",
+                    "Memimpin tim beranggotakan 4 orang, menjalankan sprint Agile, berkoordinasi lintas fungsi, dan menstandarkan CI/CD di GitHub, GitLab, dan CircleCI.",
+                    "Membangun backend API RESTful dengan Node.js dan Laravel untuk mendukung fitur mobile seperti autentikasi, pembaruan real time, dan penyimpanan data yang aman."
+                ],
+                "logo": "/assets/logo/asset-freelanxx-logo.png"
+            },
+            {
+                "title": "Mobile Developer Intern",
+                "company": "Schoters (Magang Berbasis Proyek)",
+                "location": "Indonesia",
+                "period": "Juli 2022 – Agustus 2022",
+                "responsibilities": [
+                    "Mengirimkan fitur Android berbasis Kotlin dengan integrasi Firebase Realtime Database (pembaruan langsung) dan Crashlytics (instrumentasi, peringatan), menurunkan jenis crash berulang selama program.",
+                    "Menerapkan version control (Git) dan berpartisipasi dalam code review kolaboratif sebagai bagian dari program magang jarak jauh yang mensimulasikan lingkungan pengembangan nyata."
+                ],
+                "logo": "/assets/logo/asset-schoters-logo.jpg"
+            }
+        ]
     },
     "projects": {
         "label": "Proyek",
@@ -101,9 +101,9 @@
         "click_full_detail": "klik untuk melihat detail lengkap",
         "showing": "Menampilkan {shown} dari {total} proyek",
         "items": {
-            "stethoscope_project": "Stethoscope adalah aplikasi mobile untuk tenaga kesehatan guna merekam, meninjau, dan mengelola hasil stetoskop digital di titik layanan. Aplikasi berjalan di Android dan iOS, berpasangan dengan stetoskop berfitur BLE untuk menyalurkan suara jantung dan paru berkualitas tinggi, menampilkannya secara real time, lalu menautkan rekaman ke kunjungan pasien untuk pelacakan jangka panjang.",
-            "xray_project": "X-Ray App adalah aplikasi tablet Android native untuk kios klinis Digihealth. Aplikasi terhubung langsung ke perangkat rontgen di ruangan, mengambil studi DICOM dari sistem pencitraan jarak jauh, dan menghadirkan peninjauan gambar yang bersih dan responsif di tangan dokter. Dokter dapat memberi label temuan, menggambar area yang diminati, mengukur sudut dan jarak, serta menyetel kontras dan pengaturan window dan level. Perangkat alat gambar menggunakan OpenCV dan pemilih warna presisi sehingga anotasi dan edit konsisten antar kasus. Semua antarmuka diatur untuk ergonomi tablet, mulai dari cubit untuk zoom hingga tombol cepat untuk overlay dan preset. Aplikasi mengikuti pola offline terlebih dahulu. Studi, edit, dan catatan disimpan lokal ketika tidak ada koneksi lalu disinkronkan ke backend saat perangkat kembali terhubung. Dalam praktiknya, visit dan konsultasi tetap berjalan tanpa menunggu jaringan sementara catatan tetap masuk ke sistem ketika koneksi pulih.",
-            "digihealth_kiosk_project": "Health Kiosk adalah aplikasi tablet Android yang berjalan pada perangkat Digihealth ATM di area publik seperti klinik dan rumah sakit. Kiosk menghadirkan layanan kesehatan mandiri sehingga pasien dapat mengakses layanan dasar dengan cepat dan tanpa bantuan. Sistem terhubung ke backend terpusat melalui REST API aman untuk autentikasi, sinkronisasi data, penjadwalan janji, dan fungsi lain. Kiosk terintegrasi dengan berbagai perangkat medis seperti timbangan digital, sensor tinggi badan, oksimeter, alat ukur tekanan darah, dan termometer untuk mengumpulkan tanda vital secara real time. Untuk meningkatkan mutu layanan, kiosk juga terhubung ke modul AI untuk prediksi risiko kesehatan, triase gejala, dan rekomendasi cerdas berbasis data. Pasien dapat masuk, mengatur janji, bergabung ke antrean, dan meninjau rekam medis langsung dari antarmuka.",
+            "stethoscope_project": "Stethoscope adalah aplikasi Kotlin Multiplatform yang dibangun dengan Jetpack Compose, berjalan secara native di Android dan iOS dari satu basis kode bersama. Aplikasi berpasangan dengan stetoskop berfitur BLE untuk menyalurkan suara jantung dan paru berkualitas tinggi serta menampilkannya secara real time. Perangkat yang mendukung koneksi USB juga dapat dihubungkan langsung untuk streaming audio yang lebih stabil dan minim latensi. Rekaman ditautkan ke kunjungan pasien untuk pelacakan jangka panjang, dan lapisan data offline-first menjaga sesi tetap utuh meski tanpa koneksi jaringan.",
+            "xray_project": "Aplikasi 8xray adalah aplikasi Kotlin Multiplatform yang dibangun dengan Jetpack Compose, berjalan secara native di Android, iOS, dan Desktop dari satu basis kode bersama. Aplikasi berkomunikasi dengan perangkat keras rontgen melalui library native DLL dan SO, memberikan akses langsung ke kontrol perangkat, akuisisi gambar real time, dan rutinitas kalibrasi di level hardware. Aplikasi mengambil studi DICOM, memungkinkan dokter memberi label temuan, menggambar area yang diminati, mengukur sudut dan jarak, serta menyetel kontras dan window atau level menggunakan toolkit berbasis OpenCV. Semua mengikuti pola offline-first: studi, edit, dan catatan disimpan lokal dan disinkronkan ke backend saat koneksi tersedia, sehingga visit dan konsultasi tidak pernah terganggu oleh kondisi jaringan.",
+            "digihealth_kiosk_project": "Health Kiosk adalah aplikasi Kotlin Multiplatform yang dibangun dengan Jetpack Compose, berjalan secara native di Android, iOS, dan Desktop dari satu basis kode bersama. Dipasang di dalam unit Digihealth ATM di klinik dan rumah sakit, kiosk menghadirkan layanan kesehatan mandiri di mana pasien dapat masuk, bergabung ke antrean, menjadwalkan janji, dan meninjau rekam medis. Kiosk terhubung ke 10+ perangkat medis melalui BLE dan USB, termasuk timbangan, sensor tinggi badan, oksimeter, tensimeter, dan termometer, mengumpulkan tanda vital secara real time dalam satu sesi. Modul AI menangani prediksi risiko kesehatan, triase gejala, dan rekomendasi cerdas berdasarkan data yang dikumpulkan. Logika domain bersama mencakup protokol perangkat, sinkronisasi data, dan antrean offline, sementara Compose Multiplatform merender UI yang konsisten dan siap klinik di semua platform.",
             "patient_health_companion_project": "Patient Health Companion adalah aplikasi Flutter yang membawa pengalaman kiosk Digihealth ke ponsel. Aplikasi berjalan di Android dan iOS dengan tampilan yang seragam dan mudah disentuh. Pengguna dapat memperbarui profil dan data kesehatan, melihat atau memesan janji tanpa menelepon klinik, serta melakukan konsultasi video atau chat menggunakan Agora dengan tata letak yang menjaga catatan dan pesan tetap terlihat. Pencatatan harian mencakup tanda vital, nutrisi, tidur, dan target kebugaran. Aplikasi merangkum masukan tersebut menjadi tren yang jelas dan saran yang praktis, dengan wawasan AI yang muncul hanya saat bermanfaat. Companion terhubung ke backend Digihealth melalui REST API aman dan WebSocket untuk pembaruan waktu nyata. Janji, pesan, dan pengukuran tetap sinkron antara kiosk dan ponsel sehingga pengalaman terasa menyatu di rumah, saat bepergian, dan di klinik.",
             "teddy_project": "Dirilis di Traveloka 1.1.1. Saya menata ulang detail tiket untuk menonjolkan hal yang benar-benar dibandingkan pelancong: bagasi dan aturan ubah/refund, perbedaan tarif, catatan kursi dan waktu, serta syarat penyedia yang ditulis lugas. Tata letak memprioritaskan info penting di bagian atas dan mengurangi jargon, sehingga pengguna lebih yakin dan tidak perlu bolak-balik antar tab.",
             "tweety_project": "Dirilis di Traveloka 4.0.0. Saya memperbarui banyak hal mulai dari carousel hingga deskripsi tiket. Saya menambahkan bagian “Jelajahi tiket lain” di halaman detail agar pengguna bisa membandingkan waktu dan harga tanpa meninggalkan halaman. Setiap alternatif menampilkan selisih waktu, aturan tarif, sisa kursi, ketentuan bagasi, serta info ubah atau refund. Tersedia kontrol sortir dan filter cepat dengan chip perbandingan yang jelas. Alur pemesanan dari daftar hingga pemilihan penumpang saya rapikan dengan default dan pramuat yang lebih cerdas, indikator langkah yang lebih jelas, dan penanganan error yang lebih kuat. Hasilnya gangguan berkurang dan jalur menuju pembayaran terasa lebih mulus.",
@@ -132,7 +132,25 @@
             "painthings_kotlin": "UI slicing marketplace seni dengan fokus pada gambar. Ada grid, tampilan detail dengan galeri yang bersih, keranjang sederhana, dan checkout palsu agar alur bisa diuji sampai selesai. Pemanggilan gambar terasa mulus dan layout tetap nyaman pada layar kecil. Tujuan utama adalah menonjolkan visual dan menjaga formulir agar tidak menghalangi.",
             "capstone_kotlin": "Aplikasi konsep yang menyatukan beberapa layar menjadi alur yang masuk akal. Navigasi lugas, view model memegang state, dan repository memisahkan akses data. Proyek menyertakan backend palsu kecil agar orang bisa klik sekitar tanpa menyiapkan layanan apa pun. Cocok untuk demo di akhir sprint lalu tetap dipakai sebagai dasar.",
             "cba_java": "UI toko kecantikan di Java yang menutup jalur umum. Daftar produk, detail, keranjang, dan langkah kupon kecil sudah tersedia. SQLite menyimpan cache sehingga aplikasi terasa cepat setelah penggunaan pertama. Kode mengikuti pola Android standar dan menghindari pustaka berat agar mudah dibaca.",
-            "gamography_swiftui": "Katalog gim untuk iOS dengan antarmuka SwiftUI yang bersih. Pencarian dan favorit tetap bekerja saat offline, gambar dimuat dengan pipeline asinkron, dan lapisan jaringan tetap tipis sehingga mengganti API tidak menimbulkan stres. Saya menyetel performa daftar untuk ponsel lama dan menambahkan beberapa perbaikan aksesibilitas untuk teks besar. Hasilnya terasa cepat namun tetap mudah dibaca."
+            "gamography_swiftui": "Katalog gim untuk iOS dengan antarmuka SwiftUI yang bersih. Pencarian dan favorit tetap bekerja saat offline, gambar dimuat dengan pipeline asinkron, dan lapisan jaringan tetap tipis sehingga mengganti API tidak menimbulkan stres. Saya menyetel performa daftar untuk ponsel lama dan menambahkan beberapa perbaikan aksesibilitas untuk teks besar. Hasilnya terasa cepat namun tetap mudah dibaca.",
+            "fmv_pcr_multiplatform": "Aplikasi diagnostik PCR yang dibangun dengan Kotlin Multiplatform dan Jetpack Compose, berjalan secara native di Android, iOS, dan Desktop dari satu basis kode bersama. Aplikasi berpasangan dengan perangkat PCR melalui BLE untuk memulai pengujian, melakukan streaming kurva amplifikasi secara real time, dan menampilkan hasil interpretasi. Logika domain bersama mencakup handshake perangkat, parsing protokol, perhitungan hasil, dan caching offline, sementara Compose Multiplatform merender UI yang identik dan berkualitas tinggi di ketiga platform. Lapisan MVVM dan Clean Architecture memisahkan komunikasi BLE dari tampilan, sehingga mudah diperluas untuk varian perangkat baru tanpa mengubah UI.",
+            "cvdetect_multiplatform": "CVDetect adalah aplikasi Kotlin Multiplatform dengan Jetpack Compose yang melakukan skrining kardiovaskular dengan menghubungkan ke perangkat medis CVDetect melalui BLE. Logika bisnis bersama menangani penemuan perangkat, manajemen sesi pengukuran, pengambilan gelombang, dan interpretasi risiko berbasis AI. Compose Multiplatform menghadirkan antarmuka yang konsisten dan native di Android maupun iOS, sementara struktur Clean Architecture memisahkan komunikasi BLE dari UI alur kerja klinis, memastikan operasional yang andal meski jaringan tidak tersedia.",
+            "lunit_folder_uploader": "Alat GUI desktop yang dibangun dengan Python dan PySide6 untuk mengunggah folder gambar medis secara batch ke platform Lunit 4T4TB. Antarmuka memungkinkan operator memilih folder utama, melihat pratinjau pohon direktori, mengonfigurasi pengaturan unggah, dan memantau progres per berkas secara real time. Worker latar belakang menangani antrean unggah sehingga UI tetap responsif saat transfer berkas besar, dan panel log bawaan mencatat kesalahan dengan konteks yang cukup untuk mencoba ulang item yang gagal tanpa memulai ulang seluruh batch.",
+            "fmv_kiosk_website": "Landing page produk untuk Health Kiosk Digihealth yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Halaman menyajikan fitur kiosk, integrasi perangkat medis yang terhubung, dan alur kerja klinis dengan bagian beranimasi, tata letak responsif untuk desktop dan mobile, serta konten lokal yang beralih seketika tanpa muat ulang halaman.",
+            "fmv_xray_website": "Landing page produk untuk aplikasi X-Ray Digihealth yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Halaman menampilkan penampil DICOM, alat anotasi, dan alur kerja offline-first dengan bagian visual yang jelas, animasi scroll yang halus, dan lokalisasi penuh yang menyesuaikan konten untuk setiap bahasa.",
+            "fmv_stethoscope_website": "Landing page produk untuk aplikasi Digital Stethoscope yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Halaman menyoroti pemasangan BLE, visualisasi gelombang real time, dan lampiran rekam pasien dengan hero beranimasi, kartu fitur, dan penggantian bahasa yang mulus di ketiga lokasi.",
+            "fmv_pcr_website": "Landing page produk untuk perangkat PCR yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Halaman menyajikan alur kerja amplifikasi asam nukleat, kemampuan diagnostik cepat di tempat, dan kasus penggunaan klinis dengan hero beranimasi, sorotan fitur, dan penggantian bahasa yang mulus di ketiga lokasi.",
+            "fmv_fundoscope_website": "Landing page produk untuk perangkat Fundoscope yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Halaman memandu kemampuan pencitraan retina perangkat, alur kerja skrining berbasis AI, dan poin integrasi klinis dengan hierarki visual yang bersih dan teks yang lokasi-aware.",
+            "fmv_pathology_website": "Landing page produk untuk sistem Digital Pathology yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Halaman menyajikan pencitraan slide utuh, bantuan anotasi AI, dan fitur konsultasi jarak jauh menggunakan grid gambar responsif, statistik beranimasi, dan lokalisasi tiga bahasa penuh.",
+            "fmv_spirometer_website": "Landing page produk untuk perangkat Spirometer yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Halaman mencakup alur kerja pengujian fungsi paru, tampilan kurva flow-volume real time, dan fitur pelaporan dengan tata letak yang tajam dan penggantian bahasa seketika.",
+            "fmv_ecg_website": "Landing page produk untuk perangkat ECG yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Halaman menyajikan penangkapan ECG 12-lead, interpretasi AI, dan kemampuan ekspor ke EHR dengan visual gelombang beranimasi, sorotan fitur, dan lokalisasi penuh di ketiga bahasa.",
+            "fmv_enzyme_website": "Landing page produk untuk analyzer Enzyme yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Halaman merinci alur kerja uji enzim cepat, waktu dari sampel ke hasil, dan integrasi perangkat dengan tata letak bagian yang bersih dan konten yang lokasi-aware.",
+            "fmv_epc_website": "Landing page produk untuk perangkat EPC yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Halaman menguraikan kemampuan diagnostik perangkat, integrasi dengan platform Digihealth, dan kasus penggunaan klinis dengan desain responsif dan dukungan tiga bahasa yang mulus.",
+            "gtt_nano_website": "Situs web korporat untuk GTT Nano yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Situs mencakup produk nanoteknologi perusahaan, kemampuan riset, dan alur permintaan kemitraan dengan desain modern, transisi scroll yang halus, dan lokalisasi penuh.",
+            "pcr_for_pets_website": "Landing page produk untuk PCR for Pets yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Halaman menyajikan diagnostik PCR veteriner, panel uji spesifik spesies, dan integrasi klinik dengan desain visual yang ramah dan teks yang lokal-aware untuk tiga bahasa.",
+            "pets_healthcare_website": "Situs web perusahaan untuk brand perawatan kesehatan hewan peliharaan yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Situs menampilkan layanan veteriner, program kesehatan, dan alur pemesanan dengan gaya visual yang hangat, tata letak responsif, dan penggantian bahasa yang mulus.",
+            "sugar_company_website": "Situs web korporat untuk perusahaan gula yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Situs menyajikan kapasitas produksi, lini produk, sertifikasi, dan kontak kemitraan dengan estetika industrial yang bersih dan lokalisasi tiga bahasa penuh.",
+            "fujian_medical_website": "Situs web korporat untuk Fujian Medical Engineering yang dibangun dengan Vue, Tailwind CSS, dan vue-i18n mendukung Inggris, Indonesia, dan Mandarin. Situs mencakup solusi peralatan medis, layanan rekayasa, dan distribusi regional dengan tata letak profesional, bagian grid responsif, dan lokalisasi lengkap di ketiga bahasa."
         }
     },
     "contact": {
@@ -143,7 +161,7 @@
         "find_me_at": "Atau Temukan saya di:"
     },
     "footer": {
-        "copyright": "© 2025 I Dirancang dan dikodekan oleh Fakhri Rasyid Saputro"
+        "copyright": "© 2026 I Dirancang dan dikodekan oleh Fakhri Rasyid Saputro"
     },
     "notfound": {
         "message": "Ups! Halaman yang kamu cari tidak ditemukan.",

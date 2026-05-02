@@ -129,7 +129,7 @@
               sizes="(min-width: 768px) 360px, 220px"
             />
             <img
-              src="/assets/me/asset-fakhri.jpg"
+              src="/assets/me/asset-fakhri-720.webp"
               alt="Fakhri Rasyid Saputro"
               width="720"
               height="1080"

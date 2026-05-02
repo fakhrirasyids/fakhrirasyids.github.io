@@ -47,8 +47,8 @@
                 "location": "印度尼西亚，日惹",
                 "period": "2025年10月 – 2025年12月",
                 "responsibilities": [
-                "使用 Swift 基于 Clean Architecture 与 MVVM 交付端到端 iOS 功能，并配套完善的单元测试与 UI 测试套件，以提升发布信心并减少生产环境回归。",
-                "在 iOS 端端到端落地 Superwall 付费墙（触发规则、付费墙展示、产品映射、权益/Entitlement 校验与 A/B 测试），并加入延迟 5 秒的试用提示，提升购买意愿，使转化率提升约 70%（trial-to-paid / paywall-to-purchase）。"
+                    "使用 Swift 基于 Clean Architecture 与 MVVM 交付端到端 iOS 功能，并配套完善的单元测试与 UI 测试套件，以提升发布信心并减少生产环境回归。",
+                    "在 iOS 端端到端落地 Superwall 付费墙（触发规则、付费墙展示、产品映射、权益/Entitlement 校验与 A/B 测试），并加入延迟 5 秒的试用提示，提升购买意愿，使转化率提升约 70%（trial-to-paid / paywall-to-purchase）。"
                 ],
                 "logo": "/assets/logo/asset-owlies-logo.jpg"
             },
@@ -101,9 +101,9 @@
         "click_full_detail": "点击查看完整详情",
         "showing": "显示 {shown} / {total} 个项目",
         "items": {
-            "stethoscope_project": "Stethoscope 应用是一款为医护人员打造的移动应用，用于在诊间采集、查看和管理数字听诊记录。应用运行于 Android 与 iOS，可与支持 BLE 的听诊器配对，流式传输高保真心音与呼吸音并实时可视化，同时把录音关联到患者就诊记录，便于长期追踪。",
-            "xray_project": "X-Ray App 是面向 Digihealth 临床自助机的原生 Android 平板应用。应用可与房间内的 X 光设备直连，从远程影像系统拉取 DICOM 检查，把清晰而顺手的影像阅片放到医生手中。医生可以标注发现，勾画感兴趣区域，测量角度与距离，并微调对比度与窗宽窗位。影像工具链由 OpenCV 与精确取色器提供，确保不同病例间的标注与编辑保持一致。交互按平板习惯设计，从双指缩放到覆盖层与预设的快速切换都很顺手。应用采用离线优先策略，检查、编辑与备注在断网时本地保存，设备恢复联网后再与后台同步。实际使用中，查房与会诊不会被网络状况打断，而病历会在连接恢复后完整入库。",
-            "digihealth_kiosk_project": "Health Kiosk 是运行在 Digihealth ATM 设备上的 Android 平板应用，部署在诊所与医院等公共区域，提供自助式就医体验，让患者高效并独立地完成常用服务。系统通过安全的 REST API 接入中心后端，负责登录、数据同步与预约安排等功能。终端可对接多种医疗设备，包括体重身高传感器、血氧仪、血压计与体温计，以采集实时生命体征。为提升照护质量，终端还接入 AI 模块，用于健康风险预测、症状分诊与基于数据的智能建议。患者可以登录、管理预约、加入叫号队列，并在界面中查看病历记录。",
+            "stethoscope_project": "Stethoscope 是基于 Kotlin Multiplatform 与 Jetpack Compose 构建的应用，从单一共享代码库同时在 Android 和 iOS 上原生运行。应用可与支持 BLE 的听诊器配对，实时流式传输高保真心音与呼吸音并可视化展示。支持 USB 连接的设备也可直接有线接入，获得更稳定、低延迟的音频流。录音关联到患者就诊记录以便长期追踪，离线优先的数据层确保在无网络时会话依然完整保存。",
+            "xray_project": "8xray 是基于 Kotlin Multiplatform 与 Jetpack Compose 构建的应用，从单一共享代码库同时在 Android、iOS 和 Desktop 上原生运行。应用通过原生 DLL 和 SO 库与 X 光硬件通信，直接访问设备控制、实时图像采集和硬件层面的校准程序。应用拉取 DICOM 检查，支持医生标注发现、勾画感兴趣区域、测量角度与距离，并通过基于 OpenCV 的工具包微调对比度与窗宽窗位。全程采用离线优先策略：检查、编辑与备注本地保存，待网络恢复后同步至后端，确保查房与会诊不受网络状况影响。",
+            "digihealth_kiosk_project": "Health Kiosk 是基于 Kotlin Multiplatform 与 Jetpack Compose 构建的应用，从单一共享代码库同时在 Android、iOS 和 Desktop 上原生运行。部署于诊所与医院的 Digihealth ATM 设备中，提供自助式就医体验——患者可登录、加入叫号队列、预约门诊并查看病历。自助机通过 BLE 和 USB 连接 10+ 医疗设备，包括体重身高传感器、血氧仪、血压计与体温计，在单次会话中采集实时生命体征。AI 模块负责健康风险预测、症状分诊与基于数据的智能建议。共享领域层涵盖设备协议、数据同步与离线队列，Compose Multiplatform 在所有平台上渲染一致、满足临床要求的界面。",
             "patient_health_companion_project": "Patient Health Companion 是一款用 Flutter 开发的移动应用，把 Digihealth 自助机的体验延伸到手机。Android 与 iOS 界面一致，操作简单。患者可以更新个人资料与健康数据，直接查看或预约门诊，无需致电诊所。应用内支持视频与聊天问诊，基于 Agora，布局使笔记与消息始终可见。每日可记录生命体征、营养、睡眠与运动目标，应用将这些输入整理为清晰的趋势与实用建议，只在有帮助时展示 AI 提示。应用通过安全的 REST API 与 WebSocket 连接 Digihealth 后端以获得实时更新，预约、消息与测量在自助机与手机之间保持一致，形成贯穿家庭、路途与诊间的一体化体验。",
             "teddy_project": "已在 Traveloka 1.1.1 发布。我重新梳理了票面详情，把旅客真正关心的内容放到前面：行李额度与改退规则、票价差异、座位与时间提示，以及用通俗语言写明的供应商条款。版式优先展示关键信息，减少术语堆砌，让用户更有把握，不必来回切换页面。",
             "tweety_project": "已在 Traveloka 4.0.0 发布。我更新了多处内容，从轮播到票务描述。票务详情页新增“浏览其他票”区域，用户无需离开当前页面就能查看更合适的时间或价格。每个候选项都会展示时间差、票价规则、剩余座位、行李额度，以及改签或退款信息，并提供快速排序和筛选控制，以及清晰的对比标签。我还优化了从列表到选择乘客的下单流程，加入更聪明的默认与预填、更清晰的步骤指示，以及更稳健的错误处理。最终带来更少的打断和更顺畅的付款路径。",
@@ -132,7 +132,25 @@
             "painthings_kotlin": "艺术品电商的 UI 切图，更看重图片呈现。有网格，有干净的详情画廊，有简单购物车，还有可点击的假结账流程，方便端到端地走通。图片加载连贯，缩到小屏也不拥挤。思路是把视觉放在台前，把表单放在一边。",
             "capstone_kotlin": "把几张页面串成一个可信流程的概念应用。导航直来直去，view model 管状态，repository 负责数据访问隔离。项目里带了一个很小的假后端，打开就能点，不用先搭服务。适合在一个冲刺的尾声做演示，然后继续当基座用。",
             "cba_java": "用 Java 写的美妆店 UI，覆盖常见购物路径。商品列表、详情、购物车以及一个小的优惠券步骤都已就位。SQLite 做缓存，二次打开更快。代码遵循标准 Android 写法，尽量少引库，阅读体验更好。",
-            "gamography_swiftui": "一款 iOS 游戏目录应用，前端是干净的 SwiftUI。搜索和收藏在离线时也能使用，图片通过异步管线加载，网络层很薄，更换接口时压力更小。我专门调了长列表在旧设备上的表现，并为大字体做了几处无障碍优化。整体又快又易读。"
+            "gamography_swiftui": "一款 iOS 游戏目录应用，前端是干净的 SwiftUI。搜索和收藏在离线时也能使用，图片通过异步管线加载，网络层很薄，更换接口时压力更小。我专门调了长列表在旧设备上的表现，并为大字体做了几处无障碍优化。整体又快又易读。",
+            "fmv_pcr_multiplatform": "基于 Kotlin Multiplatform 与 Jetpack Compose 构建的 PCR 诊断应用，从单一共享代码库同时在 Android、iOS 和 Desktop 上原生运行。应用通过 BLE 与 PCR 设备配对，启动检测流程、实时流式传输扩增曲线并展示解读结果。共享领域层负责设备握手、协议解析、结果计算与离线缓存，Compose Multiplatform 在三个平台上渲染一致、高保真的界面。MVVM 与 Clean Architecture 将 BLE 通信与展示层严格分离，方便在不修改 UI 的情况下扩展新设备型号。",
+            "cvdetect_multiplatform": "CVDetect 是基于 Kotlin Multiplatform 与 Jetpack Compose 的心血管筛查应用，通过 BLE 连接 CVDetect 医疗设备。共享业务逻辑负责设备发现、测量会话管理、波形采集与 AI 辅助风险解读。Compose Multiplatform 在 Android 和 iOS 上提供一致的平台原生界面，Clean Architecture 将 BLE 通信与临床工作流 UI 隔离，确保在无网络时也能可靠运行。",
+            "lunit_folder_uploader": "使用 Python 与 PySide6 构建的桌面 GUI 工具，用于将医学影像文件夹批量上传至 Lunit 4T4TB 平台。界面支持选择根目录、预览目录树、配置上传设置，并实时监控每个文件的上传进度。后台 Worker 处理上传队列，保证大批量传输时 UI 依然流畅响应，内置日志面板记录错误及上下文信息，方便在不重启整批任务的情况下重试失败项。",
+            "fmv_kiosk_website": "Digihealth Health Kiosk 的产品落地页，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。页面展示自助机功能集、医疗设备集成与临床工作流，包含动效分区、桌面与移动端响应式布局，以及无需刷新即可即时切换的多语言内容。",
+            "fmv_xray_website": "Digihealth X-Ray 应用的产品落地页，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。页面呈现 DICOM 阅片、标注工具与离线优先工作流，配有清晰的视觉分区、平滑的滚动动效，以及针对每种语言的完整本地化适配。",
+            "fmv_stethoscope_website": "Digital Stethoscope 应用的产品落地页，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。页面突出 BLE 配对、实时波形可视化与患者记录关联，包含动效 Hero 区、功能卡片，以及三种语言间的无缝切换。",
+            "fmv_pcr_website": "PCR 设备的产品落地页，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。页面呈现核酸扩增工作流、快速现场诊断能力与临床应用场景，包含动效 Hero 区、功能亮点，以及三种语言间的无缝切换。",
+            "fmv_fundoscope_website": "Fundoscope 设备的产品落地页，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。页面介绍眼底成像能力、AI 辅助筛查工作流与临床集成节点，视觉层次清晰，文案支持多语言本地化。",
+            "fmv_pathology_website": "Digital Pathology 系统的产品落地页，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。页面展示全切片成像、AI 辅助标注与远程会诊功能，采用响应式图片网格、动效统计数据，并完整支持三语本地化。",
+            "fmv_spirometer_website": "Spirometer 设备的产品落地页，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。页面涵盖肺功能检测工作流、实时流量-容积环展示与报告功能，布局简洁，支持即时语言切换。",
+            "fmv_ecg_website": "ECG 设备的产品落地页，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。页面呈现 12 导联心电采集、AI 解读与 EHR 导出能力，配有动效波形图、功能亮点，以及三语完整本地化。",
+            "fmv_enzyme_website": "Enzyme 分析仪的产品落地页，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。页面介绍快速酶促检测工作流、样本到结果的时长与设备集成，分区布局简洁，文案支持多语言本地化。",
+            "fmv_epc_website": "EPC 设备的产品落地页，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。页面梳理设备诊断能力、与 Digihealth 平台的集成及临床应用场景，响应式设计配合三语无缝支持。",
+            "gtt_nano_website": "GTT Nano 的企业官网，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。网站涵盖公司纳米技术产品、研究能力与合作咨询流程，设计现代，滚动过渡流畅，并完整支持三语本地化。",
+            "pcr_for_pets_website": "PCR for Pets 的产品落地页，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。页面展示兽医 PCR 诊断、物种专属检测套餐与诊所集成，视觉设计亲和，文案支持三语本地化。",
+            "pets_healthcare_website": "宠物医疗保健品牌企业官网，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。网站展示兽医服务、健康管理项目与预约流程，视觉风格温暖，响应式布局，支持无缝语言切换。",
+            "sugar_company_website": "糖业公司企业官网，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。网站呈现产能规模、产品线、资质认证与合作联系方式，工业美学简洁，完整支持三语本地化。",
+            "fujian_medical_website": "Fujian Medical Engineering 企业官网，基于 Vue、Tailwind CSS 与 vue-i18n 构建，支持英语、印尼语和中文。网站涵盖医疗设备解决方案、工程服务与区域分销，专业布局配合响应式网格分区，三语本地化完整覆盖。"
         }
     },
     "contact": {
@@ -143,7 +161,7 @@
         "find_me_at": "或者在以下平台找到我："
     },
     "footer": {
-        "copyright": "© 2025 由 Fakhri Rasyid Saputro 设计并编码"
+        "copyright": "© 2026 由 Fakhri Rasyid Saputro 设计并编码"
     },
     "notfound": {
         "message": "抱歉！您要找的页面不存在。",
