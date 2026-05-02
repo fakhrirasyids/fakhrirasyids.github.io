@@ -67,8 +67,9 @@
 
       <!-- Download CV -->
       <a
-        href="assets/porto/cv/CV_Fakhri_Rasyid_Saputro.pdf"
+        :href="CV_PATH"
         target="_blank"
+        rel="noopener noreferrer"
         class="whitespace-nowrap bg-inverted-light dark:bg-inverted-dark text-inverted-dark dark:text-inverted-light px-4 py-2 rounded-full font-medium hover:bg-border-light dark:hover:bg-border-dark transition"
       >
         {{ $t('header.download_cv') }}
@@ -156,8 +157,9 @@
 
           <!-- CV -->
           <a
-            href="assets/porto/cv/CV_Fakhri_Rasyid_Saputro.pdf"
+            :href="CV_PATH"
             target="_blank"
+            rel="noopener noreferrer"
             class="mt-4 text-center bg-inverted-light dark:bg-inverted-dark text-inverted-dark dark:text-inverted-light px-4 py-2 rounded-full font-medium hover:bg-border-dark transition"
             @click="isOpen = false"
           >
@@ -174,6 +176,7 @@ import { ref } from 'vue'
 import { useDarkMode } from '@/composables/useDarkMode'
 import { useI18n } from 'vue-i18n'
 import { setLocale, supportedLocales, type AppLocale } from '@/plugins/i18n'
+import { CV_PATH } from '@/constants/assets'
 
 const isOpen = ref(false)
 const isSwitchingLocale = ref(false)

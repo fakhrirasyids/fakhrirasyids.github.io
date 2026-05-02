@@ -15,7 +15,7 @@
     "about": {
         "label": "Tentang Saya",
         "title": "Penasaran tentang saya? Ini dia.",
-        "description": "Saya adalah seorang <strong>Mobile Developer</strong> dengan <strong>lebih dari Tiga Tahun Pengalaman</strong> dalam membangun aplikasi di berbagai sektor seperti <strong>pemerintahan, industri, dan perusahaan</strong>. Saya memiliki ketertarikan besar pada <strong>SOLID Principles</strong> dan <strong>Clean Architecture</strong>, serta telah berkontribusi dalam pembuatan <strong>end-user products</strong> maupun <strong>library internal (SDK) untuk mobile</strong>. Terampil bekerja secara mandiri maupun dalam tim, saya berkomitmen untuk terus berkembang di dunia Mobile Engineering.<br/><br/>Latar belakang saya mencakup <strong>gelar Sarjana Teknik Informatika</strong> dari <strong>Universitas Dian Nuswantoro</strong>, dengan fokus akademik pada <strong>machine learning</strong> dan <strong>keamanan siber pada aplikasi mobile</strong>. Di luar pengembangan mobile, saya juga telah mengembangkan <strong>aplikasi web dan desktop</strong> menggunakan berbagai teknologi dan framework modern, dengan fokus pada solusi yang bersih, terstruktur, dan skalabel."
+        "description": "Saya adalah <strong>Tech Lead dan Mobile Engineer</strong> dengan <strong>4+ tahun pengalaman</strong> membangun aplikasi Android, iOS, desktop, web, SDK, serta sistem klinis yang terhubung ke perangkat keras di domain <strong>healthcare, pemerintahan, industri, edukasi, ritel, dan enterprise</strong>. Fokus terbaru saya mencakup <strong>Kotlin Multiplatform</strong>, <strong>Jetpack Compose</strong>, <strong>Clean Architecture</strong>, integrasi perangkat medis USB/BLE, alur offline-first, dan sistem produksi yang digunakan di lingkungan rumah sakit di Asia Tenggara.<br/><br/>Saya pernah memimpin <strong>5+ engineer</strong>, merilis <strong>5+ aplikasi medis</strong>, mendukung <strong>10+ perangkat medis USB/BLE</strong>, serta berkolaborasi erat dengan tim product, design, firmware, backend, dan klien untuk menerjemahkan kebutuhan klinis yang kompleks menjadi software yang andal dan siap rilis. Saya juga memiliki <strong>gelar Sarjana Teknik Informatika</strong> dari <strong>Universitas Dian Nuswantoro</strong> dengan <strong>IPK 3.83 / 4.00</strong>, dan selalu menekankan arsitektur yang mudah dirawat, testing, CI/CD, mentoring, serta delivery produk yang praktis."
     },
     "skills": {
         "label": "Keahlian",
@@ -30,25 +30,37 @@
         "title": "Berikut adalah ringkasan singkat dari pengalaman terbaru saya:",
         "items": [
             {
-                "title": "Mobile Developer",
-                "company": "Fischer Medical Ventures",
-                "location": "Central Region, Singapura",
-                "period": "Januari 2025 – Sekarang",
+                "title": "Tech Lead, Software Team",
+                "company": "Fischer's Medical Ventures",
+                "location": "Singapura",
+                "period": "Februari 2026 – Sekarang",
                 "responsibilities": [
-                    "Mengirimkan aplikasi mobile produksi yang terhubung ke 10+ perangkat medis (USB/BLE), mendukung streaming real time, kalibrasi, dan kendali jarak jauh dengan koneksi tangguh serta alur kerja toleran kesalahan yang dipakai klinisi.",
-                    "Meneliti dan membuat prototipe BLE GATT, video real time, dan pembelajaran mesin di perangkat; mengubah temuan menjadi modul referensi dan dokumen keputusan yang mempercepat peluncuran ke produksi.",
-                    "Berkolaborasi dengan tim firmware dan backend untuk mendefinisikan protokol dan memperkuat alur, merilis aplikasi mobile siap klinik dengan dukungan offline dan retry yang kuat serta observabilitas end to end."
+                    "Memimpin 5+ engineer di platform mobile, desktop, dan web, serta merilis 5+ aplikasi medis yang terhubung ke perangkat keras dan digunakan di rumah sakit di Asia Tenggara.",
+                    "Mengoordinasikan 10+ integrasi perangkat medis USB/BLE bersama tim firmware, product, design, backend, dan klien, menerjemahkan kebutuhan klinis menjadi alur kerja siap produksi.",
+                    "Meneliti dan mengusulkan arsitektur offline-first untuk aplikasi perangkat klinis, meningkatkan kontinuitas workflow, pemulihan sinkronisasi, dan keandalan perangkat saat jaringan rumah sakit tidak stabil."
                 ],
                 "logo": "/assets/logo/asset-fmv-logo.png"
             },
             {
-                "title": "iOS Developer",
+                "title": "Mobile Engineer",
+                "company": "Fischer's Medical Ventures",
+                "location": "Singapura",
+                "period": "Januari 2025 – Januari 2026",
+                "responsibilities": [
+                    "Merilis aplikasi mobile produksi yang terhubung ke 5+ perangkat medis USB/BLE, mendukung live streaming, kalibrasi, dan kendali jarak jauh untuk workflow klinis.",
+                    "Membangun modul reusable untuk BLE GATT, video real time, offline handling, retry flow, dan on-device ML, mempercepat integrasi perangkat keras dan rollout produk medis.",
+                    "Berkolaborasi dengan tim firmware dan backend untuk mendefinisikan protokol, memperkuat failure state, dan merilis aplikasi siap klinik yang tangguh."
+                ],
+                "logo": "/assets/logo/asset-fmv-logo.png"
+            },
+            {
+                "title": "iOS Developer, Kontrak",
                 "company": "Owlies",
                 "location": "Yogyakarta, Indonesia",
                 "period": "Oktober 2025 – Desember 2025",
                 "responsibilities": [
-                    "Merilis fitur iOS end-to-end menggunakan Clean Architecture dan MVVM di Swift, didukung rangkaian pengujian unit + UI yang komprehensif untuk meningkatkan kepercayaan diri saat rilis dan mengurangi regresi di produksi.",
-                    "Mengimplementasikan Superwall Paywall secara end-to-end di iOS (aturan pemicu, penayangan paywall, pemetaan produk, validasi entitlement, dan A/B testing), termasuk prompt trial yang ditunda 5 detik yang meningkatkan niat pembelian dan menaikkan konversi ~70% (trial-to-paid / paywall-to-purchase)."
+                    "Merilis fitur iOS end-to-end menggunakan Clean Architecture dan MVVM di Swift, didukung unit test dan UI test untuk meningkatkan kepercayaan diri saat rilis dan mengurangi regresi produksi.",
+                    "Mengimplementasikan Superwall Paywall end-to-end di iOS, termasuk prompt trial yang ditunda 5 detik dan meningkatkan niat pembelian serta konversi sekitar 70%."
                 ],
                 "logo": "/assets/logo/asset-owlies-logo.jpg"
             },
@@ -58,9 +70,9 @@
                 "location": "Tangerang, Indonesia",
                 "period": "Februari 2024 – Juni 2024",
                 "responsibilities": [
-                    "Merombak modul legacy dan memperbaiki bug pada aplikasi Traveloka Android (50M+ unduhan), meningkatkan responsivitas di berbagai kelas perangkat serta memperkuat stabilitas rilis.",
-                    "Mengimplementasikan fitur end-to-end dengan arsitektur Clean MVVM dan MVP. Menulis unit/UI test di Kotlin dan Java, menaikkan cakupan hingga 70%+ dan menurunkan regresi saat rilis.",
-                    "Meneliti dan mengusulkan strategi integrasi untuk Jetpack Compose dan pustaka Android modern guna meningkatkan efisiensi pengembang dan responsivitas UI."
+                    "Merombak modul legacy dan menyelesaikan bug produksi pada aplikasi Traveloka Android dengan 50M+ unduhan, meningkatkan responsivitas di berbagai kelas perangkat dan memperkuat stabilitas rilis.",
+                    "Mengirimkan fitur Android menggunakan Clean MVVM dan MVP di Kotlin dan Java, menaikkan cakupan unit/UI test hingga 70%+, dan mengurangi regresi rilis.",
+                    "Meneliti adopsi Jetpack Compose dan integrasi library Android modern untuk meningkatkan performa UI dan efisiensi developer."
                 ],
                 "logo": "/assets/logo/asset-traveloka-logo.png"
             },
@@ -72,7 +84,7 @@
                 "responsibilities": [
                     "Merancang, membangun, dan merilis 20+ aplikasi mobile di sektor edukasi dan ritel menggunakan Kotlin/Java (Android) dan Flutter (lintas platform).",
                     "Memimpin tim beranggotakan 4 orang, menjalankan sprint Agile, berkoordinasi lintas fungsi, dan menstandarkan CI/CD di GitHub, GitLab, dan CircleCI.",
-                    "Membangun backend API RESTful dengan Node.js dan Laravel untuk mendukung fitur mobile seperti autentikasi, pembaruan real time, dan penyimpanan data yang aman."
+                    "Membangun backend RESTful API dengan Node.js dan Laravel untuk mendukung autentikasi, pembaruan real time, dan penyimpanan data aman pada produk mobile."
                 ],
                 "logo": "/assets/logo/asset-freelanxx-logo.png"
             },

@@ -15,7 +15,7 @@
     "about": {
         "label": "关于我",
         "title": "想了解我？这里有答案。",
-        "description": "我是一名<strong>移动开发工程师</strong>，拥有<strong>三年以上经验</strong>，曾为<strong>政府、工业和企业</strong>等多个领域开发应用。我热衷于<strong>SOLID 原则</strong>和<strong>Clean Architecture（整洁架构）</strong>，并参与过<strong>终端用户产品</strong>及内部<strong>移动端库（SDK）</strong>的开发。无论是独立工作还是团队合作，我都能胜任，并致力于在移动工程领域不断成长。<br/><br/>我毕业于<strong>迪安努桑托罗大学（Universitas Dian Nuswantoro）</strong>信息工程专业，学术方向涵盖<strong>机器学习</strong>和<strong>移动端网络安全</strong>。除了移动开发，我还使用多种现代技术与框架开发过<strong>网页和桌面应用</strong>，确保方案简洁、可维护且可扩展。"
+        "description": "我是一名<strong>技术负责人兼移动工程师</strong>，拥有<strong>4 年以上经验</strong>，构建过 Android、iOS、桌面端、Web、SDK 以及与硬件连接的临床系统，覆盖<strong>医疗健康、政府、工业、教育、零售和企业级</strong>场景。近期工作聚焦于 <strong>Kotlin Multiplatform</strong>、<strong>Jetpack Compose</strong>、<strong>Clean Architecture</strong>、USB/BLE 医疗设备集成、离线优先工作流，以及在东南亚医院环境中使用的生产系统。<br/><br/>我曾带领 <strong>5+ 名工程师</strong>，交付 <strong>5+ 款医疗应用</strong>，支持 <strong>10+ 台 USB/BLE 医疗设备</strong>，并与产品、设计、固件、后端和客户团队紧密协作，把复杂临床需求转化为稳定、可发布的软件。我毕业于<strong>迪安努桑托罗大学（Universitas Dian Nuswantoro）</strong>信息工程专业，<strong>GPA 3.83 / 4.00</strong>，工程实践上重视可维护架构、测试、CI/CD、团队指导和务实的产品交付。"
     },
     "skills": {
         "label": "技能",
@@ -30,25 +30,37 @@
         "title": "以下是我最近工作的简要概述：",
         "items": [
             {
-                "title": "移动开发工程师",
-                "company": "Fischer Medical Ventures",
-                "location": "新加坡中部地区",
-                "period": "2025年1月—至今",
+                "title": "技术负责人，软件团队",
+                "company": "Fischer's Medical Ventures",
+                "location": "新加坡",
+                "period": "2026年2月—至今",
                 "responsibilities": [
-                    "交付可用于生产的移动应用，对接 10+ 医疗设备（USB/BLE），支持实时数据流、校准和远程控制；连接稳定，工作流具备容错能力，满足临床使用。",
-                    "研究并完成 BLE GATT、实时视频与端侧机器学习的原型，将结论沉淀为参考模块和决策文档，加速生产落地。",
-                    "与固件和后端团队协作定义协议并加固流程，发布可在临床场景使用的移动应用，具备可靠的离线与重试机制以及端到端可观测性。"
+                    "带领 5+ 名工程师覆盖移动端、桌面端和 Web 平台，交付 5+ 款与硬件连接的医疗应用，并在东南亚医院场景中使用。",
+                    "与固件、产品、设计、后端和客户团队协作，推进 10+ 次 USB/BLE 医疗设备集成，把临床需求转化为可上线的工作流。",
+                    "研究并提出面向临床设备应用的离线优先架构，改善医院网络不稳定时的工作流连续性、同步恢复和设备可靠性。"
                 ],
                 "logo": "/assets/logo/asset-fmv-logo.png"
             },
             {
-                "title": "iOS 开发工程师",
+                "title": "移动工程师",
+                "company": "Fischer's Medical Ventures",
+                "location": "新加坡",
+                "period": "2025年1月—2026年1月",
+                "responsibilities": [
+                    "交付连接 5+ 台 USB/BLE 医疗设备的生产级移动应用，支持临床工作流中的实时数据流、校准和远程控制。",
+                    "构建 BLE GATT、实时视频、离线处理、重试流程和端侧机器学习等可复用模块，加速医疗设备产品的硬件集成与上线。",
+                    "与固件和后端团队协作定义协议、加固异常状态，并交付稳定的临床可用应用。"
+                ],
+                "logo": "/assets/logo/asset-fmv-logo.png"
+            },
+            {
+                "title": "iOS 开发工程师，合同",
                 "company": "Owlies",
                 "location": "印度尼西亚，日惹",
                 "period": "2025年10月 – 2025年12月",
                 "responsibilities": [
-                    "使用 Swift 基于 Clean Architecture 与 MVVM 交付端到端 iOS 功能，并配套完善的单元测试与 UI 测试套件，以提升发布信心并减少生产环境回归。",
-                    "在 iOS 端端到端落地 Superwall 付费墙（触发规则、付费墙展示、产品映射、权益/Entitlement 校验与 A/B 测试），并加入延迟 5 秒的试用提示，提升购买意愿，使转化率提升约 70%（trial-to-paid / paywall-to-purchase）。"
+                    "使用 Swift 基于 Clean Architecture 与 MVVM 交付端到端 iOS 功能，并配套单元测试和 UI 测试，以提升发布信心并减少生产环境回归。",
+                    "在 iOS 端端到端落地 Superwall 付费墙，包括延迟 5 秒的试用提示，提升购买意愿并使转化率提升约 70%。"
                 ],
                 "logo": "/assets/logo/asset-owlies-logo.jpg"
             },
@@ -58,9 +70,9 @@
                 "location": "印度尼西亚 坦格朗",
                 "period": "2024年2月 – 2024年6月",
                 "responsibilities": [
-                    "在 Traveloka Android 应用（下载量 5000万+）中重构遗留模块并修复 Bug，提升跨设备档位的响应速度并增强版本发布稳定性。",
-                    "基于 Clean MVVM 与 MVP 架构端到端实现新功能。编写 Kotlin 与 Java 的单元/界面测试，将覆盖率提升至 70%+，并显著降低发布期回归。",
-                    "调研并提出 Jetpack Compose 及现代 Android 库的集成策略，以提升开发效率与界面响应速度。"
+                    "在 Traveloka Android 应用（下载量 5000万+）中重构遗留模块并解决生产 Bug，提升跨设备档位的响应速度并增强版本发布稳定性。",
+                    "使用 Kotlin 和 Java 基于 Clean MVVM 与 MVP 交付 Android 功能，将单元/UI 测试覆盖率提升至 70%+，并减少发布期回归。",
+                    "调研 Jetpack Compose 采用路径与现代 Android 库集成策略，以提升 UI 性能和开发效率。"
                 ],
                 "logo": "/assets/logo/asset-traveloka-logo.png"
             },
@@ -72,7 +84,7 @@
                 "responsibilities": [
                     "使用 Kotlin/Java（Android）与 Flutter（跨平台）设计、构建并上线 20+ 款移动应用，覆盖教育与零售场景。",
                     "带领 4 人团队推进 Agile 冲刺，跨团队协作，并在 GitHub、GitLab、CircleCI 上标准化 CI/CD 流程。",
-                    "基于 Node.js 与 Laravel 构建 RESTful API 后端，支持移动端认证、实时更新与安全数据存储等能力。"
+                    "基于 Node.js 与 Laravel 构建 RESTful API 后端，支持移动产品的认证、实时更新与安全数据存储。"
                 ],
                 "logo": "/assets/logo/asset-freelanxx-logo.png"
             },
