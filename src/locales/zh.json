@@ -30,18 +30,6 @@
         "title": "以下是我最近工作的简要概述：",
         "items": [
             {
-                "title": "技术负责人，软件团队",
-                "company": "Fischer's Medical Ventures",
-                "location": "新加坡",
-                "period": "2026年2月—至今",
-                "responsibilities": [
-                    "带领 5+ 名工程师覆盖移动端、桌面端和 Web 平台，交付 5+ 款与硬件连接的医疗应用，并在东南亚医院场景中使用。",
-                    "与固件、产品、设计、后端和客户团队协作，推进 10+ 次 USB/BLE 医疗设备集成，把临床需求转化为可上线的工作流。",
-                    "研究并提出面向临床设备应用的离线优先架构，改善医院网络不稳定时的工作流连续性、同步恢复和设备可靠性。"
-                ],
-                "logo": "/assets/logo/asset-fmv-logo.png"
-            },
-            {
                 "title": "移动工程师",
                 "company": "Fischer's Medical Ventures",
                 "location": "新加坡",

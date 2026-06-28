@@ -30,18 +30,6 @@
         "title": "Berikut adalah ringkasan singkat dari pengalaman terbaru saya:",
         "items": [
             {
-                "title": "Tech Lead, Software Team",
-                "company": "Fischer's Medical Ventures",
-                "location": "Singapura",
-                "period": "Februari 2026 – Sekarang",
-                "responsibilities": [
-                    "Memimpin 5+ engineer di platform mobile, desktop, dan web, serta merilis 5+ aplikasi medis yang terhubung ke perangkat keras dan digunakan di rumah sakit di Asia Tenggara.",
-                    "Mengoordinasikan 10+ integrasi perangkat medis USB/BLE bersama tim firmware, product, design, backend, dan klien, menerjemahkan kebutuhan klinis menjadi alur kerja siap produksi.",
-                    "Meneliti dan mengusulkan arsitektur offline-first untuk aplikasi perangkat klinis, meningkatkan kontinuitas workflow, pemulihan sinkronisasi, dan keandalan perangkat saat jaringan rumah sakit tidak stabil."
-                ],
-                "logo": "/assets/logo/asset-fmv-logo.png"
-            },
-            {
                 "title": "Mobile Engineer",
                 "company": "Fischer's Medical Ventures",
                 "location": "Singapura",

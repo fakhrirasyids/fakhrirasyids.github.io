@@ -30,18 +30,6 @@
         "title": "Here is a quick summary of my most recent experiences:",
         "items": [
             {
-                "title": "Tech Lead, Software Team",
-                "company": "Fischer's Medical Ventures",
-                "location": "Singapore",
-                "period": "February 2026 – Present",
-                "responsibilities": [
-                    "Led 5+ engineers across mobile, desktop, and web platforms, delivering 5+ hardware-connected medical applications used across hospitals in Southeast Asia.",
-                    "Coordinated 10+ USB/BLE medical device integrations with firmware, product, design, backend, and client teams, translating clinical requirements into production-ready workflows.",
-                    "Researched and proposed offline-first architecture for clinical device applications, improving workflow continuity, sync recovery, and device reliability during unstable hospital network conditions."
-                ],
-                "logo": "/assets/logo/asset-fmv-logo.png"
-            },
-            {
                 "title": "Mobile Engineer",
                 "company": "Fischer's Medical Ventures",
                 "location": "Singapore",
