@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#cbd3c5"/></pattern></defs>
+  <rect width="1200" height="630" fill="#f4f5ee"/><rect x="790" width="410" height="630" fill="url(#grid)"/>
+  <path d="M64 115H1136M64 539H1136" stroke="#cbd3c5"/>
+  <text x="64" y="78" font-family="Arial, sans-serif" font-size="30" font-weight="bold" letter-spacing="-1" fill="#193c32">FRS / SIGNAL LAB</text>
+  <text x="64" y="194" font-family="monospace" font-size="14" letter-spacing="2" fill="#56665d">TECH LEAD / MOBILE ENGINEER</text>
+  <text x="58" y="300" font-family="Arial, sans-serif" font-size="76" letter-spacing="-4" fill="#193c32">Complex systems.</text>
+  <text x="58" y="389" font-family="Georgia, serif" font-style="italic" font-size="78" letter-spacing="-3" fill="#193c32">Clear experiences.</text>
+  <text x="64" y="479" font-family="Arial, sans-serif" font-size="23" fill="#56665d">Fakhri Rasyid Saputro</text>
+  <circle cx="986" cy="322" r="137" fill="none" stroke="#91a68b" stroke-dasharray="3 9"/>
+  <circle cx="986" cy="322" r="101" fill="none" stroke="#91a68b"/>
+  <circle cx="986" cy="322" r="70" fill="#193c32"/>
+  <path d="M986 185V252M986 392V459M849 322H916M1056 322H1123" stroke="#91a68b"/>
+  <text x="986" y="336" text-anchor="middle" font-family="Arial, sans-serif" font-size="37" fill="#ddf478">FRS</text>
+  <circle cx="986" cy="185" r="7" fill="#ddf478" stroke="#193c32"/><circle cx="849" cy="322" r="7" fill="#ddf478" stroke="#193c32"/>
+  <text x="64" y="581" font-family="monospace" font-size="13" letter-spacing="1" fill="#56665d">MOBILE · MULTIPLATFORM · CONNECTED DEVICES</text>
+</svg>

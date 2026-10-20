@@ -1,34 +1,423 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "",
+  "installCommand": "",
+  "outputDirectory": ".",
+  "trailingSlash": true,
+  "git": {
+    "deploymentEnabled": {
+      "dev": false,
+      "stable/v2": false
+    }
+  },
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
     {
       "source": "/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/(.*).(js|css|webp|png|jpg|jpeg|svg|woff2)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/index.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
+          "value": "public, max-age=3600, must-revalidate"
         }
       ]
     }
   ],
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+  "redirects": [
+    {
+      "source": "/project/:path*",
+      "destination": "/projects/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/work/:path*",
+      "destination": "/projects/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-digihealth-kiosk",
+      "destination": "/projects/digihealth-kiosk-atm/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-xray",
+      "destination": "/projects/8xray-app/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-stethoscope",
+      "destination": "/projects/stethoscope/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-pcr-multiplatform",
+      "destination": "/projects/pcr-kotlin-multiplatform/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-patient-health-companion",
+      "destination": "/projects/patient-health-companion/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/cvdetect-multiplatform",
+      "destination": "/projects/cvdetect-kotlin-multiplatform/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/teddy-project",
+      "destination": "/projects/traveloka-xperience-ticket-detail-project/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/tweety-project",
+      "destination": "/projects/traveloka-xperience-ticket-detail-v2-project/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/lp-sr-cruise-project",
+      "destination": "/projects/traveloka-cruise-lp-sr-project/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/lunit-folder-uploader",
+      "destination": "/projects/lunit-4t4tb-folder-uploader/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-kiosk-website",
+      "destination": "/projects/health-kiosk-website/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-xray-website",
+      "destination": "/projects/x-ray-website/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-stethoscope-website",
+      "destination": "/projects/digital-stethoscope-website/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-pcr-website",
+      "destination": "/projects/pcr-website/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-fundoscope-website",
+      "destination": "/projects/fundoscope-website/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-pathology-website",
+      "destination": "/projects/digital-pathology-website/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-spirometer-website",
+      "destination": "/projects/spirometer-website/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-ecg-website",
+      "destination": "/projects/ecg-website/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-enzyme-website",
+      "destination": "/projects/enzyme-website/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fmv-epc-website",
+      "destination": "/projects/epc-website/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/pets-healthcare-website",
+      "destination": "/projects/pets-healthcare-company-website/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/8isugar-website",
+      "destination": "/projects/sugar-company-website/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/fujian-medical-website",
+      "destination": "/projects/fujian-medical-engineering-website/",
+      "permanent": true
+    },
+    {
+      "source": "/id/project/:path*",
+      "destination": "/id/projects/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/id/work/:path*",
+      "destination": "/id/projects/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-digihealth-kiosk",
+      "destination": "/id/projects/digihealth-kiosk-atm/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-xray",
+      "destination": "/id/projects/8xray-app/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-stethoscope",
+      "destination": "/id/projects/stethoscope/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-pcr-multiplatform",
+      "destination": "/id/projects/pcr-kotlin-multiplatform/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-patient-health-companion",
+      "destination": "/id/projects/patient-health-companion/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/cvdetect-multiplatform",
+      "destination": "/id/projects/cvdetect-kotlin-multiplatform/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/teddy-project",
+      "destination": "/id/projects/traveloka-xperience-ticket-detail-project/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/tweety-project",
+      "destination": "/id/projects/traveloka-xperience-ticket-detail-v2-project/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/lp-sr-cruise-project",
+      "destination": "/id/projects/traveloka-cruise-lp-sr-project/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/lunit-folder-uploader",
+      "destination": "/id/projects/lunit-4t4tb-folder-uploader/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-kiosk-website",
+      "destination": "/id/projects/health-kiosk-website/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-xray-website",
+      "destination": "/id/projects/x-ray-website/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-stethoscope-website",
+      "destination": "/id/projects/digital-stethoscope-website/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-pcr-website",
+      "destination": "/id/projects/pcr-website/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-fundoscope-website",
+      "destination": "/id/projects/fundoscope-website/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-pathology-website",
+      "destination": "/id/projects/digital-pathology-website/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-spirometer-website",
+      "destination": "/id/projects/spirometer-website/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-ecg-website",
+      "destination": "/id/projects/ecg-website/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-enzyme-website",
+      "destination": "/id/projects/enzyme-website/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fmv-epc-website",
+      "destination": "/id/projects/epc-website/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/pets-healthcare-website",
+      "destination": "/id/projects/pets-healthcare-company-website/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/8isugar-website",
+      "destination": "/id/projects/sugar-company-website/",
+      "permanent": true
+    },
+    {
+      "source": "/id/projects/fujian-medical-website",
+      "destination": "/id/projects/fujian-medical-engineering-website/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/project/:path*",
+      "destination": "/zh/projects/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/zh/work/:path*",
+      "destination": "/zh/projects/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-digihealth-kiosk",
+      "destination": "/zh/projects/digihealth-kiosk-atm/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-xray",
+      "destination": "/zh/projects/8xray-app/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-stethoscope",
+      "destination": "/zh/projects/stethoscope/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-pcr-multiplatform",
+      "destination": "/zh/projects/pcr-kotlin-multiplatform/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-patient-health-companion",
+      "destination": "/zh/projects/patient-health-companion/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/cvdetect-multiplatform",
+      "destination": "/zh/projects/cvdetect-kotlin-multiplatform/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/teddy-project",
+      "destination": "/zh/projects/traveloka-xperience-ticket-detail-project/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/tweety-project",
+      "destination": "/zh/projects/traveloka-xperience-ticket-detail-v2-project/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/lp-sr-cruise-project",
+      "destination": "/zh/projects/traveloka-cruise-lp-sr-project/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/lunit-folder-uploader",
+      "destination": "/zh/projects/lunit-4t4tb-folder-uploader/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-kiosk-website",
+      "destination": "/zh/projects/health-kiosk-website/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-xray-website",
+      "destination": "/zh/projects/x-ray-website/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-stethoscope-website",
+      "destination": "/zh/projects/digital-stethoscope-website/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-pcr-website",
+      "destination": "/zh/projects/pcr-website/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-fundoscope-website",
+      "destination": "/zh/projects/fundoscope-website/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-pathology-website",
+      "destination": "/zh/projects/digital-pathology-website/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-spirometer-website",
+      "destination": "/zh/projects/spirometer-website/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-ecg-website",
+      "destination": "/zh/projects/ecg-website/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-enzyme-website",
+      "destination": "/zh/projects/enzyme-website/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fmv-epc-website",
+      "destination": "/zh/projects/epc-website/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/pets-healthcare-website",
+      "destination": "/zh/projects/pets-healthcare-company-website/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/8isugar-website",
+      "destination": "/zh/projects/sugar-company-website/",
+      "permanent": true
+    },
+    {
+      "source": "/zh/projects/fujian-medical-website",
+      "destination": "/zh/projects/fujian-medical-engineering-website/",
+      "permanent": true
+    }
   ]
 }
