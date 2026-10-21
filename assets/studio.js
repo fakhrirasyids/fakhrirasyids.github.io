@@ -1,5 +1,3 @@
-import { initConnection } from './connection.js';
-
 export function initStudio() {
   const root = document.documentElement;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -68,5 +66,10 @@ export function initStudio() {
     document.querySelectorAll('.project-image').forEach(element => element.style.removeProperty('view-transition-name'));
   });
 
-  initConnection();
+  // Hero code is only requested on a homepage, never on the 160 other pages.
+  if (document.querySelector('.assembly-hero')) {
+    import('./assembly.js').then(({ initAssembly }) => initAssembly()).catch(() => {
+      // The HTML composition and both destination links remain usable.
+    });
+  }
 }

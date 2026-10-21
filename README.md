@@ -27,9 +27,10 @@ does not provide the origin needed for module scripts and root-relative URLs.
 
 ## Experience
 
-- Full-screen connection hero: a physical cable you can drag into a socket,
-  pluck with the pointer, or connect by click, touch, or keyboard. The name fills
-  when connected; the simulation settles to idle and respects reduced motion.
+- Type Assembly hero: pull apart the name, throw letters and the working photo,
+  then rebuild them. Drag, click/tap-to-place, and keyboard controls are supported.
+  See works and Download CV stay outside the play area. No animation on arrival;
+  reduced motion uses still arrangements, and the simulation stops when idle.
 - Editorial art direction, staggered selected-work gallery, scroll reveals, and
   shared-image page transitions in supporting browsers. See `DESIGN.md` for research.
 - Minimal opening with direct selected-work access and a compact navigation menu.
@@ -58,8 +59,9 @@ does not provide the origin needed for module scripts and root-relative URLs.
 | `assets/site.css` | Shared styles, themes, breakpoints, reduced motion |
 | `assets/site.js` | Progressive enhancement and events |
 | `assets/studio.css`, `assets/studio.js` | Editorial design and interaction enhancement |
-| `assets/connection.css`, `assets/connection.js` | Full-screen hero and input handling |
-| `assets/cable.mjs` | Position-based cable physics and signal interpolation |
+| `assets/assembly.css`, `assets/assembly.js` | Type Assembly hero, input and lifecycle handling |
+| `assets/assembly-physics.mjs` | Original bounding-box physics and rebuild springs |
+| `assets/connection.css`, `assets/connection.js`, `assets/cable.mjs` | Retained MVP assets; no longer loaded |
 | `assets/core.mjs` | Search, filter, sorting, URL functions |
 | `assets/theme.js` | Small before-paint theme preference loader |
 | `assets/project-index.json` | Search index, fetched only when search opens |
@@ -106,7 +108,7 @@ are preserved as supplied; their availability is not guaranteed.
 ## Verification
 
 ```sh
-node --test tests/core.test.mjs tests/cable.test.mjs
+node --test tests/*.test.mjs
 python3 tests/validate.py
 node --check assets/site.js
 git diff --check
