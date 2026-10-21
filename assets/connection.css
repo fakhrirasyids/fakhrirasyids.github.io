@@ -1,0 +1,59 @@
+/* One room, one interaction. The name is the content; the cable is the invitation. */
+body[data-page=home] .connection-hero{position:relative;isolation:isolate;min-height:580px;height:calc(100svh - 92px);max-height:1100px;overflow:hidden;border-bottom:1px solid var(--line)}
+.connection-hero:before{content:"";position:absolute;inset:7% 4vw 10%;border:1px solid var(--line);opacity:.35;pointer-events:none;clip-path:polygon(0 0,20px 0,20px 1px,1px 1px,1px 20px,0 20px,0 0,100% 0,100% 20px,calc(100% - 1px) 20px,calc(100% - 1px) 1px,calc(100% - 20px) 1px,calc(100% - 20px) 0,100% 0,100% 100%,calc(100% - 20px) 100%,calc(100% - 20px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(100% - 20px),100% calc(100% - 20px),100% 100%,0 100%,0 calc(100% - 20px),1px calc(100% - 20px),1px calc(100% - 1px),20px calc(100% - 1px),20px 100%,0 100%)}
+.connection-identity{position:absolute;inset:11% 13% auto;pointer-events:none}
+.connection-kicker{font:11px/1.6 var(--mono);color:var(--muted);letter-spacing:.01em;margin-bottom:4.5vh}
+body[data-page=home] .connection-name{font-size:clamp(100px,16.5vw,250px);line-height:.82;letter-spacing:-.065em;font-weight:600;position:relative;z-index:1}
+.connection-name>span{display:block}
+.connection-name>span+span{margin-left:13%;color:transparent;-webkit-text-stroke:1.5px var(--ink);transition:color .65s}
+.connection-hero.is-connected .connection-name>span+span{color:var(--ink)}
+.connection-name .name-dot{color:var(--signal-color);-webkit-text-stroke:0}
+.connection-role{margin-top:28px;margin-left:14%;font-size:13px;color:var(--muted)}
+#connection-art{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.cable-source,.cable-socket,.cable-plug{position:absolute;z-index:3;transform:translate(-50%,-50%)}
+.cable-source{width:24px;height:24px;border:1px solid var(--line);border-radius:50%;background:var(--bg);display:grid;place-items:center;pointer-events:none}
+.cable-source:after{content:"";width:8px;height:8px;background:var(--ink);border-radius:50%}
+.cable-source:before{content:"01";position:absolute;bottom:40px;font:9px var(--mono);color:var(--muted)}
+.cable-socket{width:60px;height:60px;border:1px solid var(--line);border-radius:50%;background:var(--bg);display:grid;place-items:center;transition:background .3s,border-color .3s,box-shadow .3s}
+.cable-socket:before{content:"02";position:absolute;bottom:72px;font:9px var(--mono);color:var(--muted)}
+.cable-socket:after{content:"";width:22px;height:22px;border:7px solid var(--ink);border-radius:50%;box-shadow:0 0 0 4px var(--bg),0 0 0 5px var(--line)}
+.near-socket .cable-socket{box-shadow:0 0 0 12px #dc4a2720;border-color:var(--signal-color)}
+.is-connected .cable-socket{background:var(--accent);border-color:var(--accent)}
+.cable-plug{width:62px;height:62px;padding:9px;cursor:grab;touch-action:none;user-select:none;border-radius:50%;background:none}
+.cable-plug:before{content:"";display:block;box-sizing:border-box;width:44px;height:44px;border-radius:50%;background:var(--signal-color);border:7px solid var(--ink);box-shadow:inset 0 0 0 2px #ffffff55,0 3px 8px #0002}
+.cable-plug:after{content:"+";position:absolute;inset:0;display:grid;place-items:center;color:var(--bg);font:20px var(--mono)}
+.is-dragging .cable-plug{cursor:grabbing}
+.connection-footer{position:absolute;bottom:5%;left:5vw;right:5vw;display:flex;align-items:end;justify-content:space-between;gap:24px;z-index:4;pointer-events:none}
+.connection-footer a,.connection-footer button{pointer-events:auto}
+.connection-work{display:flex;align-items:center;gap:32px;font-size:14px;letter-spacing:-.02em;min-height:48px;border-bottom:1px solid var(--ink)}
+.connection-work span{font-size:25px;transition:transform .25s}
+.connection-work:hover span{transform:translateY(4px)}
+.connection-invite{text-align:right}
+.connection-action{font:12px var(--mono);border-bottom:1px solid var(--ink);padding:10px 0;min-height:44px}
+.connection-action:after{content:" ↗";color:var(--signal-color)}
+.connection-instruction{font:10px/1.6 var(--mono);color:var(--muted);margin-top:6px}
+.connection-status{position:absolute!important;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden}
+.connection-tools{display:none}
+.js .connection-tools{display:block}
+.connection-hero:not(.connection-ready) .connection-tools{display:none}
+.connection-hero:not(.connection-ready) .connection-name>span+span{color:var(--ink)}
+html:not(.js) body[data-page=home] .header-inner{flex-wrap:wrap}
+body[data-page=home] .hero-work-link{font-size:12px;min-height:44px;display:flex;align-items:center;gap:18px;margin-left:auto}
+body[data-page=home] .brand{margin-right:0}
+body[data-page=home] .brand-text{display:none}
+.js body[data-page=home] .menu-toggle{display:flex!important;align-items:center;justify-content:center;gap:12px;order:2;font-size:12px;min-width:70px}
+.js body[data-page=home] .menu-toggle span{font-size:20px}
+.js body[data-page=home] #site-nav{display:none;position:absolute;right:4vw;top:80px;width:min(360px,92vw);padding:26px 28px 110px;background:var(--paper);border:1px solid var(--line);box-shadow:0 20px 50px #0001;flex-direction:column;align-items:start;gap:14px;z-index:30}
+.js body[data-page=home] #site-nav.is-open{display:flex}
+.js body[data-page=home] .header-tools{display:none;position:absolute;right:calc(4vw + 28px);top:320px;z-index:31;gap:10px}
+.js body[data-page=home] .site-header:has(#site-nav.is-open) .header-tools{display:flex}
+.js body[data-page=home] .header-tools .search-open{display:inline-flex!important}
+.js.hero-in-view body[data-page=home] .inspect-bar{visibility:hidden;pointer-events:none}
+body[data-page=home] .discipline-strip{display:none}
+.inspect .connection-identity{outline:1px dashed var(--line);outline-offset:15px}
+@media(min-width:1700px){.connection-identity{inset-inline:calc((100vw - 1260px)/2)}}
+@media(max-width:900px){body[data-page=home] .connection-hero{height:calc(100svh - 80px)}body[data-page=home] .header-inner{flex-wrap:nowrap}.connection-identity{inset:16% 10% auto}body[data-page=home] .connection-name{font-size:19vw}.connection-kicker{font-size:10px;margin-bottom:38px}.connection-role{font-size:12px}.connection-instruction{max-width:190px}.js body[data-page=home] #site-nav{top:70px}.js body[data-page=home] .header-tools{top:310px}}
+@media(max-width:600px){body[data-page=home] .connection-hero{height:calc(100svh - 76px);min-height:540px;max-height:900px}.connection-identity{inset:17% 8% auto}.connection-kicker{font-size:10px;max-width:250px;margin-bottom:32px}body[data-page=home] .connection-name{font-size:22vw;letter-spacing:-.055em;line-height:.86}.connection-name>span+span{margin-left:7%;-webkit-text-stroke:1px var(--ink)}.connection-role{font-size:11px;line-height:1.5;margin-top:20px;margin-left:8%;max-width:220px}.connection-footer{left:22px;right:22px;bottom:5%;gap:20px}.connection-work{font-size:12px;gap:12px}.connection-work span{font-size:20px}.connection-action{font-size:10px}.connection-instruction{font-size:8px;max-width:160px}.cable-socket{width:48px;height:48px}.cable-socket:before{bottom:60px}.cable-socket:after{width:18px;height:18px;border-width:6px}.cable-plug{width:52px;height:52px;padding:7px}.cable-plug:before{width:38px;height:38px;border-width:6px}.cable-plug:after{font-size:18px}.cable-source{width:20px;height:20px}.connection-hero:before{inset:6% 22px 12%}body[data-page=home] .header-inner{min-height:76px}.js body[data-page=home] #site-nav{right:22px;width:calc(100vw - 44px)}.js body[data-page=home] .header-tools{right:48px}body[data-page=home] .hero-work-link{font-size:11px;margin-right:10px}.js body[data-page=home] .menu-toggle{min-width:60px;font-size:11px;gap:8px}}
+@media(max-height:700px) and (min-width:601px){body[data-page=home] .connection-hero{min-height:500px}.connection-identity{top:9%}.connection-kicker{margin-bottom:22px}body[data-page=home] .connection-name{font-size:min(16vw,180px)}.connection-role{margin-top:18px}}
+@media(prefers-reduced-motion:reduce){.connection-name>span+span,.cable-socket,.connection-work span{transition:none}.connection-work:hover span{transform:none}}
+@media print{body[data-page=home] .connection-hero{height:auto;min-height:0;padding:25px}.connection-identity{position:static}.connection-kicker{margin-bottom:20px}body[data-page=home] .connection-name{font-size:70px}.connection-name>span+span{color:black;-webkit-text-stroke:0}.connection-footer,.connection-tools,#connection-art{display:none!important}}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#f1efe7"/>
+<text x="48" y="65" font-family="Arial,sans-serif" font-size="40" font-weight="bold" letter-spacing="-4" fill="#242420">frs.</text>
+<text x="150" y="135" font-family="monospace" font-size="13" fill="#64635b">Connecting the physical &amp; digital.</text>
+<text x="140" y="292" font-family="Arial,sans-serif" font-size="172" font-weight="bold" letter-spacing="-10" fill="#242420">FAKHRI</text>
+<text x="230" y="438" font-family="Arial,sans-serif" font-size="172" font-weight="bold" letter-spacing="-10" fill="none" stroke="#242420" stroke-width="1.4">RASYID</text>
+<rect x="917" y="414" width="24" height="24" fill="#d94a27"/>
+<text x="240" y="477" font-family="Arial,sans-serif" font-size="16" fill="#64635b">Tech lead &amp; mobile engineer</text>
+<path d="M105 350 Q390 670 790 510" fill="none" stroke="#d94a27" stroke-width="10" stroke-linecap="round"/>
+<circle cx="105" cy="350" r="10" fill="#242420" stroke="#f1efe7" stroke-width="5"/>
+<circle cx="1060" cy="350" r="22" fill="none" stroke="#cbc8bc"/>
+<circle cx="1060" cy="350" r="12" fill="none" stroke="#242420" stroke-width="7"/>
+<circle cx="790" cy="510" r="20" fill="#d94a27" stroke="#242420" stroke-width="7"/>
+<path d="M784 510h12m-6 -6v12" stroke="#f1efe7" stroke-width="1.5"/>
+</svg>
