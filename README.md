@@ -27,7 +27,12 @@ does not provide the origin needed for module scripts and root-relative URLs.
 
 ## Experience
 
-- System explorer: four disciplines connected to real project pages.
+- Full-screen connection hero: a physical cable you can drag into a socket,
+  pluck with the pointer, or connect by click, touch, or keyboard. The name fills
+  when connected; the simulation settles to idle and respects reduced motion.
+- Editorial art direction, staggered selected-work gallery, scroll reveals, and
+  shared-image page transitions in supporting browsers. See `DESIGN.md` for research.
+- Minimal opening with direct selected-work access and a compact navigation menu.
 - All 50 projects: search, platform/technology filters, sorting, shareable query
   URLs, and progressive loading.
 - Inspect mode: public project IDs, platforms, and recorded technologies.
@@ -52,6 +57,9 @@ does not provide the origin needed for module scripts and root-relative URLs.
 | `id/`, `zh/` | Equivalent localized pages |
 | `assets/site.css` | Shared styles, themes, breakpoints, reduced motion |
 | `assets/site.js` | Progressive enhancement and events |
+| `assets/studio.css`, `assets/studio.js` | Editorial design and interaction enhancement |
+| `assets/connection.css`, `assets/connection.js` | Full-screen hero and input handling |
+| `assets/cable.mjs` | Position-based cable physics and signal interpolation |
 | `assets/core.mjs` | Search, filter, sorting, URL functions |
 | `assets/theme.js` | Small before-paint theme preference loader |
 | `assets/project-index.json` | Search index, fetched only when search opens |
@@ -98,7 +106,7 @@ are preserved as supplied; their availability is not guaranteed.
 ## Verification
 
 ```sh
-node --test tests/core.test.mjs
+node --test tests/core.test.mjs tests/cable.test.mjs
 python3 tests/validate.py
 node --check assets/site.js
 git diff --check
@@ -108,3 +116,7 @@ These checks cover content retention, local resources, routes, metadata, ARIA
 references, color token contrast, size budgets, filters, query parsing, and
 storage-denied theme startup. They do not substitute for browser, device,
 screen-reader, or Lighthouse QA. See `VALIDATION.md` for verification limits.
+
+Optional browser regression checks use an existing Python Playwright installation:
+start the static server on port 8001, then run `python3 tests/browser_qa.py`.
+Playwright is a development-only test tool, not an application dependency.

@@ -36,7 +36,8 @@ def resolve(href,current):
     if target.is_dir():target=target/'index.html'
     return target
 
-pages={p:Page(p) for p in ROOT.rglob('*.html')}
+excluded={'node_modules','dist','.git','.vercel'}
+pages={p:Page(p) for p in ROOT.rglob('*.html') if not excluded.intersection(p.relative_to(ROOT).parts)}
 check(len(pages)==163,f'Expected 163 HTML files, found {len(pages)}')
 for path,page in pages.items():
     label=str(path.relative_to(ROOT))
@@ -112,13 +113,19 @@ def luminance(color):
     vals=[int(color[i:i+2],16)/255 for i in (1,3,5)]
     vals=[v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in vals]
     return sum(a*b for a,b in zip(vals,[.2126,.7152,.0722]))
-for fg,bg in [('#193c32','#f4f5ee'),('#56665d','#f4f5ee'),('#56665d','#e9ede3'),('#eaf0e4','#101d18'),('#b0bdaf','#192b23'),('#193c32','#ddf478')]:
+studio=(ROOT/'assets/studio.css').read_text()
+themes=re.findall(r':root:root(?:\[data-theme=dark\])?\{([^}]+)\}',studio)
+pairs=[]
+for theme in themes:
+    tokens=dict(re.findall(r'(--[\w-]+):([^;]+)',theme))
+    pairs += [(tokens[fg],tokens[bg]) for fg,bg in [('--ink','--bg'),('--muted','--bg'),('--muted','--surface'),('--accent-ink','--accent')]]
+for fg,bg in pairs:
     a,b=sorted([luminance(fg),luminance(bg)]);contrast=(b+.05)/(a+.05)
     check(contrast>=4.5,f'Insufficient text contrast {fg}/{bg}: {contrast:.2f}')
 css=(ROOT/'assets/site.css').read_text()
 check('prefers-reduced-motion:reduce' in css,'Missing reduced-motion handling')
 check('.js [hidden]{display:none!important}' in css,'Hidden filter controls can be overridden')
-for name,budget in [('assets/site.css',8000),('assets/site.js',5000),('assets/core.mjs',1500),('index.html',9000)]:
+for name,budget in [('assets/site.css',8000),('assets/studio.css',6500),('assets/connection.css',4000),('assets/site.js',5000),('assets/studio.js',2500),('assets/connection.js',4500),('assets/cable.mjs',1500),('assets/core.mjs',1500),('index.html',9000)]:
     size=len(gzip.compress((ROOT/name).read_bytes()));check(size<=budget,f'{name}: {size} gzip bytes exceeds {budget}')
 if errors:
     print('\n'.join(errors));raise SystemExit(f'FAILED: {len(errors)} errors')

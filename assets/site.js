@@ -1,4 +1,5 @@
 import { matchesProject, selectProjects, readFilters, filterQuery, projectPath } from './core.mjs';
+import { initStudio } from './studio.js';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -18,7 +19,7 @@ const themeMeta = $('meta[name="theme-color"]');
 function setTheme(theme) {
   root.dataset.theme = theme;
   themeButton.setAttribute('aria-pressed', String(theme === 'dark'));
-  themeMeta.content = theme === 'dark' ? '#101d18' : '#f4f5ee';
+  themeMeta.content = theme === 'dark' ? '#191917' : '#f1efe7';
 }
 setTheme(root.dataset.theme);
 themeButton.addEventListener('click', () => {
@@ -54,6 +55,9 @@ menu.addEventListener('click', () => {
   navigation.classList.toggle('is-open', expanded);
 });
 navigation.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
+document.addEventListener('click', event => {
+  if (menu.getAttribute('aria-expanded') === 'true' && !event.target.closest('.site-header, dialog')) closeMenu();
+});
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
     closeMenu(); menu.focus();
@@ -61,12 +65,7 @@ document.addEventListener('keydown', event => {
 });
 matchMedia('(min-width: 901px)').addEventListener('change', closeMenu);
 
-$$('[data-signal]').forEach(button => button.addEventListener('click', () => {
-  const value = button.dataset.signal;
-  $$('[data-signal]').forEach(node => node.setAttribute('aria-pressed', String(node === button)));
-  $$('.signal-panel').forEach(panel => { panel.hidden = panel.id !== 'signal-panel-' + value; });
-  $('.signal-map').dataset.active = value;
-}));
+initStudio();
 
 let toastTimer;
 function toast(message) {
@@ -175,6 +174,10 @@ async function openSearch(trigger) {
 }
 $$('.search-open').forEach(button => button.addEventListener('click', () => openSearch(button)));
 $('.dialog-close').addEventListener('click', () => dialog.close());
+dialog.addEventListener('keydown', event => {
+  // Search inputs can consume Escape to clear text before the dialog sees it.
+  if (event.key === 'Escape') { event.preventDefault(); event.stopPropagation(); dialog.close(); }
+});
 dialog.addEventListener('click', event => {
   const rect = dialog.getBoundingClientRect();
   if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
