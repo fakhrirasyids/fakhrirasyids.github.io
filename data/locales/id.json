@@ -15,7 +15,7 @@
     "about": {
         "label": "Tentang Saya",
         "title": "Penasaran tentang saya? Ini dia.",
-        "description": "Saya adalah <strong>Tech Lead dan Mobile Engineer</strong> dengan <strong>4+ tahun pengalaman</strong> membangun aplikasi Android, iOS, desktop, web, SDK, serta sistem klinis yang terhubung ke perangkat keras di domain <strong>healthcare, pemerintahan, industri, edukasi, ritel, dan enterprise</strong>. Fokus terbaru saya mencakup <strong>Kotlin Multiplatform</strong>, <strong>Jetpack Compose</strong>, <strong>Clean Architecture</strong>, integrasi perangkat medis USB/BLE, alur offline-first, dan sistem produksi yang digunakan di lingkungan rumah sakit di Asia Tenggara.<br/><br/>Saya pernah memimpin <strong>5+ engineer</strong>, merilis <strong>5+ aplikasi medis</strong>, mendukung <strong>10+ perangkat medis USB/BLE</strong>, serta berkolaborasi erat dengan tim product, design, firmware, backend, dan klien untuk menerjemahkan kebutuhan klinis yang kompleks menjadi software yang andal dan siap rilis. Saya juga memiliki <strong>gelar Sarjana Teknik Informatika</strong> dari <strong>Universitas Dian Nuswantoro</strong> dengan <strong>IPK 3.83 / 4.00</strong>, dan selalu menekankan arsitektur yang mudah dirawat, testing, CI/CD, mentoring, serta delivery produk yang praktis."
+        "description": "Saya adalah <strong>Software Engineer dan Full-Stack Developer</strong> dengan <strong>4+ tahun pengalaman</strong> membangun aplikasi mobile, desktop, dan web untuk sektor <strong>healthcare, pemerintahan, dan enterprise</strong>. Saya berfokus pada <strong>Kotlin Multiplatform</strong>, full-stack development, integrasi perangkat keras, Clean Architecture yang reusable, sistem offline-first, serta workflow DICOM/PACS.<br/><br/>Sepanjang karier, saya telah merilis <strong>20+ aplikasi</strong>, membangun <strong>5+ sistem yang dapat bekerja offline</strong>, dan mengintegrasikan <strong>5+ perangkat medis</strong>. Saya bekerja lintas Android, iOS, desktop, dan web untuk mengubah kebutuhan produk dan perangkat yang kompleks menjadi software tangguh yang siap produksi. Saya meraih <strong>gelar Sarjana Teknik Informatika</strong> dari <strong>Universitas Dian Nuswantoro</strong> dengan <strong>IPK 3.83 / 4.00</strong>."
     },
     "skills": {
         "label": "Keahlian",
@@ -30,62 +30,72 @@
         "title": "Berikut adalah ringkasan singkat dari pengalaman terbaru saya:",
         "items": [
             {
-                "title": "Mobile Engineer",
-                "company": "Fischer's Medical Ventures",
+                "title": "Full-Stack Developer",
+                "company": "RUISI International Co., Ltd.",
                 "location": "Singapura",
-                "period": "Januari 2025 – Januari 2026",
+                "period": "Juli 2026 – Sekarang",
                 "responsibilities": [
-                    "Merilis aplikasi mobile produksi yang terhubung ke 5+ perangkat medis USB/BLE, mendukung live streaming, kalibrasi, dan kendali jarak jauh untuk workflow klinis.",
-                    "Membangun modul reusable untuk BLE GATT, video real time, offline handling, retry flow, dan on-device ML, mempercepat integrasi perangkat keras dan rollout produk medis.",
-                    "Berkolaborasi dengan tim firmware dan backend untuk mendefinisikan protokol, memperkuat failure state, dan merilis aplikasi siap klinik yang tangguh."
+                    "Merancang framework Kotlin Multiplatform reusable untuk Android, iOS, desktop, dan web, sekaligus menstandarkan shared module dan Clean Architecture di berbagai proyek.",
+                    "Membangun modul reusable untuk BLE, UART, TCP/IP, dan MCP Server guna mendukung komunikasi perangkat real time, kontrol perangkat, serta integrasi pencitraan medis DICOM/PACS.",
+                    "Mengembangkan arsitektur offline yang digunakan pada 5+ aplikasi, lengkap dengan penyimpanan lokal, sinkronisasi otomatis, dan pemulihan fault-tolerant."
                 ],
-                "logo": "/assets/logo/asset-fmv-logo.png"
+                "mark": "RUISI"
+            },
+            {
+                "title": "Mobile Developer",
+                "company": "RUISI International Co., Ltd.",
+                "location": "Singapura",
+                "period": "Maret 2025 – Juli 2026",
+                "responsibilities": [
+                    "Membangun aplikasi mobile, desktop, dan web yang terhubung ke 5+ perangkat medis melalui USB/BLE untuk live streaming, kalibrasi, dan kendali jarak jauh pada workflow klinis.",
+                    "Meneliti dan membuat prototipe BLE GATT, video real time, serta machine learning di perangkat sambil memperkuat perilaku offline dan retry.",
+                    "Berkolaborasi dengan tim firmware dan backend untuk mendefinisikan protokol serta merilis aplikasi siap klinik dengan observability end-to-end."
+                ],
+                "mark": "RUISI"
             },
             {
                 "title": "iOS Developer, Kontrak",
                 "company": "Owlies",
-                "location": "Yogyakarta, Indonesia",
+                "location": "Indonesia",
                 "period": "Oktober 2025 – Desember 2025",
+                "logo": "/assets/logo/asset-owlies-logo.jpg",
                 "responsibilities": [
-                    "Merilis fitur iOS end-to-end menggunakan Clean Architecture dan MVVM di Swift, didukung unit test dan UI test untuk meningkatkan kepercayaan diri saat rilis dan mengurangi regresi produksi.",
-                    "Mengimplementasikan Superwall Paywall end-to-end di iOS, termasuk prompt trial yang ditunda 5 detik dan meningkatkan niat pembelian serta konversi sekitar 70%."
-                ],
-                "logo": "/assets/logo/asset-owlies-logo.jpg"
+                    "Merilis fitur iOS end-to-end di Swift menggunakan Clean Architecture dan MVVM, didukung unit test dan UI test.",
+                    "Mengimplementasikan Superwall Paywall end-to-end, termasuk prompt trial tertunda lima detik yang meningkatkan konversi sekitar 70%."
+                ]
             },
             {
-                "title": "Android Engineer Intern",
+                "title": "Android Engineer",
                 "company": "Traveloka (Departemen Aktivitas Perjalanan)",
-                "location": "Tangerang, Indonesia",
+                "location": "Indonesia",
                 "period": "Februari 2024 – Juni 2024",
+                "logo": "/assets/logo/asset-traveloka-logo.png",
                 "responsibilities": [
-                    "Merombak modul legacy dan menyelesaikan bug produksi pada aplikasi Traveloka Android dengan 50M+ unduhan, meningkatkan responsivitas di berbagai kelas perangkat dan memperkuat stabilitas rilis.",
-                    "Mengirimkan fitur Android menggunakan Clean MVVM dan MVP di Kotlin dan Java, menaikkan cakupan unit/UI test hingga 70%+, dan mengurangi regresi rilis.",
-                    "Meneliti adopsi Jetpack Compose dan integrasi library Android modern untuk meningkatkan performa UI dan efisiensi developer."
-                ],
-                "logo": "/assets/logo/asset-traveloka-logo.png"
+                    "Merombak modul legacy dan memperbaiki bug pada aplikasi Traveloka Android dengan 50M+ unduhan, meningkatkan responsivitas dan stabilitas rilis.",
+                    "Mengimplementasikan fitur end-to-end menggunakan Clean MVVM dan MVP di Kotlin dan Java, menaikkan cakupan unit test dan UI test hingga 70%+."
+                ]
+            },
+            {
+                "title": "Tech Lead",
+                "company": "Freelanxx.it",
+                "location": "Indonesia",
+                "period": "Januari 2022 – Januari 2024",
+                "logo": "/assets/logo/asset-freelanxx-logo.png",
+                "responsibilities": [
+                    "Merancang, mengembangkan, dan merilis 20+ aplikasi mobile dan web di sektor edukasi, ritel, dan pemerintahan menggunakan Kotlin, Java, dan Flutter.",
+                    "Memimpin tim engineering beranggotakan empat orang di 20+ proyek, mengelola sprint Agile, kolaborasi lintas fungsi, dan standardisasi pipeline CI/CD."
+                ]
             },
             {
                 "title": "Mobile Developer",
-                "company": "Freelanxx.it",
-                "location": "Semarang, Indonesia",
-                "period": "Januari 2022 – Februari 2024",
-                "responsibilities": [
-                    "Merancang, membangun, dan merilis 20+ aplikasi mobile di sektor edukasi dan ritel menggunakan Kotlin/Java (Android) dan Flutter (lintas platform).",
-                    "Memimpin tim beranggotakan 4 orang, menjalankan sprint Agile, berkoordinasi lintas fungsi, dan menstandarkan CI/CD di GitHub, GitLab, dan CircleCI.",
-                    "Membangun backend RESTful API dengan Node.js dan Laravel untuk mendukung autentikasi, pembaruan real time, dan penyimpanan data aman pada produk mobile."
-                ],
-                "logo": "/assets/logo/asset-freelanxx-logo.png"
-            },
-            {
-                "title": "Mobile Developer Intern",
-                "company": "Schoters (Magang Berbasis Proyek)",
+                "company": "Schoters",
                 "location": "Indonesia",
                 "period": "Juli 2022 – Agustus 2022",
+                "logo": "/assets/logo/asset-schoters-logo.jpg",
                 "responsibilities": [
-                    "Mengirimkan fitur Android berbasis Kotlin dengan integrasi Firebase Realtime Database (pembaruan langsung) dan Crashlytics (instrumentasi, peringatan), menurunkan jenis crash berulang selama program.",
-                    "Menerapkan version control (Git) dan berpartisipasi dalam code review kolaboratif sebagai bagian dari program magang jarak jauh yang mensimulasikan lingkungan pengembangan nyata."
-                ],
-                "logo": "/assets/logo/asset-schoters-logo.jpg"
+                    "Mengembangkan fitur Android di Kotlin dengan Firebase Realtime Database dan Crashlytics, serta mengurangi jenis crash berulang selama program.",
+                    "Menerapkan version control berbasis Git dan berpartisipasi dalam code review kolaboratif."
+                ]
             }
         ]
     },

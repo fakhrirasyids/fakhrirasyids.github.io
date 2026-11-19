@@ -16,3 +16,6 @@ dialog{color:var(--ink);background:var(--bg);width:min(650px,calc(100vw - 32px))
 /* Hidden results must take precedence over progressive-enhancement display rules. */
 .js [hidden]{display:none!important}
 @media print{body{padding:0;background:white;color:black}.site-header,.site-footer,.inspect-bar,.system-console,.hero-actions,dialog,.js .js-only,.filter-bar,.load-more{display:none!important}.section{padding:24px 0}.js .project-card[hidden]{display:block!important}.project-grid,.featured-grid{display:block}.project-card,.experience-row{break-inside:avoid;margin-bottom:20px}.project-image{max-width:350px}.contact-section{background:white;color:black}.detail-grid{display:block}.project-specs{display:block}.inspect-detail{display:none!important}a{text-decoration:underline}}
+.experience-company-mark{display:grid;place-items:center;width:100px;height:65px;padding:8px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--muted);font-size:.68rem;letter-spacing:.12em}
+@media(max-width:1150px){.experience-company-mark{width:80px}}
+@media(max-width:900px){.experience-company-mark{display:none}}
