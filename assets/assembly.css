@@ -1,0 +1,64 @@
+/* TYPE ASSEMBLY / an interactive typographic workbench, not a loading screen. */
+html:not(.js) body[data-page=home] .header-inner{flex-wrap:wrap}
+body[data-page=home] .hero-work-link{font-size:12px;min-height:44px;display:flex;align-items:center;gap:18px;margin-left:auto}
+body[data-page=home] .brand{margin-right:0}
+body[data-page=home] .brand-text{display:none}
+.js body[data-page=home] .menu-toggle{display:flex!important;align-items:center;justify-content:center;gap:12px;order:2;font-size:12px;min-width:70px}
+.js body[data-page=home] .menu-toggle span{font-size:20px}
+.js body[data-page=home] #site-nav{display:none;position:absolute;right:4vw;top:80px;width:min(360px,92vw);padding:26px 28px 110px;background:var(--paper);border:1px solid var(--line);box-shadow:0 20px 50px #0001;flex-direction:column;align-items:start;gap:14px;z-index:30}
+.js body[data-page=home] #site-nav.is-open{display:flex}
+.js body[data-page=home] .header-tools{display:none;position:absolute;right:calc(4vw + 28px);top:320px;z-index:31;gap:10px}
+.js body[data-page=home] .site-header:has(#site-nav.is-open) .header-tools{display:flex}
+.js body[data-page=home] .header-tools .search-open{display:inline-flex!important}
+.js.hero-in-view body[data-page=home] .inspect-bar{visibility:hidden;pointer-events:none}
+body[data-page=home] .discipline-strip{display:none}
+@media(max-width:900px){.js body[data-page=home] #site-nav{top:70px}.js body[data-page=home] .header-tools{top:310px}}
+@media(max-width:600px){body[data-page=home] .header-inner{min-height:76px;flex-wrap:nowrap}.js body[data-page=home] #site-nav{right:22px;width:calc(100vw - 44px)}.js body[data-page=home] .header-tools{right:48px}body[data-page=home] .hero-work-link{font-size:11px;margin-right:10px}.js body[data-page=home] .menu-toggle{min-width:60px;font-size:11px;gap:8px}}
+.assembly-hero{position:relative;isolation:isolate;display:flex;flex-direction:column;min-height:650px;height:calc(100svh - 92px);max-height:1100px;padding:24px 4vw 30px;border-bottom:1px solid var(--line)}
+.assembly-meta{display:flex;justify-content:space-between;gap:20px;align-items:center;font:11px/1.5 var(--mono);color:var(--muted)}
+.assembly-role{display:flex;align-items:center;gap:10px;color:var(--ink)}
+.assembly-role:before{content:"";width:7px;height:7px;background:var(--signal-color);border-radius:50%}
+.assembly-edition{letter-spacing:.04em}
+.assembly-board{position:relative;flex:1;min-height:0;margin:18px 0 22px;container-type:size;isolation:isolate}
+.assembly-board:before{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--line) .8px,transparent .8px);background-size:24px 24px;opacity:.42;mask-image:linear-gradient(transparent,#000 25%,#000 80%,transparent);pointer-events:none}
+.assembly-lettering{position:absolute;left:4%;right:3%;top:50%;transform:translateY(-50%);font:700 min(19.5vw,38cqh)/.84 var(--sans);letter-spacing:-.065em}
+.assembly-line{display:flex;width:max-content;position:relative}
+.assembly-line+.assembly-line{margin-left:13%;margin-top:.04em}
+.assembly-piece{display:block;position:relative;flex-shrink:0;user-select:none;-webkit-user-select:none;transform-origin:center;outline-offset:5px}
+.assembly-letter{padding:0 .025em;letter-spacing:-.055em;min-width:24px}
+.assembly-letter:last-child{padding-right:.06em}
+.assembly-line:nth-child(2) .assembly-letter{color:var(--signal-color)}
+.assembly-ready .assembly-piece{cursor:grab;touch-action:none}
+.assembly-ready .assembly-piece:hover{filter:drop-shadow(2px 5px 0 #00000010)}
+.assembly-ready .assembly-piece[aria-pressed=true]{cursor:grabbing;z-index:5;outline:1px dashed var(--signal-color)}
+.assembly-photo{position:absolute;right:5%;top:5%;width:clamp(100px,12vw,170px);padding:8px 8px 25px;background:var(--paper);border:1px solid var(--line);box-shadow:2px 7px 10px #0000000d;rotate:8deg;font:9px/1 var(--mono);letter-spacing:.02em;color:var(--ink)}
+.assembly-photo img{display:block;width:100%;height:clamp(100px,12.5vw,175px);object-fit:cover;object-position:50% 62%;filter:grayscale(1);pointer-events:none}
+.assembly-photo-caption{display:flex;justify-content:space-between;position:absolute;bottom:8px;left:9px;right:9px}
+.assembly-photo-caption span:last-child{color:var(--signal-color)}
+.assembly-board:after{content:"+";position:absolute;bottom:0;right:0;color:var(--line);font:18px var(--mono);pointer-events:none}
+.assembly-coordinate{position:absolute;left:0;bottom:0;font:9px var(--mono);color:var(--muted);pointer-events:none}
+.assembly-guide{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s}
+.assembly-guide i{position:absolute;border:1px dashed var(--line)}
+.assembly-hero[data-mode=loose] .assembly-guide{opacity:.6}
+.assembly-footer{display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:82px;position:relative;z-index:10;border-top:1px solid var(--line);padding-top:22px}
+.assembly-actions{display:flex;gap:12px;align-items:center}
+.assembly-work,.assembly-cv{display:inline-flex;align-items:center;justify-content:space-between;gap:38px;min-height:50px;padding:0 22px;font-size:13px;border:1px solid var(--ink);transition:background .2s,color .2s}
+.assembly-work{background:var(--ink);color:var(--bg)}
+.assembly-work:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.assembly-cv:hover{background:var(--surface)}
+.assembly-actions span{font-size:20px}
+.assembly-play{display:none;align-items:center;gap:22px}
+.assembly-ready .assembly-play{display:flex}
+.assembly-hint{font:10px/1.6 var(--mono);color:var(--muted);max-width:190px;text-align:right}
+.assembly-toggle{display:flex;align-items:center;gap:12px;font:12px var(--mono);min-height:50px;padding:0 18px;border:1px solid var(--line);background:var(--paper)}
+.assembly-toggle:hover{border-color:var(--ink)}
+.assembly-toggle-icon{font-size:24px;color:var(--signal-color);line-height:1}
+.assembly-hero[data-mode=loose] .assembly-toggle-icon{transform:rotate(45deg)}
+.assembly-ready .assembly-piece{will-change:auto}
+.assembly-hero.is-running .assembly-piece{will-change:transform}
+.inspect .assembly-piece{outline:1px dashed var(--muted)}
+@media(max-width:900px){.assembly-hero{height:calc(100svh - 80px);min-height:620px}.assembly-meta{font-size:10px}.assembly-footer{gap:16px}.assembly-hint{max-width:130px;font-size:9px}.assembly-play{gap:12px}.assembly-work,.assembly-cv{padding:0 16px;gap:20px}.assembly-photo{top:9%;right:4%}.assembly-lettering{font-size:min(19.5vw,36cqh)}}
+@media(max-width:600px){.assembly-hero{height:calc(100svh - 76px);min-height:620px;max-height:950px;padding:16px 22px 22px}.assembly-meta{align-items:start;font-size:9px;gap:20px}.assembly-role{max-width:160px;line-height:1.65;gap:8px}.assembly-role:before{flex-shrink:0}.assembly-edition{max-width:95px;text-align:right;line-height:1.65}.assembly-board{margin:12px -6px 16px}.assembly-lettering{left:0;right:0;top:53%;font-size:21vw;line-height:.87;letter-spacing:-.06em}.assembly-line+.assembly-line{margin-left:3%;margin-top:.08em}.assembly-photo{width:94px;right:6%;top:5%;padding:5px 5px 22px;rotate:9deg}.assembly-photo img{height:100px}.assembly-photo-caption{left:6px;right:6px;font-size:8px}.assembly-footer{flex-direction:column;align-items:stretch;gap:18px;padding-top:18px}.assembly-actions{gap:10px}.assembly-work,.assembly-cv{flex:1;font-size:12px;padding:0 14px;gap:12px}.assembly-play{justify-content:space-between;flex-direction:row-reverse;gap:12px}.assembly-hint{max-width:180px;text-align:left;font-size:9px}.assembly-toggle{min-height:44px;padding:0 12px;font-size:11px}.assembly-coordinate{font-size:8px}}
+@media(max-height:740px) and (min-width:601px){.assembly-hero{min-height:540px}.assembly-photo{width:105px;padding:5px 5px 22px;top:0}.assembly-photo img{height:100px}.assembly-lettering{font-size:min(18vw,38cqh)}}
+@media(prefers-reduced-motion:reduce){.assembly-guide,.assembly-work,.assembly-cv{transition:none}}
+@media print{.assembly-hero{height:650px;min-height:0;break-after:page}.assembly-play,.assembly-guide,.assembly-coordinate{display:none!important}.assembly-piece{transform:none!important}.assembly-lettering{font-size:120px}.assembly-board:before{display:none}}

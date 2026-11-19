@@ -15,7 +15,7 @@
     "about": {
         "label": "About Me",
         "title": "Curious about me? Here you have it.",
-        "description": "I'm a <strong>Tech Lead and Mobile Engineer</strong> with <strong>4+ years of experience</strong> building Android, iOS, desktop, web, SDK, and hardware-connected clinical systems across <strong>healthcare, government, industrial, education, retail, and enterprise domains</strong>. My recent work focuses on <strong>Kotlin Multiplatform</strong>, <strong>Jetpack Compose</strong>, <strong>Clean Architecture</strong>, USB/BLE medical device integrations, offline-first workflows, and production systems used in hospital environments across Southeast Asia.<br/><br/>I have led <strong>5+ engineers</strong>, shipped <strong>5+ medical applications</strong>, supported <strong>10+ USB/BLE medical devices</strong>, and partnered closely with product, design, firmware, backend, and client teams to turn complex clinical requirements into reliable release-ready software. I also hold a <strong>Bachelor's degree in Informatics Engineering</strong> from <strong>Universitas Dian Nuswantoro</strong> with a <strong>3.83 / 4.00 GPA</strong>, and I keep a strong engineering bias toward maintainable architecture, testing, CI/CD, mentoring, and practical product delivery."
+        "description": "I'm a <strong>Software Engineer and Full-Stack Developer</strong> with <strong>4+ years of experience</strong> building mobile, desktop, and web applications across <strong>healthcare, government, and enterprise sectors</strong>. I specialize in <strong>Kotlin Multiplatform</strong>, full-stack development, hardware integration, reusable Clean Architecture, offline-first systems, and DICOM/PACS workflows.<br/><br/>Across my work, I have delivered <strong>20+ applications</strong>, built <strong>5+ offline-capable systems</strong>, and integrated <strong>5+ medical devices</strong>. I work across Android, iOS, desktop, and web, turning complex product and device requirements into resilient, production-ready software. I hold a <strong>Bachelor's degree in Informatics Engineering</strong> from <strong>Universitas Dian Nuswantoro</strong> with a <strong>3.83 / 4.00 GPA</strong>."
     },
     "skills": {
         "label": "Skills",
@@ -30,62 +30,72 @@
         "title": "Here is a quick summary of my most recent experiences:",
         "items": [
             {
-                "title": "Mobile Engineer",
-                "company": "Fischer's Medical Ventures",
+                "title": "Full-Stack Developer",
+                "company": "RUISI International Co., Ltd.",
                 "location": "Singapore",
-                "period": "January 2025 – January 2026",
+                "period": "July 2026 – Present",
                 "responsibilities": [
-                    "Delivered production mobile apps connected to 5+ USB/BLE medical devices, enabling live streaming, calibration, and remote control for clinical workflows.",
-                    "Built reusable modules for BLE GATT, real-time video, offline handling, retry flows, and on-device ML, accelerating hardware integration and rollout across medical device products.",
-                    "Partnered with firmware and backend teams to define protocols, harden failure states, and ship resilient clinic-ready applications."
+                    "Architected reusable Kotlin Multiplatform frameworks for Android, iOS, desktop, and web, standardizing shared modules and Clean Architecture across multiple projects.",
+                    "Engineered reusable BLE, UART, TCP/IP, and MCP Server modules for real-time hardware communication, device control, and DICOM/PACS medical imaging integration.",
+                    "Developed offline-capable architecture adopted across 5+ applications, with local storage, automatic synchronization, and fault-tolerant recovery."
                 ],
-                "logo": "/assets/logo/asset-fmv-logo.png"
+                "mark": "RUISI"
+            },
+            {
+                "title": "Mobile Developer",
+                "company": "RUISI International Co., Ltd.",
+                "location": "Singapore",
+                "period": "March 2025 – July 2026",
+                "responsibilities": [
+                    "Built mobile, desktop, and web applications connected to 5+ medical devices via USB/BLE, supporting live streaming, calibration, and remote control for clinical workflows.",
+                    "Researched and prototyped BLE GATT, real-time video, and on-device machine learning while hardening offline and retry behavior.",
+                    "Partnered with firmware and backend teams to define protocols and ship clinic-ready applications with end-to-end observability."
+                ],
+                "mark": "RUISI"
             },
             {
                 "title": "iOS Developer, Contract",
                 "company": "Owlies",
-                "location": "Yogyakarta, Indonesia",
+                "location": "Indonesia",
                 "period": "October 2025 – December 2025",
+                "logo": "/assets/logo/asset-owlies-logo.jpg",
                 "responsibilities": [
-                    "Shipped end-to-end iOS features using Clean Architecture and MVVM in Swift, supported by unit and UI test suites to improve release confidence and reduce production regressions.",
-                    "Implemented Superwall Paywall end-to-end on iOS, including a 5-second delayed trial prompt that improved purchase intent and increased conversion by ~70%."
-                ],
-                "logo": "/assets/logo/asset-owlies-logo.jpg"
+                    "Shipped end-to-end iOS features in Swift using Clean Architecture and MVVM, backed by unit and UI test suites.",
+                    "Implemented Superwall Paywall end-to-end, including a five-second delayed trial prompt that increased conversion by approximately 70%."
+                ]
             },
             {
-                "title": "Android Engineer Intern",
+                "title": "Android Engineer",
                 "company": "Traveloka (Travel Activities Department)",
-                "location": "Tangerang, Indonesia",
+                "location": "Indonesia",
                 "period": "February 2024 – June 2024",
+                "logo": "/assets/logo/asset-traveloka-logo.png",
                 "responsibilities": [
-                    "Refactored legacy modules and resolved production bugs in the Traveloka Android app with 50M+ downloads, improving responsiveness across device tiers and strengthening release stability.",
-                    "Delivered Android features using Clean MVVM and MVP in Kotlin and Java, increased unit/UI test coverage to 70%+, and reduced release regressions.",
-                    "Researched Jetpack Compose adoption and modern Android library integration to improve UI performance and developer efficiency."
-                ],
-                "logo": "/assets/logo/asset-traveloka-logo.png"
+                    "Refactored legacy modules and fixed bugs in the Traveloka Android app with 50M+ downloads, improving responsiveness and release stability.",
+                    "Implemented features end-to-end using Clean MVVM and MVP in Kotlin and Java, raising unit and UI test coverage to 70%+."
+                ]
+            },
+            {
+                "title": "Tech Lead",
+                "company": "Freelanxx.it",
+                "location": "Indonesia",
+                "period": "January 2022 – January 2024",
+                "logo": "/assets/logo/asset-freelanxx-logo.png",
+                "responsibilities": [
+                    "Designed, developed, and shipped 20+ mobile and web applications across education, retail, and government using Kotlin, Java, and Flutter.",
+                    "Led a four-person engineering team across 20+ projects, managing Agile sprints, cross-functional collaboration, and standardized CI/CD pipelines."
+                ]
             },
             {
                 "title": "Mobile Developer",
-                "company": "Freelanxx.it",
-                "location": "Semarang, Indonesia",
-                "period": "January 2022 – February 2024",
-                "responsibilities": [
-                    "Designed, built, and shipped 20+ mobile apps across education and retail using Kotlin/Java (Android) and Flutter (cross-platform).",
-                    "Led a 4-person team, ran Agile sprints, coordinated cross-functionally, and standardized CI/CD across GitHub, GitLab, and CircleCI.",
-                    "Built RESTful API backends using Node.js and Laravel to support authentication, real-time updates, and secure data storage for mobile products."
-                ],
-                "logo": "/assets/logo/asset-freelanxx-logo.png"
-            },
-            {
-                "title": "Mobile Developer Intern",
-                "company": "Schoters (Project-Based Internship)",
+                "company": "Schoters",
                 "location": "Indonesia",
                 "period": "July 2022 – August 2022",
+                "logo": "/assets/logo/asset-schoters-logo.jpg",
                 "responsibilities": [
-                    "Delivered Android features in Kotlin with Firebase Realtime Database (live updates) and Crashlytics (instrumentation, alerting), reducing repeat crash types during the program.",
-                    "Practiced version control (Git) and participated in collaborative code reviews as part of a remote internship program simulating real-world development environments."
-                ],
-                "logo": "/assets/logo/asset-schoters-logo.jpg"
+                    "Delivered Android features in Kotlin with Firebase Realtime Database and Crashlytics, reducing repeat crash types during the program.",
+                    "Practiced Git-based version control and participated in collaborative code reviews."
+                ]
             }
         ]
     },

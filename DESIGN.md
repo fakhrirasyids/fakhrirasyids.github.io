@@ -1,4 +1,66 @@
-# SIGNAL LAB — Make a connection
+# SIGNAL LAB — Type Assembly / 002
+
+Second hero concept, 21 October 2026. The first MVP is preserved in commit
+`a853325` and its cable assets remain in the repository, unloaded. This iteration
+changes only the three homepages and their hero enhancement; the archive,
+project pages, experience, contact content and original media are preserved.
+
+## Concept and composition
+
+The engineer's name is the object you can build, take apart, and rebuild.
+A full-width typographic workbench replaces the cable. FAKHRI is ink, RASYID is
+vermilion; a quiet dot grid suggests working paper, not a fictional terminal.
+One small, monochrome print uses the existing photograph of Fakhri working.
+It is a movable component of the composition, not a fabricated portrait.
+
+On arrival everything is assembled and still. Drag a letter or the photo to
+release it into the physical toy. The Break it button gives an immediate way
+to discover the interaction; Rebuild springs the pieces back into their original
+alignment. Outlined assembly positions remain as quiet guides when disassembled.
+The role stays readable, the semantic H1 remains intact, and both See works
+and Download CV remain outside the simulation. Visitors need not play to proceed.
+
+## Research applied
+
+- [Martin Laxenaire's portfolio case study](https://tympanus.net/codrops/2025/10/06/self-doubt-and-the-quest-for-fun-how-i-ended-up-turning-my-portfolio-into-a-game/)
+  connects its experiments to personal content and discusses reduced-motion
+  alternatives and dynamic loading. Interpretation here: the personal identity
+  itself is the toy, and the hero module loads only where needed. We do not adopt
+  the source site's content-unlocking mechanic: portfolio access stays immediate.
+- [Bartosz Ciechanowski's Gears](https://ciechanow.ski/gears/) gives readers direct
+  control over visible mechanical relationships. Interpretation here: grabbing,
+  throwing, collision and reconstruction should have clear visible consequences.
+  This is a playful bounding-box simulation, not an accurate mechanics teaching aid.
+- [W3C dragging guidance](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html)
+  informs the click/tap-pick then click/tap-place alternative. Keyboard access is
+  provided separately: one tab stop for the pieces, arrow selection, Enter/Space
+  pickup, arrow movement, Enter placement, and Escape rebuild.
+
+These are original design interpretations, not copied assets, source code or
+claims of equivalent production scope. The prior visual research is retained below.
+
+## Implementation constraints
+
+- Plain HTML/CSS/ES modules. No dependencies, remote fonts, GPU requirements,
+  autoplay sound, fake code/status metrics, scroll hijacking, or gated content.
+- Fixed 60 Hz simulation with bounded elapsed time, oriented bounding-box
+  collision detection, four correction passes and spring-based reconstruction.
+  Collision geometry approximates glyph rectangles, not their outlines.
+- Transform-only motion. No rendering loop at arrival; interaction settles to
+  a frozen composition after five seconds. Rebuild ends after 1.5 seconds.
+  Offscreen and background-tab work stops; resize restores the name safely.
+- Pointer capture is restricted to a picked piece. Empty space remains native
+  touch-scrolling space. Pointer cancellation and lost capture release the piece.
+- Reduced motion replaces animated scatter/rebuild with immediate still states.
+  No-JavaScript mode retains the visual identity, photo and both real links.
+- The photo remains the original WebP, visually cropped/desaturated with CSS.
+  Theme tokens are inherited. English, Indonesian and Chinese share one controller.
+
+No commit, push, hosting change or deployment is part of this iteration.
+
+---
+
+# Previous MVP — Make a connection
 
 Iteration: 21 October 2026. The opening is now one full-screen interaction,
 built around Fakhri's work connecting physical devices and digital interfaces.

@@ -125,7 +125,7 @@ for fg,bg in pairs:
 css=(ROOT/'assets/site.css').read_text()
 check('prefers-reduced-motion:reduce' in css,'Missing reduced-motion handling')
 check('.js [hidden]{display:none!important}' in css,'Hidden filter controls can be overridden')
-for name,budget in [('assets/site.css',8000),('assets/studio.css',6500),('assets/connection.css',4000),('assets/site.js',5000),('assets/studio.js',2500),('assets/connection.js',4500),('assets/cable.mjs',1500),('assets/core.mjs',1500),('index.html',9000)]:
+for name,budget in [('assets/site.css',8000),('assets/studio.css',6500),('assets/assembly.css',4000),('assets/site.js',5000),('assets/studio.js',2500),('assets/assembly.js',4500),('assets/assembly-physics.mjs',2500),('assets/core.mjs',1500),('index.html',9000)]:
     size=len(gzip.compress((ROOT/name).read_bytes()));check(size<=budget,f'{name}: {size} gzip bytes exceeds {budget}')
 if errors:
     print('\n'.join(errors));raise SystemExit(f'FAILED: {len(errors)} errors')

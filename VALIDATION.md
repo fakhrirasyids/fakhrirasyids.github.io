@@ -1,4 +1,55 @@
-# Connection hero verification — 21 October 2026
+# Type Assembly hero verification — 21 October 2026
+
+Second hero implemented locally on `dev`, starting from the clean first-MVP
+commit `a853325`. No commit, push, deployment or hosting changes performed.
+
+## Passed for this iteration
+
+- 21 Node tests: 13 core behavior tests, 2 retained cable tests, and 6 new
+  assembly tests covering rotated collision detection, bounds, spring
+  convergence, held bodies, repeated 13-piece simulation and reduced motion.
+- Static integrity checks across all 163 HTML pages, 150 localized detail pages,
+  50 original projects and 162 sitemap URLs. Local links, ARIA references,
+  theme-token contrast and gzip budgets pass.
+- Chromium: actual CV PDF download, scatter/rebuild, drag and throw, roving
+  keyboard focus, keyboard pickup/move/place, click-pick/click-place, and Escape.
+- No animation on arrival; the animation loop stops after settling. Identical
+  board screenshots confirm that the idle composition no longer changes.
+- 35 responsive route/viewport combinations at 320, 390, 768, 1024 and 1440px,
+  including all three languages and retained archive/detail/experience/writing.
+  No horizontal page overflow found.
+- Touch-emulated pickup, placement, rebuild and direct work navigation. Fixed
+  the browser's zero-detail synthetic click causing double activation on touch.
+- Resize resets safely; leaving the hero stops its animation; changing the
+  reduced-motion preference at runtime restores a still composition.
+- Reduced-motion scatter/rebuild and no-JavaScript identity, both hero links,
+  and all 50 archive projects. Interactive controls stay hidden without JS.
+- Shared menu, themes, Inspect, search dialog focus return, project filtering,
+  empty state, load-more and detail navigation regressions.
+- Desktop/mobile assembled and scattered screenshots reviewed, plus dark theme.
+  No JavaScript runtime errors observed. Syntax and `git diff --check` pass.
+
+The in-app browser connection failed during setup. Rendered QA used the existing
+standalone Chromium/Python Playwright installation, with no new dependencies.
+Reproducible checks are in `tests/browser_qa.py`; screenshots are outside the repo
+at `/private/tmp/frs-qa/`.
+
+## Payload and limits
+
+New hero CSS: 2,370 gzip bytes. Controller: 3,760 gzip bytes. Physics: 1,406
+gzip bytes. Total: approximately 7.4 KiB, plus the existing ~16 KB WebP photo.
+The hero JS is dynamically imported only on homepages. Original images and CV
+are unchanged, and obsolete MVP assets are retained but no longer requested.
+These are local payload measurements, not Lighthouse or Core Web Vitals scores.
+
+Safari, Firefox, physical-device performance and screen-reader operation remain
+unverified. Token contrast and keyboard checks are not a full accessibility audit.
+The toy collides oriented bounding rectangles, not exact glyph contours.
+No live hosting, redirect or deployment checks were made.
+
+---
+
+# Previous connection hero verification — 21 October 2026
 
 Implemented locally on `dev`, continuing the previous uncommitted redesign.
 No deployment, commit, or push was performed.
